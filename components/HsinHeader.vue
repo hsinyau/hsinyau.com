@@ -9,7 +9,7 @@ const { menu } = useAppConfig()
     backdrop="filter blur-lg saturate-200"
     flex="~ items-center justify-between"
     text="gray-900 dark:gray-200"
-    class="max-w-5xl inset-x-0 top-4 sticky w-full z-40 mx-auto h-[60px] px-4 shadow-sm saturate-100"
+    class="max-w-5xl inset-x-0 top-4 sticky w-full z-40 mx-auto h-[60px] px-4 shadow-sm saturate-100 font-sans"
   >
     <NuxtLink to="/" class="flex items-center justify-center gap-1">
       <HsinLogo />

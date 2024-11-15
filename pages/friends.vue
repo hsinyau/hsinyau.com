@@ -1,14 +1,9 @@
 <script setup lang="ts">
-  const { friends } = useAppConfig()
+  const { friends, site } = useAppConfig()
 </script>
 
 <template>
   <div class="mt-8">
-      <Card class="py-2 mb-4 flex justify-between flex-wrap select-none rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800/50 backdrop-filter backdrop-blur-lg">
-        <div class="px-4 py-2 text-[12px] text-gray-500">
-          友情链接
-        </div>
-      </Card>
       <div class="mx-auto text-gray-600">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 slide-enter-content">
             <NuxtLink v-for="friend in friends" :key="friend.link" class="w-full transition-opacity ease" :href="friend.link" target="_blank">
@@ -18,9 +13,6 @@
                     alt="team"
                     class="w-16 h-16 object-cover object-center rounded-full filter dark:brightness-50"
                     :src="friend.avatar"
-                    placeholder="blur"
-                    width={100}
-                    height={100}
                   >
                 </div>
                 <div class="flex-grow">
@@ -31,7 +23,36 @@
             </NuxtLink>
         </div>
       </div>
-      <Info />
-      <Comment path="/friends" server-u-r-l={env.COMMENT_API} />
+      <div class="card p-4 divide-y w-full divide-gray-100 dark:text-gray-200 rounded-xl mt-4">
+      <div class="flex items-center justify-between gap-1.5">
+        <h2 class="text-lg font-medium mx-auto mb-4">
+          快来和我做朋友吧
+        </h2>
+      </div>
+      <span class="mt-4 leading-loose">
+        <dl class=" divide-gray-100 text-sm border-y border-gray-200 dark:border-gray-800">
+          <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 even:dark:bg-gray-800/50 sm:grid-cols-3 sm:gap-4">
+            <dt class="font-medium">站点名称🪪</dt>
+            <dd class="sm:col-span-2">{{site.title}}</dd>
+          </div>
+          <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 even:dark:bg-gray-800/50 sm:grid-cols-3 sm:gap-4">
+            <dt class="font-medium">站点描述🎨</dt>
+            <dd class="sm:col-span-2">{{site.description}}</dd>
+          </div>
+          <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 even:dark:bg-gray-800/50 sm:grid-cols-3 sm:gap-4">
+            <dt class="font-medium">站点链接🔗</dt>
+            <dd class="sm:col-span-2">{{site.domain}}</dd>
+          </div>
+          <div class="grid grid-cols-1 gap-1 p-3 even:bg-gray-50 even:dark:bg-gray-800/50 sm:grid-cols-3 sm:gap-4">
+            <dt class="font-medium">站点头像🪄</dt>
+            <dd class="sm:col-span-2">
+              <a :href="site.avatar" target="_blank">点击查看</a>
+            </dd>
+          </div>
+        </dl>
+      </span>
+      <p class="text-center mt-4">申请加入友链请在下方留言✨</p>
+    </div>
+      <HsinWaline path="/friends" />
     </div>
 </template>

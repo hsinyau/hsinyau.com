@@ -7,6 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxthq/studio',
     '@unocss/nuxt',
+    '@vueuse/nuxt',
+    '@vueuse/motion/nuxt',
     '@nuxtjs/color-mode'
   ],
   colorMode: {
@@ -19,5 +21,10 @@ export default defineNuxtConfig({
   },
   css: [
     '@unocss/reset/tailwind.css'
-  ]
+  ],
+  runtimeConfig: {
+    public: {
+      commentApi: process.env.PUBLIC_COMMENT_API
+    }
+  }
 })
