@@ -82,11 +82,11 @@ async function toggleTheme(event: MouseEvent) {
   })
 }
 
-const router = useRouter()
+// const router = useRouter()
 
-defineShortcuts({
-  backspace: () => router.back(),
-})
+// defineShortcuts({
+//   backspace: () => router.back(),
+// })
 </script>
 
 <template>

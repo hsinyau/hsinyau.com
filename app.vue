@@ -6,10 +6,6 @@ useHead({
 
 <template>
   <Html lang="zh-CN">
-    <Head>
-      <Title>HSINYAU</Title>
-    </Head>
-
     <Body>
       <NuxtLoadingIndicator color="#808080" />
       <AppBackground />

@@ -23,17 +23,17 @@ const socials = [
   {
     icon: 'ph:threads-logo-duotone',
     label: 'Threads',
-    link: 'https://www.threads.net/@hsinyau',
+    link: 'https://www.threads.net/@hsinyau_zz',
   },
   {
     icon: 'tabler:brand-netease-music',
     label: '网易云',
-    link: 'https://www.threads.net/@hsinyau',
+    link: 'https://music.163.com/#/user/home?id=1352085491',
   },
   {
     icon: 'tabler:brand-bilibili',
     label: '哔哩哔哩',
-    link: 'https://www.threads.net/@hsinyau',
+    link: 'https://space.bilibili.com/221029937',
   },
 ]
 </script>
@@ -62,12 +62,13 @@ const socials = [
         </div>
       </div>
       <div class="flex flex-col md:flex-row gap-2 md:items-center">
-        <h1>发送邮件</h1>
+        <h1>发邮件</h1>
         <div class="flex">
           <HomeLink
             blanked
-            href="mailto:hsinyau@outlook.com"
-            label="hsinyau@outlook.com"
+            icon="i-ph:envelope-duotone"
+            href="mailto:hi@hsinyau.com"
+            label="hi@hsinyau.com"
           />
         </div>
       </div>
