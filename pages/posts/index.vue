@@ -1,7 +1,10 @@
 <script setup lang="ts">
+const title = '文稿'
+const description = '阅读我关于软件开发、设计及生活等方面的想法。'
+
 useSeoMeta({
-  title: '文稿',
-  description: '阅读我关于软件开发、设计及生活等方面的想法。',
+  title,
+  description,
 })
 
 const { data: posts } = await useAsyncData('all-posts', () => queryContent('/posts')
@@ -13,8 +16,8 @@ const { data: posts } = await useAsyncData('all-posts', () => queryContent('/pos
 <template>
   <main class="space-y-12">
     <HsinTitle
-      title="文稿"
-      description="阅读我关于软件开发、设计及生活等方面的想法。"
+      :title
+      :description
     />
     <ul class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <NuxtLink

@@ -24,21 +24,24 @@ const categorizedItems = categories.map(category => ({
 <template>
   <main>
     <HsinTitle
-      :title="title"
-      :description="description"
+      :title
+      :description
     />
-    <div class="mt-12 space-y-24">
-      <UsesList
+    <div class="mt-12 space-y-12">
+      <HsinDivider
         v-for="category in categorizedItems"
         :key="category.id"
         :title="category.title"
       >
-        <UsesItem
-          v-for="(item, id) in category.items"
-          :key="id"
-          :item="item"
-        />
-      </UsesList>
+        <li v-for="(item, id) in category.items" :key="id">
+          <p class="text-base font-semibold text-black dark:text-white">
+            {{ item.name }}
+          </p>
+          <p class="text-sm">
+            {{ item.description }}
+          </p>
+        </li>
+      </HsinDivider>
     </div>
   </main>
 </template>

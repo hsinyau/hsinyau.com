@@ -1,0 +1,13 @@
+{
+  "category": "NPM 包",
+  "order": "3",
+  "data": [
+    {
+      "title": "hexo-sitemap-generator",
+      "description": "一个Hexo 博客框架的站点地图生成器插件。这个插件支持生成三种格式标准的站点地图文件: .xml、.txt 和 .html。",
+      "color": "pink",
+      "link": "https://www.npmjs.com/package/hexo-sitemap-generator",
+      "icon": "i-ph:network-duotone"
+    }
+  ]
+}

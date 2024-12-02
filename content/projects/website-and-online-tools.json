@@ -1,0 +1,27 @@
+{
+  "category": "网站 · 在线工具",
+  "order": "4",
+  "data": [
+    {
+      "title": "hsinyau.com",
+      "description": "一个极简主义的个人网站，采用了 Nuxt.js 框架和 Tailwindcss 原子化 CSS 库。",
+      "color": "pink",
+      "link": "https://hsinyau.com",
+      "icon": "i-ph:flower-duotone"
+    },
+    {
+      "title": "可乐音乐",
+      "description": "使用 Next.js、TailwindCSS 和网易云音乐 API 开发的仿汽水音乐网站，实现汽水音乐大部分功能。",
+      "color": "blue",
+      "link": "https://cola-music.hsinyau.cc",
+      "icon": "i-ph:music-note-duotone"
+    },
+    {
+      "title": "hexo-theme-jianjia",
+      "description": "一款比较简单的 Hexo 主题模板，响应式兼容设计。主体白灰黑三种配色，简洁、精致、美观。",
+      "color": "blue",
+      "link": "https://jianjia.hsinyau.cc",
+      "icon": "i-ph:cactus-duotone"
+    }
+  ]
+}

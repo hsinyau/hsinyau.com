@@ -14,7 +14,7 @@ const formatDate = (date: Date, format: string) => useDateFormat(date, format, {
       年，始于
       <HoverText
         hover="第一次知道这个东西 🫣"
-        :text="formatDate(new Date(stats.coding.data.range.start), 'YYYY年MMMM')"
+        :text="formatDate(new Date(stats.coding.data.range.start), 'YYYY 年 M 月')"
       />。
       截至目前我编写代码时间约
       <HoverText
