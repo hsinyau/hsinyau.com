@@ -8,6 +8,7 @@ export default defineNuxtConfig({
         separator: '•',
       },
     },
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
   modules: [
     '@nuxt/ui',
@@ -69,12 +70,6 @@ export default defineNuxtConfig({
       },
     },
   },
-  // // Nitro
-  // nitro: {
-  //   experimental: {
-  //     openAPI: true,
-  //   },
-  // },
   // Nuxt Hub
   hub: {
     cache: true,
@@ -85,16 +80,7 @@ export default defineNuxtConfig({
   // Nuxt Env
   runtimeConfig: {
     wakatime: {
-      userId: '',
-      coding: '',
-      editors: '',
-      languages: '',
-      os: '',
-    },
-    discord: {
-      userId: '',
-      id: '',
-      token: '',
+      apiKey: '',
     },
   },
 })

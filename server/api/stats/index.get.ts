@@ -1,16 +1,32 @@
+interface Stats {
+  data: {
+    total_seconds: number
+    languages: Array<{
+      name: string
+      total_seconds: number
+    }>
+  }
+}
+
 export default defineCachedEventHandler(async (event) => {
   const { wakatime } = useRuntimeConfig(event)
 
-  const coding = await $fetch(`https://wakatime.com/share/${wakatime.userId}/${wakatime.coding}.json`)
-  const editors = await $fetch(`https://wakatime.com/share/${wakatime.userId}/${wakatime.editors}.json`)
-  const os = await $fetch(`https://wakatime.com/share/${wakatime.userId}/${wakatime.os}.json`)
-  const languages = await $fetch(`https://wakatime.com/share/${wakatime.userId}/${wakatime.languages}.json`)
+  const fetchData = async (endpoint: string) => {
+    return await $fetch(`https://wakatime.com/api/v1/users/current/${endpoint}`, {
+      headers: {
+        Authorization: `Basic ${wakatime.apiKey ?? ''}`,
+      },
+    })
+  }
+
+  const [coding, languages] = await Promise.all([
+    fetchData('all_time_since_today') as Promise<Stats>,
+    fetchData('insights/languages/last_year') as Promise<Stats>,
+  ])
 
   return {
-    coding,
-    editors,
-    os,
-    languages,
+    seconds: coding?.data?.total_seconds ?? 0,
+    languages: languages?.data?.languages.slice(0, 2),
   }
 }, {
   maxAge: 24 * 60 * 60,
