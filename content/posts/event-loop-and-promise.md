@@ -118,15 +118,13 @@ Promise.resolve().then(() => {
 
 **总结一下：**
 
-<Alert
-  content="同步和异步任务会进入不同的执行环境。同步的进入主线程，即主执行栈 (Call Stack)，异步的进入任务队列 (Queue)。"
-  type="danger"
-/>
+::alert{type="danger"}
+同步和异步任务会进入不同的执行环境。同步的进入主线程，即主执行栈 (Call Stack)，异步的进入任务队列 (Queue)。
+::
 
-<Alert
-  content="事件循环的每个循环中，同步任务  →  微任务(Micro-tasks)  →  宏任务(Macro-tasks)"
-  type="danger"
-/>
+::alert{type="danger"}
+事件循环的每个循环中，同步任务  →  微任务(Micro-tasks)  →  宏任务(Macro-tasks)
+::
 
 ## Node.js的事件循环
 
@@ -159,17 +157,15 @@ Node.js 的事件循环基于 libuv 库实现，它主要有 6 个阶段：
 
 **宏任务**
 
-<Alert
-  content="setlnterval、setimeout、setlmmediate、I/O"
-  type="danger"
-/>
+::alert{type="danger"}
+setlnterval、setimeout、setlmmediate、I/O
+::
 
 **微任务**
 
-<Alert
-  content="Promise.then、Promise.catch、Promise.finally、process.nextTick"
-  type="danger"
-/>
+::alert{type="danger"}
+Promise.then、Promise.catch、Promise.finally、process.nextTick
+::
 
 对于微任务我们还有个点需要特别注意。那就是虽然 nextTick 同属于微任务，但是它的优先级是高于其它微任务，在执行微任务时，只有nextlick中的所有回调函数执行完成后才会开始执行其它微任务。
 

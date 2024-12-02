@@ -15,10 +15,9 @@ cover: https://bu.dusays.com/2024/08/16/66be42c38d31c.jpg
 View Transitions API 是一种用于创建动画的浏览器 API，常用于 SPA（单页面应用）中的过渡切换动画。
 使用 View Transitions API 可以轻松创建不同 DOM 状态之间的转换动画，避免了编写大量的 CSS 和 JavaScript 来处理新旧内容的共存逻辑。
 
-<Alert
-  content="View Transitions API 目前仍然是一个实验性功能，仅在 Chrome 和 Edge 的 111 及以上版本、Opera 的 75 及以上版本可用，Firefox 和 Safari 暂时不可用。"
-  type="danger"
-/>
+::alert{type="danger"}
+View Transitions API 目前仍然是一个实验性功能，仅在 Chrome 和 Edge 的 111 及以上版本、Opera 的 75 及以上版本可用，Firefox 和 Safari 暂时不可用。
+::
 
 ## 工作原理
 
