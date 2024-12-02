@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 useHead({
-  link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+  link: [
+    { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+    { rel: 'icon', type: 'image/ico', href: '/favicon.ico' },
+
+  ],
 })
 </script>
 
@@ -8,7 +12,6 @@ useHead({
   <Html lang="zh-CN">
     <Body>
       <NuxtLoadingIndicator color="#808080" />
-      <AppBackground />
       <UContainer class="z-50 relative max-w-5xl min-h-[100dvh] flex flex-col">
         <HsinHeader />
         <NuxtPage class="mt-12 grow" />
