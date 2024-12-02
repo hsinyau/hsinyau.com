@@ -14,6 +14,7 @@ useHead({
         <NuxtPage class="mt-12 grow" />
         <HsinFooter />
       </UContainer>
+      <BackTop />
     </Body>
   </Html>
 </template>
