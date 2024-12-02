@@ -163,6 +163,8 @@ monorepo
 
 ## 参考
 
-[工作空间（Workspace） | pnpm](https://pnpm.io/zh/workspaces)
-[pnpm cli | pnpm](https://pnpm.io/pnpm-cli#-c-path---dir-path)
-[Create a monorepo using PNPM workspace](https://dev.to/vinomanick/create-a-monorepo-using-pnpm-workspace-1ebn)
+[工作空间（Workspace） | pnpm](https://pnpm.io/zh/workspaces){target="_blank"}
+
+[pnpm cli | pnpm](https://pnpm.io/pnpm-cli#-c-path---dir-path){target="_blank"}
+
+[Create a monorepo using PNPM workspace](https://dev.to/vinomanick/create-a-monorepo-using-pnpm-workspace-1ebn){target="_blank"}

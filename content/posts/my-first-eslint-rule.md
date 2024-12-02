@@ -100,5 +100,6 @@ module.exports = {
 
 ## 参考
 
-[Find and fix problems in your JavaScript code - ESLint - Pluggable JavaScript Linter](https://eslint.org/)
-[配置规则 - ESLint - 插件化的 JavaScript 代码检查工具](https://zh-hans.eslint.org/docs/latest/use/configure)
+[Find and fix problems in your JavaScript code - ESLint - Pluggable JavaScript Linter](https://eslint.org/){target="_blank"}
+
+[配置规则 - ESLint - 插件化的 JavaScript 代码检查工具](https://zh-hans.eslint.org/docs/latest/use/configure){target="_blank"}

@@ -201,8 +201,8 @@ WebSocket 是一种全双工通信协议，它不受同源策略的限制。
 
 ## 参考资料
 
-[跨源资源共享（CORS） - HTTP | MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS)
+[跨源资源共享（CORS） - HTTP | MDN](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS){target="_blank"}
 
-[跨域资源共享 CORS 详解 - 阮一峰的网络日志 (ruanyifeng.com)](http://www.ruanyifeng.com/blog/2016/04/cors.html)
+[跨域资源共享 CORS 详解 - 阮一峰的网络日志 (ruanyifeng.com)](http://www.ruanyifeng.com/blog/2016/04/cors.html){target="_blank"}
 
-[前端跨域解决方案（11种方案详细笔记）- SegmentFault 思否](https://segmentfault.com/a/1190000020688656)
+[前端跨域解决方案（11种方案详细笔记）- SegmentFault 思否](https://segmentfault.com/a/1190000020688656){target="_blank"}

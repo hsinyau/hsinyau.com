@@ -21,17 +21,17 @@ var a = void 0
 
 MDN 是这样描述的：
 
-The void operator evaluates the given expression and then returns [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined).
+The void operator evaluates the given expression and then returns [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined){target="_blank"}.
 
-void 运算符 对给定的表达式进行求值，然后返回 [`undefined`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。
+void 运算符 对给定的表达式进行求值，然后返回 [`undefined`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined){target="_blank"}。
 
-This operator allows evaluating expressions that produce a value into places where an expression that evaluates to [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) is desired.
+This operator allows evaluating expressions that produce a value into places where an expression that evaluates to [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined){target="_blank"} is desired.
 
-这个运算符能向期望一个表达式的值是[`undefined`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)的地方插入会产生副作用的表达式。
+这个运算符能向期望一个表达式的值是[`undefined`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined){target="_blank"}的地方插入会产生副作用的表达式。
 
-The void operator is often used merely to obtain the `undefined` primitive value, usually using "void(0)" (which is equivalent to "void 0"). In these cases, the global variable [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) can be used.
+The void operator is often used merely to obtain the `undefined` primitive value, usually using "void(0)" (which is equivalent to "void 0"). In these cases, the global variable [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined){target="_blank"} can be used.
 
-void 运算符通常只用于获取 `undefined`的原始值，一般使用 void(0)（等同于 void 0 ）。在上述情况中，也可以使用全局变量[`undefined`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 来代替（假定其仍是默认值）。
+void 运算符通常只用于获取 `undefined`的原始值，一般使用 void(0)（等同于 void 0 ）。在上述情况中，也可以使用全局变量[`undefined`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined){target="_blank"} 来代替（假定其仍是默认值）。
 
 ## undefined 又是什么?
 
@@ -98,8 +98,8 @@ button.onclick = () => void doSomething()
 
 ## 参考
 
-[void operator - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void)
+[void operator - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void){target="_blank"}
 
-[IIFE（立即调用函数表达式）](https://developer.mozilla.org/zh-CN/docs/Glossary/IIFE)
+[IIFE（立即调用函数表达式）](https://developer.mozilla.org/zh-CN/docs/Glossary/IIFE){target="_blank"}
 
-[difference between "void 0 " and "undefined"](https://stackoverflow.com/questions/4806286/difference-between-void-0-and-undefined)
+[difference between "void 0 " and "undefined"](https://stackoverflow.com/questions/4806286/difference-between-void-0-and-undefined){target="_blank"}

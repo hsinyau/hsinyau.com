@@ -101,6 +101,6 @@ window.addEventListener('resize', throttle(sayHi))
 
 ## 参考文档
 
-[Advanced-Frontend/Daily-Interview-Question](https://github.com/Advanced-Frontend/Daily-Interview-Question)
+[Advanced-Frontend/Daily-Interview-Question](https://github.com/Advanced-Frontend/Daily-Interview-Question){target="_blank"}
 
-[JS节流和防抖](https://blog.csdn.net/MichelleZhai/article/details/118343787)
+[JS节流和防抖](https://blog.csdn.net/MichelleZhai/article/details/118343787){target="_blank"}

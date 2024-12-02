@@ -6,7 +6,7 @@ created: 2024-04-6 07:59:45
 cover: https://bu.dusays.com/2024/08/16/66be42c38d31c.jpg
 ---
 
-还记得在 2023 年的时候，偶然在 [antfu](https://antfu.me) 大佬的一次直播里听闻了 View Transitions API 这个新鲜名词。
+还记得在 2023 年的时候，偶然在 [antfu](https://antfu.me){target="_blank"} 大佬的一次直播里听闻了 View Transitions API 这个新鲜名词。
 
 当时只是在脑海中浅浅留下了个印象，并未深入探究。然而时光流转，直到最近，由于项目中的特定需求，我才真正静下心来，对 view-transitions-api 进行了全面的了解，并将其应用到实际开发当中。
 
@@ -138,7 +138,7 @@ transition.finished.then(() => {
 
 除了使用 CSS 来自定义动画，我们还可以使用 JS 来实现更加复杂的过渡动画。当 ViewTransition.ready 完成时，运用 document.documentElement.animate 来实现动画。
 
-这里以 [antfu](https://antfu.me) 大佬的的 Blog 主题切换代码为例
+这里以 [antfu](https://antfu.me){target="_blank"} 大佬的的 Blog 主题切换代码为例
 
 ```ts
 export function toggleDark(event: MouseEvent) {
@@ -194,7 +194,7 @@ export function toggleDark(event: MouseEvent) {
 }
 ```
 
-具体效果查看下图或前往 [antfu](https://antfu.me) 尝试
+具体效果查看下图或前往 [antfu](https://antfu.me){target="_blank"} 尝试
 
 ![Antfu 浅色 / 暗色模式切换](https://bu.dusays.com/2024/08/16/66be3ff04a2ba.gif)
 
@@ -213,10 +213,10 @@ export function toggleDark(event: MouseEvent) {
 
 ## 参考
 
-[View Transitions API - Web API | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/View_Transitions_API)
+[View Transitions API - Web API | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/View_Transitions_API){target="_blank"}
 
-[Document：startViewTransition() 方法 - Web API | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/startViewTransition)
+[Document：startViewTransition() 方法 - Web API | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/startViewTransition){target="_blank"}
 
-[太丝滑了！了解一下原生的视图转换动画 View Transitions - 前端侦探 - SegmentFault 思否](https://segmentfault.com/a/1190000044133146)
+[太丝滑了！了解一下原生的视图转换动画 View Transitions - 前端侦探 - SegmentFault 思否](https://segmentfault.com/a/1190000044133146){target="_blank"}
 
-[浅学 View Transitions API | 前端学习笔记](https://xiaotianxia.github.io/blog/vuepress/js/view_transitions.html)
+[浅学 View Transitions API | 前端学习笔记](https://xiaotianxia.github.io/blog/vuepress/js/view_transitions.html){target="_blank"}

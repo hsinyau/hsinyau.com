@@ -452,7 +452,7 @@ export const suzhouzhan = [
 
 ### 东方之门
 
-逛完了平江路，约好了和 [Rinkaneko](https://rinkaneko.top) 在苏州中心面基。虽然认识了有些年头了，但两个社恐线下面基的场景你们能想象到吗？
+逛完了平江路，约好了和 [Rinkaneko](https://rinkaneko.top){target="_blank"} 在苏州中心面基。虽然认识了有些年头了，但两个社恐线下面基的场景你们能想象到吗？
 
 面基成功一起恰了顿饭，恰完饭天也黑了。一起去金鸡湖拍 “大裤衩 - 东方之门”。据说傍晚时候拍的更好看。
 ![东方之门](https://bu.dusays.com/2024/06/28/667e502419281.webp)

@@ -401,10 +401,10 @@ async/await 语法使得异步代码看起来更像同步代码，提高了代�
 
 ## 参考资料
 
-[并发模型与事件循环 - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Event_loop)
+[并发模型与事件循环 - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Event_loop){target="_blank"}
 
-[Node.js - The Node.js Event Loop](https://nodejs.org/zh-cn/learn/asynchronous-work/event-loop-timers-and-nexttick)
+[Node.js - The Node.js Event Loop](https://nodejs.org/zh-cn/learn/asynchronous-work/event-loop-timers-and-nexttick){target="_blank"}
 
-[这么通俗易懂的Node事件循环，背就完了](https://juejin.cn/post/7209698674905382973)
+[这么通俗易懂的Node事件循环，背就完了](https://juejin.cn/post/7209698674905382973){target="_blank"}
 
-[Promise - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+[Promise - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise){target="_blank"}

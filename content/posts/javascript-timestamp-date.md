@@ -136,6 +136,8 @@ console.log(timestamp) // 1657202377
 
 ## 参考
 
-[UTC - 协调世界时](https://baike.baidu.com/item/%E5%8D%8F%E8%B0%83%E4%B8%96%E7%95%8C%E6%97%B6/787659)
-[What is the unix Timestamp?](https://unixtime.org/)
-[Date - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date)
+[UTC - 协调世界时](https://baike.baidu.com/item/%E5%8D%8F%E8%B0%83%E4%B8%96%E7%95%8C%E6%97%B6/787659){target="_blank"}
+
+[What is the unix Timestamp?](https://unixtime.org/){target="_blank"}
+
+[Date - JavaScript | MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date){target="_blank"}

@@ -7,10 +7,10 @@ cover: https://hsinyau.com/img/avatar.jpg
 ---
 
 好久以前，我就有重写博客的想法，因为最初的博客缺乏灵活性，而且某些功能的实现只能以一种粗糙的方式完成，这使得它难以维护。
-因此，我决定使用 React 框架 [Next.js](https://nextjs.org) 和原子化(Atomic CSS) CSS 框架 [WindiCSS](https://windicss.org) 来构建一个全新的博客。Next.js 提供了强大的服务器端渲染功能来加速页面加载速度。
+因此，我决定使用 React 框架 [Next.js](https://nextjs.org){target="_blank"} 和原子化(Atomic CSS) CSS 框架 [WindiCSS](https://windicss.org){target="_blank"} 来构建一个全新的博客。Next.js 提供了强大的服务器端渲染功能来加速页面加载速度。
 同时，WindiCSS以其简单易用的风格库而闻名，使我能够轻松地创建美观且用户友好的设计。
 
-在此之前的两年里，我一直在使用 Hexo 社区中流行的 [Hexo](https://hexo.io) + [Butterfly](https://butterfly.js.org) 组合。在此期间，我还编写了两个自定义主题供个人使用，但最终都不满意。
+在此之前的两年里，我一直在使用 Hexo 社区中流行的 [Hexo](https://hexo.io){target="_blank"} + [Butterfly](https://butterfly.js.org){target="_blank"} 组合。在此期间，我还编写了两个自定义主题供个人使用，但最终都不满意。
 
 在选择框架时，我希望找到一个可以实现以下目标的框架:
 
@@ -75,7 +75,7 @@ cover: https://hsinyau.com/img/avatar.jpg
 
 ## 最后
 
-从之前使用过的 [Hexo](https://hexo.io)，[Halo](https://halo.run)，[Typecho](https://typecho.org)，[Wordpress](https://cn.wordpress.org/)，到现在自己亲手从头搭建起来的，期间遇到了许多问题，但总归解决了，在整个过程中我学到了很多，还是挺开心的。
+从之前使用过的 [Hexo](https://hexo.io){target="_blank"}，[Halo](https://halo.run){target="_blank"}，[Typecho](https://typecho.org){target="_blank"}，[Wordpress](https://cn.wordpress.org/){target="_blank"}，到现在自己亲手从头搭建起来的，期间遇到了许多问题，但总归解决了，在整个过程中我学到了很多，还是挺开心的。
 
 虽然这个网站还是存在许多问题，但总归能看了○( ＾皿＾)っHiahiahia…。还有许多BUG，慢慢修吧。
 

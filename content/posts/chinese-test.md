@@ -38,7 +38,7 @@ Q&A：
 
 > 春土學性本新情他頭西應配就，黑羅師人信臺，和社生們語好工質陸電道告大造是環可來起一前得。
 
-来源 [亂數假文產生器 - Chinese Lorem Ipsum](http://www.richyli.com/tool/loremipsum/)
+来源 [亂數假文產生器 - Chinese Lorem Ipsum](http://www.richyli.com/tool/loremipsum/){target="_blank"}
 
 ## 问题的关键究竟为何？
 
@@ -54,4 +54,4 @@ Q&A：
 
 经过上述讨论， 奥普拉·温弗瑞说过一句富有哲理的话，你相信什么，你就成为什么样的人。这句话语虽然很短，但令我浮想联翩。 现在，解决问题的关键究竟为何？的问题，是非常非常重要的。 所以， 我们不得不面对一个非常尴尬的事实，那就是， 总结的来说， 这样看来， 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 经过上述讨论， 而这些并不是完全重要，更加重要的问题是。
 
-来源 [狗屁不通文章生成器](https://suulnnka.github.io/BullshitGenerator/)
+来源 [狗屁不通文章生成器](https://suulnnka.github.io/BullshitGenerator/){target="_blank"}
