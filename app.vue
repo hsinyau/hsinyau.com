@@ -9,7 +9,7 @@ useHead({
     <Body>
       <NuxtLoadingIndicator color="#808080" />
       <AppBackground />
-      <UContainer class="z-50 relative min-h-[100dvh] flex flex-col">
+      <UContainer class="z-50 relative max-w-5xl min-h-[100dvh] flex flex-col">
         <HsinHeader />
         <NuxtPage class="mt-12 grow" />
         <HsinFooter />

@@ -18,7 +18,7 @@ const isShow = computed(() => y.value > 200)
       <UButton
         v-show="isShow"
         color="white"
-        icon="i-ph:arrow-up-duotone"
+        icon="i-ph-arrow-fat-lines-up-duotone"
         size="md"
         variant="solid"
         class="fixed bottom-8 right-8 focus:outline-none outline-none duration-300"

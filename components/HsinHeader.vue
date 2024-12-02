@@ -9,18 +9,13 @@ watch(isDark, () => {
 
 const navs = [
   {
-    label: '主页',
-    to: '/',
-    icon: 'house-line-duotone',
-  },
-  {
     label: '文稿',
     to: '/posts',
     icon: 'book-open-duotone',
   },
   {
-    label: '作品',
-    to: '/portfolio',
+    label: '项目',
+    to: '/projects',
     icon: 'books-duotone',
   },
   {
@@ -29,10 +24,9 @@ const navs = [
     icon: 'backpack-duotone',
   },
   {
-    label: '简历',
-    icon: 'address-book-duotone',
-    to: '/Resume2024.pdf',
-    target: '_blank',
+    label: '友链',
+    icon: 'link-break-duotone',
+    to: '/friends',
   },
 ]
 
@@ -105,7 +99,6 @@ async function toggleTheme(event: MouseEvent) {
       >
         <UButton
           :icon="`i-ph:${nav.icon}`"
-          :target="nav.target ? nav.target : '_self'"
           :to="nav.to"
           :aria-label="nav.label"
           color="white"

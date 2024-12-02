@@ -14,6 +14,8 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxt/content',
     '@vueuse/nuxt',
+    '@nuxthub/core',
+    '@nuxt/image',
   ],
   // Nuxt UI Module Config
   ui: {
@@ -73,6 +75,13 @@ export default defineNuxtConfig({
   //     openAPI: true,
   //   },
   // },
+  // Nuxt Hub
+  hub: {
+    cache: true,
+    kv: true,
+    database: true,
+    analytics: true,
+  },
   // Nuxt Env
   runtimeConfig: {
     wakatime: {
