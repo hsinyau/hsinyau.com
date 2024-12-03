@@ -14,7 +14,11 @@ const { copy, copied } = useClipboard({
 useSeoMeta({
   title: post.value?.title,
   description: post.value?.summary,
-  author: 'Hsinyau',
+  ogTitle: post.value?.title,
+  ogDescription: post.value?.summary,
+  ogImage: '/opengraph.jpg',
+  twitterTitle: post.value?.title,
+  twitterDescription: post.value?.summary,
 })
 
 function getDetails() {

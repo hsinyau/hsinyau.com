@@ -1,9 +1,24 @@
 <script lang="ts" setup>
+const { site, social } = useAppConfig()
+
+useSeoMeta({
+  ogTitle: site.title,
+  ogDescription: site.description,
+  ogImage: '/opengraph.jpg',
+  ogUrl: site.domain,
+  twitterTitle: site.title,
+  twitterDescription: site.description,
+  twitterImage: '/opengraph.jpg',
+  twitterCard: 'summary_large_image',
+  twitterCreator: social.twitter,
+})
+
 useHead({
+  title: site.title,
+  titleTemplate: title => title === site.title ? `${site.title} - ${site.description}` : `${title} - ${site.title}`,
   link: [
     { rel: 'icon', type: 'image/png', href: '/favicon.png' },
-    { rel: 'icon', type: 'image/ico', href: '/favicon.ico' },
-
+    { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.svg' },
   ],
 })
 </script>
