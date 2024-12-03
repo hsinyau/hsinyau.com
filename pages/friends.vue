@@ -11,12 +11,12 @@ const { data: friends } = await useAsyncData('all-friends', () => queryContent('
 </script>
 
 <template>
-  <main>
+  <main class="mt-12 space-y-12">
     <HsinTitle
       :title
       :description
     />
-    <ul class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 place-content-between mt-12">
+    <ul class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 place-content-between">
       <template v-for="friend in friends" :key="friend._id">
         <li v-for="item in friend.body" :key="item.link">
           <NuxtLink

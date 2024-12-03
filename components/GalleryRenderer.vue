@@ -11,8 +11,11 @@ const nuxtImgProps = computed(() => {
 </script>
 
 <template>
-  <NuxtImg
-    v-bind="nuxtImgProps"
-    class="rounded-md"
-  />
+  <div class="overflow-hidden cursor-pointer">
+    <NuxtImg
+      v-bind="nuxtImgProps"
+      loading="lazy"
+      class="rounded-md hover:scale-105 transition-all duration-500"
+    />
+  </div>
 </template>

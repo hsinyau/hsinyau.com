@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxthub/core',
     '@nuxt/image',
+    'nuxt-mapbox',
   ],
   // Nuxt UI Module Config
   ui: {
@@ -81,6 +82,17 @@ export default defineNuxtConfig({
   runtimeConfig: {
     wakatime: {
       apiKey: '',
+    },
+    github: {
+      apiKey: '',
+    },
+    gallery: {
+      apiKey: '',
+    },
+    public: {
+      mapbox: {
+        accessToken: '',
+      },
     },
   },
 })

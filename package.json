@@ -23,6 +23,7 @@
     "drizzle-orm": "^0.36.4",
     "h3-zod": "^0.5.3",
     "nuxt": "^3.14.1592",
+    "nuxt-mapbox": "1.6.1",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
     "remark-parse": "^11.0.0",
@@ -36,6 +37,8 @@
     "@types/node": "^22.10.1",
     "drizzle-kit": "^0.28.1",
     "eslint": "^9.16.0",
+    "mapbox-gl": "^3.8.0",
+    "nuxt-mapbox": "1.6.1",
     "typescript": "^5.7.2",
     "wrangler": "^3.91.0"
   }

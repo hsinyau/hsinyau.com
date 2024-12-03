@@ -11,7 +11,7 @@ const { data: projects } = await useAsyncData('all-projects', () => queryContent
 </script>
 
 <template>
-  <main>
+  <main class="mt-12 space-y-12">
     <HsinTitle
       :title="title"
       :description="description"
@@ -20,7 +20,6 @@ const { data: projects } = await useAsyncData('all-projects', () => queryContent
       v-for="project in projects"
       :key="project.id"
       :title="project.category"
-      class="mt-12"
     >
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <li v-for="item in project.data" :key="item.link" class="border border-neutral-200 shadow-sm rounded-md hover:border-neutral-500 dark:border-neutral-700 dark:hover:border-neutral-500 duration-300">

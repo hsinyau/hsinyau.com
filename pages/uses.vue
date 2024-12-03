@@ -22,26 +22,24 @@ const categorizedItems = categories.map(category => ({
 </script>
 
 <template>
-  <main>
+  <main class="mt-12 space-y-12">
     <HsinTitle
       :title
       :description
     />
-    <div class="mt-12 space-y-12">
-      <HsinDivider
-        v-for="category in categorizedItems"
-        :key="category.id"
-        :title="category.title"
-      >
-        <li v-for="(item, id) in category.items" :key="id">
-          <p class="text-base font-semibold text-black dark:text-white">
-            {{ item.name }}
-          </p>
-          <p class="text-sm">
-            {{ item.description }}
-          </p>
-        </li>
-      </HsinDivider>
-    </div>
+    <HsinDivider
+      v-for="category in categorizedItems"
+      :key="category.id"
+      :title="category.title"
+    >
+      <li v-for="(item, id) in category.items" :key="id">
+        <p class="text-base font-semibold text-black dark:text-white">
+          {{ item.name }}
+        </p>
+        <p class="text-sm">
+          {{ item.description }}
+        </p>
+      </li>
+    </HsinDivider>
   </main>
 </template>

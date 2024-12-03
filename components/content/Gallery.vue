@@ -8,6 +8,14 @@ defineProps({
     required: true,
     default: () => [],
   },
+  layout: {
+    type: String,
+    default: 'rows',
+  },
+  columns: {
+    type: Number,
+    default: 3,
+  },
 })
 </script>
 
@@ -15,7 +23,8 @@ defineProps({
   <div class="article-gallery not-prose">
     <PhotoAlbum
       :photos="photos"
-      layout="rows"
+      :layout="layout"
+      :columns="columns"
       spacing="5"
       :photo-renderer="GalleryRenderer"
     />
