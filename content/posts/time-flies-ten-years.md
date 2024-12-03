@@ -11,7 +11,16 @@ cover: https://bu.dusays.com/2024/08/21/66c4fbe6733be.png
 在短视频平台看到一个视频，标题是 “不知不觉已经是十年前了，这些歌曲还在你的歌单吗？”。
 怀着好奇点进去，看着视频里那些熟悉又陌生的音乐和画面，心中不禁涌起万千感慨。原来那些事已经是十年前发生的了，时间，就这样在不经意间从指尖滑落，留下了满地的回忆与感慨。
 
-<Meting src="https://music.163.com/#/song?id=5238992" />
+<iframe
+  style="border-radius:12px"
+  src="https://open.spotify.com/embed/track/0MKQMuVOTbLnN6sMuie5lC?utm_source=generator"
+  width="100%"
+  height="152"
+  frameBorder="0"
+  allowfullscreen=""
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+  loading="lazy"
+/>
 
 “花有重开日，人无再少年。” 常常感叹时光飞逝，这不，一不留神，十年光阴就如白驹过隙般匆匆而过。
 日子一天天过，平淡又充实，可猛然回头才发现，原来十年就这样弹指一挥间。

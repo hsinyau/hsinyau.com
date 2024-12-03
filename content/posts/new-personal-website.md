@@ -30,37 +30,10 @@ cover: https://hsinyau.com/img/avatar.jpg
 
 本站灵感与部分代码参考或直接来自以下网站
 
-<BookMark
-  title="Diu"
-  src="https://ddiu.io/"
-  cover="https://ddiu.io/avatar.png"
-  icon="https://ddiu.io/favicon.ico"
-  desc="Diu (ddiu8081), Developer."
-/>
-
-<BookMark
-  title="异次元の机智君"
-  src="https://www.anzifan.com/"
-  cover="http://static.anzifan.com/img/new_blog_new_light.jpg"
-  icon="https://www.anzifan.com/favicon-32x32.png"
-  desc="💻 🎨 🎮 ⚡️"
-/>
-
-<BookMark
-  title="张洪Heo"
-  src="https://blog.zhheo.com/"
-  cover="https://bu.dusays.com/2024/07/02/6683983ca6faa.webp"
-  icon="https://bu.dusays.com/2024/07/02/66839907885b7.webp"
-  desc="分享设计与科技生活"
-/>
-
-<BookMark
-  title="静かな森"
-  src="https://innei.in/"
-  cover="https://innei.ren/api/v2/objects/avatar/d5obusvl8ihmamw5qu.png"
-  icon="https://innei.in/innei.svg"
-  desc="致虚极，守静笃。"
-/>
+- [Diu - Diu (ddiu8081), Developer.](https://ddiu.io/)
+- [异次元の机智君 - 💻 🎨 🎮 ⚡️](https://www.anzifan.com/)
+- [张洪Heo - 分享设计与科技生活](https://blog.zhheo.com/)
+- [静かな森 - 致虚极，守静笃。](https://innei.in/)
 
 ## TODO
 

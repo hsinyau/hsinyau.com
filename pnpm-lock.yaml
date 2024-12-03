@@ -48,10 +48,13 @@ importers:
         specifier: ^11.1.1
         version: 11.1.1
       vue:
-        specifier: latest
+        specifier: ^3.5.13
         version: 3.5.13(typescript@5.7.2)
+      vue-photo-album:
+        specifier: ^1.2.4
+        version: 1.2.4(vue@3.5.13(typescript@5.7.2))
       vue-router:
-        specifier: latest
+        specifier: ^4.5.0
         version: 4.5.0(vue@3.5.13(typescript@5.7.2))
     devDependencies:
       '@antfu/eslint-config':
@@ -5577,6 +5580,12 @@ packages:
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
+
+  vue-photo-album@1.2.4:
+    resolution: {integrity: sha512-JJGzAeJD0KgoLnGpjURncK9+S1gr5QvNn7bCM6yXF4UD8j5SvImCFPoflfeRd0G0VVjV9XHMuCinNRGZldHngg==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      vue: ^3.3.0
 
   vue-router@4.5.0:
     resolution: {integrity: sha512-HDuk+PuH5monfNuY+ct49mNmkCRK4xJAV9Ts4z9UFc4rzdDnxQLyCMGGc8pKhZhHTVzfanpNwB/lwqevcBwI4w==}
@@ -12189,6 +12198,10 @@ snapshots:
       semver: 7.6.3
     transitivePeerDependencies:
       - supports-color
+
+  vue-photo-album@1.2.4(vue@3.5.13(typescript@5.7.2)):
+    dependencies:
+      vue: 3.5.13(typescript@5.7.2)
 
   vue-router@4.5.0(vue@3.5.13(typescript@5.7.2)):
     dependencies:

@@ -13,6 +13,9 @@ defineProps({
   position: {
     type: String as PropType<'top' | 'right' | 'bottom' | 'left'>,
   },
+  href: {
+    type: String,
+  },
 })
 </script>
 
@@ -22,7 +25,10 @@ defineProps({
       :popper="{ placement: position }"
       :text="hover"
     >
-      <strong class="leading-3 cursor-help">{{ text }}</strong>
+      <NuxtLink v-if="href" :href="href" target="_black">
+        <strong class="leading-3 cursor-point">{{ text }}</strong>
+      </NuxtLink>
+      <strong v-else class="leading-3 cursor-help">{{ text }}</strong>
     </UTooltip>
   </ClientOnly>
 </template>

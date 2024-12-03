@@ -45,5 +45,7 @@ URI、URL和URN的关系:
 我用常见的例子来解释它们的区别:
 
 - URL例子: https://hsinyau.com/search?keyword=查询、ftp://ftp.hsinyau.com/pub
+
 - URI例子: mailto:lihua@example.com、file:///etc/passwd
+
 - URN例子: urn:isbn:9787200069716、urn:doi:10.1109/ICCV.2017.322
