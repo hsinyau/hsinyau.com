@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { site, social } = useAppConfig()
+const { site } = useAppConfig()
 
 useSeoMeta({
   ogTitle: site.title,
@@ -10,7 +10,7 @@ useSeoMeta({
   twitterDescription: site.description,
   twitterImage: '/opengraph.jpg',
   twitterCard: 'summary_large_image',
-  twitterCreator: social.twitter,
+  twitterCreator: site.twitter,
 })
 
 useHead({

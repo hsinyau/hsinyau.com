@@ -3,32 +3,10 @@ const colorMode = useColorMode()
 
 const isDark = ref(colorMode.value === 'dark')
 
+const { menu } = useAppConfig()
 watch(isDark, () => {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 })
-
-const navs = [
-  {
-    label: '文稿',
-    to: '/posts',
-    icon: 'book-open-duotone',
-  },
-  {
-    label: '项目',
-    to: '/projects',
-    icon: 'books-duotone',
-  },
-  {
-    label: '装备',
-    to: '/uses',
-    icon: 'backpack-duotone',
-  },
-  {
-    label: '友链',
-    icon: 'link-break-duotone',
-    to: '/friends',
-  },
-]
 
 async function toggleTheme(event: MouseEvent) {
   // 检查浏览器是否支持 View Transitions API
@@ -92,7 +70,7 @@ defineShortcuts({
     </NuxtLink>
     <nav class="flex gap-2 items-center justify-end flex-wrap">
       <UTooltip
-        v-for="nav in navs"
+        v-for="nav in menu"
         :key="nav.label"
         :text="nav.label"
       >

@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import type { Photos } from '~/types/gallery'
 import type { Moment, Moments } from '~/types/moments'
-import { consola } from 'consola'
-import { FlatESLint } from 'eslint/use-at-your-own-risk'
 
 const config = useRuntimeConfig()
 
@@ -46,12 +44,8 @@ const displayData = computed(() => {
     case 2:
       return geo.value?.features || []
     default:
-      return []
+      return moments.value?.moments || []
   }
-})
-
-watch(displayData, () => {
-  consola.log(displayData)
 })
 
 const zoom = ref(4)

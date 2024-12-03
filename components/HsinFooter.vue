@@ -1,41 +1,5 @@
 <script setup lang="ts">
-const socials = [
-  {
-    icon: 'ph:x-logo-duotone',
-    label: 'Twitter',
-    link: 'https://twitter.com/yau_1204',
-  },
-  {
-    icon: 'ph:github-logo-duotone',
-    label: 'GitHub',
-    link: 'https://github.com/hsinyau',
-  },
-  {
-    icon: 'ph:instagram-logo-duotone',
-    label: 'Instagram',
-    link: 'https://www.instagram.com/hsinyau_zz',
-  },
-  {
-    icon: 'ph:telegram-logo-duotone',
-    label: 'Telegram',
-    link: 'https://t.me/hsinyau_channel',
-  },
-  {
-    icon: 'ph:threads-logo-duotone',
-    label: 'Threads',
-    link: 'https://www.threads.net/@hsinyau_zz',
-  },
-  {
-    icon: 'tabler:brand-netease-music',
-    label: '网易云',
-    link: 'https://music.163.com/#/user/home?id=1352085491',
-  },
-  {
-    icon: 'tabler:brand-bilibili',
-    label: '哔哩哔哩',
-    link: 'https://space.bilibili.com/221029937',
-  },
-]
+const { socials } = useAppConfig()
 </script>
 
 <template>
