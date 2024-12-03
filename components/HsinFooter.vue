@@ -16,7 +16,7 @@ const { socials } = useAppConfig()
         <h1>找到我</h1>
         <div class="flex gap-2 flex-wrap">
           <HomeLink
-            v-for="social in socials.sort((a, b) => a.label.localeCompare(b.label))"
+            v-for="social in socials"
             :key="social.label"
             :href="social.link"
             :icon="`i-${social.icon}`"
