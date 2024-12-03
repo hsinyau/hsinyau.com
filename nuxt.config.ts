@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     '@nuxthub/core',
     '@nuxt/image',
     'nuxt-mapbox',
+    '@nuxthq/studio',
   ],
   // Nuxt UI Module Config
   ui: {
