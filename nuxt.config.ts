@@ -78,6 +78,12 @@ export default defineNuxtConfig({
       },
     },
   },
+  // Nuxt Nitro Config
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml'],
+    },
+  },
   // Nuxt Hub
   hub: {
     cache: true,

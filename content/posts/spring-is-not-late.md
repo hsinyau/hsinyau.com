@@ -37,7 +37,7 @@ cover: https://bu.dusays.com/2024/08/14/66bcc920bdc71.webp
 
 来早了没出太阳，看了天气预报多云转晴，也不直到啥时候晴。天空灰蒙蒙的，西湖边的杨柳也才刚刚发芽。拍出来的照片都不太满意，随便拍了几张，证明我来过。
 
-::gallery{:photos='[{"alt":"雷峰塔","src":"https://bu.dusays.com/2024/06/28/667e5021b5e3a.webp","width":2160,"height":1215},{"alt":"见湖","src":"https://bu.dusays.com/2024/06/28/667e502650969.webp","width":2160,"height":1215},{"alt":"鸭鸭","src":"https://bu.dusays.com/2024/06/28/667e5023d4924.webp","width":2160,"height":1215},{"alt":"疏影横斜","src":"https://bu.dusays.com/2024/06/28/667e502891f07.webp","width":2160,"height":1215}]'}
+::gallery{:photos='[{"alt":"雷峰塔","src":"https://bu.dusays.com/2024/06/28/667e5021b5e3a.webp","width":2160,"height":1215},{"alt":"见湖","src":"https://bu.dusays.com/2024/06/28/667e502650969.webp","width":2160,"height":1215},{"alt":"鸭鸭","src":"https://bu.dusays.com/2024/06/28/667e5023d4924.webp","width":2160,"height":1215},{"alt":"疏影横斜","src":"https://bu.dusays.com/2024/06/28/667e502891f07.webp","width":2160,"height":1215}]' :layout='columns'}
 ::
 
 真给我面子，天晴出太阳了~
@@ -47,7 +47,7 @@ cover: https://bu.dusays.com/2024/08/14/66bcc920bdc71.webp
 
 来都来了总要坐一次 1314 路公交吧，去灵隐寺看看~
 
-::gallery{:photos='[{"alt":"1314路公交","src":"https://bu.dusays.com/2024/06/28/667e50246f2d8.webp","width":1707,"height":960},{"alt":"西湖灵隐寺","src":"https://bu.dusays.com/2024/06/28/667e5021b805d.webp","width":1440,"height":1799}]'}
+::gallery{:photos='[{"alt":"1314路公交","src":"https://bu.dusays.com/2024/06/28/667e50246f2d8.webp","width":1707,"height":960},{"alt":"西湖灵隐寺","src":"https://bu.dusays.com/2024/06/28/667e5021b805d.webp","width":1440,"height":1799}]' :layout='columns'}
 ::
 
 这次一个人游玩多少少了些乐趣，逛的超级快。下次来杭州好想试试西湖醋鱼到底有多难吃 —— 来自一个不知死活的外地犟种。
@@ -68,7 +68,7 @@ cover: https://bu.dusays.com/2024/08/14/66bcc920bdc71.webp
 
 来都来了诸暨，怎么可以不去西施故里看看，反正时间还早。
 
-::gallery{:photos='[{"alt":"西施殿","src":"https://bu.dusays.com/2024/06/28/667e5026c6c07.webp","width":1156,"height":867},{"alt":"角落","src":"https://bu.dusays.com/2024/06/28/667e5026bf08e.webp","width":2160,"height":1251},{"alt":"窗","src":"https://bu.dusays.com/2024/06/28/667e50261dbf0.webp","width":1101,"height":1468},{"alt":"耕读传家","src":"https://bu.dusays.com/2024/06/28/667e5026b2a36.webp","width":1280,"height":1617},{"alt":"墙","src":"https://bu.dusays.com/2024/06/28/667e50260f500.webp","width":1440,"height":810},{"alt":"如梦令","src":"https://bu.dusays.com/2024/06/28/667e502602c79.webp","width":1440,"height":810},{"alt":"光影","src":"https://bu.dusays.com/2024/06/28/667e50263475f.webp","width":1920,"height":1080}]'}
+::gallery{:photos='[{"alt":"西施殿","src":"https://bu.dusays.com/2024/06/28/667e5026c6c07.webp","width":1156,"height":867},{"alt":"角落","src":"https://bu.dusays.com/2024/06/28/667e5026bf08e.webp","width":2160,"height":1251},{"alt":"窗","src":"https://bu.dusays.com/2024/06/28/667e50261dbf0.webp","width":1101,"height":1468},{"alt":"耕读传家","src":"https://bu.dusays.com/2024/06/28/667e5026b2a36.webp","width":1280,"height":1617},{"alt":"墙","src":"https://bu.dusays.com/2024/06/28/667e50260f500.webp","width":1440,"height":810},{"alt":"如梦令","src":"https://bu.dusays.com/2024/06/28/667e502602c79.webp","width":1440,"height":810},{"alt":"光影","src":"https://bu.dusays.com/2024/06/28/667e50263475f.webp","width":1920,"height":1080}]' :layout='columns'}
 ::
 
 环境确实挺好的，一进去就感觉很幽静。大概是木质结构的原因，院子里面有淡淡的霉味，房子的老旧感扑面而来，透露着一丝破败和萧瑟，这大概也是游人稀少的原因，却也添了一分安逸。
@@ -102,7 +102,7 @@ cover: https://bu.dusays.com/2024/08/14/66bcc920bdc71.webp
 
 也许是举办地点的原因，古风装扮的COS很多(古风爱好者狂喜😁)。
 
-::gallery{:photos='[{"alt":"acg1","src":"https://bu.dusays.com/2024/06/28/667e501d28f0b.webp","width":1067,"height":1600},{"alt":"acg2","src":"https://bu.dusays.com/2024/06/28/667e501c695ae.webp","width":1067,"height":1600},{"alt":"acg3","src":"https://bu.dusays.com/2024/06/28/667e6fa5f12c4.webp","width":1600,"height":1067},{"alt":"acg4","src":"https://bu.dusays.com/2024/06/28/667e501c6af9f.webp","width":1067,"height":1600},{"alt":"acg5","src":"https://bu.dusays.com/2024/06/28/667e501cdb4c1.webp","width":1600,"height":1067},{"alt":"acg6","src":"https://bu.dusays.com/2024/06/28/667e501d7707f.webp","width":1600,"height":1067},{"alt":"acg7","src":"https://bu.dusays.com/2024/06/28/667e501d43a54.webp","width":1600,"height":1067},{"alt":"acg8","src":"https://bu.dusays.com/2024/06/28/667e501d396f5.webp","width":1067,"height":1600},{"alt":"acg9","src":"https://bu.dusays.com/2024/06/28/667e501c6d36b.webp","width":1067,"height":1600},{"alt":"acg10","src":"https://bu.dusays.com/2024/06/28/667e501c3fc50.webp","width":1067,"height":1600},{"alt":"acg11","src":"https://bu.dusays.com/2024/06/28/667e501d94677.webp","width":1067,"height":1600},{"alt":"acg12","src":"https://bu.dusays.com/2024/06/28/667e501d9ee74.webp","width":1600,"height":1067},{"alt":"acg13","src":"https://bu.dusays.com/2024/06/28/667e501d85a90.webp","width":1600,"height":1067}]'}
+::gallery{:photos='[{"alt":"acg1","src":"https://bu.dusays.com/2024/06/28/667e501d28f0b.webp","width":1067,"height":1600},{"alt":"acg2","src":"https://bu.dusays.com/2024/06/28/667e501c695ae.webp","width":1067,"height":1600},{"alt":"acg3","src":"https://bu.dusays.com/2024/06/28/667e6fa5f12c4.webp","width":1600,"height":1067},{"alt":"acg4","src":"https://bu.dusays.com/2024/06/28/667e501c6af9f.webp","width":1067,"height":1600},{"alt":"acg5","src":"https://bu.dusays.com/2024/06/28/667e501cdb4c1.webp","width":1600,"height":1067},{"alt":"acg6","src":"https://bu.dusays.com/2024/06/28/667e501d7707f.webp","width":1600,"height":1067},{"alt":"acg7","src":"https://bu.dusays.com/2024/06/28/667e501d43a54.webp","width":1600,"height":1067},{"alt":"acg8","src":"https://bu.dusays.com/2024/06/28/667e501d396f5.webp","width":1067,"height":1600},{"alt":"acg9","src":"https://bu.dusays.com/2024/06/28/667e501c6d36b.webp","width":1067,"height":1600},{"alt":"acg10","src":"https://bu.dusays.com/2024/06/28/667e501c3fc50.webp","width":1067,"height":1600},{"alt":"acg11","src":"https://bu.dusays.com/2024/06/28/667e501d94677.webp","width":1067,"height":1600},{"alt":"acg12","src":"https://bu.dusays.com/2024/06/28/667e501d9ee74.webp","width":1600,"height":1067},{"alt":"acg13","src":"https://bu.dusays.com/2024/06/28/667e501d85a90.webp","width":1600,"height":1067}]' :layout='columns'}
 ::
 
 原本还和群友和 Coser 拍了合照的，这里就不放了。
@@ -136,7 +136,7 @@ cover: https://bu.dusays.com/2024/08/14/66bcc920bdc71.webp
 
 雨天的拙政园，人比我想象中的要少，整体感受还是很不错的。雨天的园林自带一层滤镜，更加有了江南烟雨的感觉。可惜我不会拍...
 
-::gallery{:photos='[{"alt":"拙政园","src":"https://bu.dusays.com/2024/06/28/667e5028d4ba9.webp","width":1920,"height":1080},{"alt":"拙政园","src":"https://bu.dusays.com/2024/06/28/667e5028983c8.webp","width":1920,"height":1080},{"alt":"拙政园","src":"https://bu.dusays.com/2024/06/28/667e5022a3c40.webp","width":1920,"height":1080}]'}
+::gallery{:photos='[{"alt":"拙政园","src":"https://bu.dusays.com/2024/06/28/667e5028d4ba9.webp","width":1920,"height":1080},{"alt":"拙政园","src":"https://bu.dusays.com/2024/06/28/667e5028983c8.webp","width":1920,"height":1080},{"alt":"拙政园","src":"https://bu.dusays.com/2024/06/28/667e5022a3c40.webp","width":1920,"height":1080}]' :layout='columns'}
 ::
 
 原本想去苏州博物馆看看的，没预约啊，啊那没事了，下次来了再看吧~
@@ -147,7 +147,7 @@ cover: https://bu.dusays.com/2024/08/14/66bcc920bdc71.webp
 
 网上对平江路的评价褒贬不一，但我还是感觉不错的，也许是因为苏州一直是我想来的城市。平江路真是适合拍照，一路上遇到好多穿着汉服、马面裙的小哥哥小姐姐。
 
-::gallery{:photos='[{"alt":"平江路","src":"https://bu.dusays.com/2024/06/28/667e50242f3b0.webp","width":1280,"height":960},{"alt":"平江路","src":"https://bu.dusays.com/2024/06/28/667e501ee4820.webp","width":1280,"height":960},{"alt":"平江路","src":"https://bu.dusays.com/2024/06/28/667e5024c2bdc.webp","width":1280,"height":960},{"alt":"平江路","src":"https://bu.dusays.com/2024/06/28/667e5026bca71.webp","width":1101,"height":1468},{"alt":"平江路","src":"https://bu.dusays.com/2024/06/28/667e5020683f5.webp","width":1245,"height":700},{"alt":"平江路","src":"https://bu.dusays.com/2024/06/28/667e50214ac4e.webp","width":1440,"height":1080}]'}
+::gallery{:photos='[{"alt":"平江路","src":"https://bu.dusays.com/2024/06/28/667e50242f3b0.webp","width":1280,"height":960},{"alt":"平江路","src":"https://bu.dusays.com/2024/06/28/667e501ee4820.webp","width":1280,"height":960},{"alt":"平江路","src":"https://bu.dusays.com/2024/06/28/667e5024c2bdc.webp","width":1280,"height":960},{"alt":"平江路","src":"https://bu.dusays.com/2024/06/28/667e5026bca71.webp","width":1101,"height":1468},{"alt":"平江路","src":"https://bu.dusays.com/2024/06/28/667e5020683f5.webp","width":1245,"height":700},{"alt":"平江路","src":"https://bu.dusays.com/2024/06/28/667e50214ac4e.webp","width":1440,"height":1080}]' :layout='columns'}
 ::
 
 苏州作为热门旅游城市，游客真的超级多,如果想要更好的游玩体验，建议错开节假日高峰期。但抛开人多这一点不说，风景是真不错。
@@ -166,7 +166,7 @@ cover: https://bu.dusays.com/2024/08/14/66bcc920bdc71.webp
 
 最近几天东奔西跑的好累，一觉睡到 11 点，洗漱了一下点了个外卖(问就是不想动)，打算吃完再去逛到晚上就开始返程了。机票买在了杭州萧山机场，因为便宜了几百块捏。
 
-::gallery{:photos='[{"alt":"西园寺","src":"https://bu.dusays.com/2024/06/28/667e502084f15.webp","width":4090,"height":3072},{"alt":"西园寺","src":"https://bu.dusays.com/2024/06/28/667e502200003.webp","width":2448,"height":3264},{"alt":"西园寺","src":"https://bu.dusays.com/2024/06/28/667e501fa912c.webp","width":3072,"height":4096},{"alt":"西园寺","src":"https://bu.dusays.com/2024/06/28/667e5026bf5c0.webp","width":4096,"height":3072},{"alt":"西园寺","src":"https://bu.dusays.com/2024/06/28/667e502c0d223.webp","width":3072,"height":4096},{"alt":"西园寺","src":"https://bu.dusays.com/2024/06/28/667e502a424ce.webp","width":3072,"height":4096},{"alt":"西园寺","src":"https://bu.dusays.com/2024/06/28/667e50259ba6e.webp","width":3072,"height":4096},{"alt":"西园寺","src":"https://bu.dusays.com/2024/06/28/667e50272baee.webp","width":3072,"height":4096}]'}
+::gallery{:photos='[{"alt":"西园寺","src":"https://bu.dusays.com/2024/06/28/667e502084f15.webp","width":4090,"height":3072},{"alt":"西园寺","src":"https://bu.dusays.com/2024/06/28/667e502200003.webp","width":2448,"height":3264},{"alt":"西园寺","src":"https://bu.dusays.com/2024/06/28/667e501fa912c.webp","width":3072,"height":4096},{"alt":"西园寺","src":"https://bu.dusays.com/2024/06/28/667e5026bf5c0.webp","width":4096,"height":3072},{"alt":"西园寺","src":"https://bu.dusays.com/2024/06/28/667e502c0d223.webp","width":3072,"height":4096},{"alt":"西园寺","src":"https://bu.dusays.com/2024/06/28/667e502a424ce.webp","width":3072,"height":4096},{"alt":"西园寺","src":"https://bu.dusays.com/2024/06/28/667e50259ba6e.webp","width":3072,"height":4096}]'}
 ::
 
 这个小众的寺庙真的值得一来，感觉是寺庙和园林的结合体。即有寺庙的清净，又有苏州园林的特色。
@@ -179,7 +179,7 @@ cover: https://bu.dusays.com/2024/08/14/66bcc920bdc71.webp
 
 本来想着周一来可以稍微错峰一下的，没想到人还是很多。不过来都来了，还是要去看看的，七里山塘美是真的美。一个人来的，想着随便逛逛，就没买游船票。
 
-::gallery{:photos='[{"alt":"山塘街","src":"https://bu.dusays.com/2024/06/28/667e5029563c5.webp","width":1189,"height":1548},{"alt":"山塘街","src":"https://bu.dusays.com/2024/06/28/667e5028a7a8e.webp","width":1707,"height":960},{"alt":"山塘街","src":"https://bu.dusays.com/2024/06/28/667e502a0bf7d.webp","width":1707,"height":960},{"alt":"山塘街","src":"https://bu.dusays.com/2024/06/28/667e502297be5.webp","width":1440,"height":810}]'}
+::gallery{:photos='[{"alt":"山塘街","src":"https://bu.dusays.com/2024/06/28/667e5029563c5.webp","width":1189,"height":1548},{"alt":"山塘街","src":"https://bu.dusays.com/2024/06/28/667e5028a7a8e.webp","width":1707,"height":960},{"alt":"山塘街","src":"https://bu.dusays.com/2024/06/28/667e502a0bf7d.webp","width":1707,"height":960},{"alt":"山塘街","src":"https://bu.dusays.com/2024/06/28/667e502297be5.webp","width":1440,"height":810}]' :layout='columns'}
 ::
 
 夜景是真的好看，人也是真的多，全程是被推着走的那种，都是为了多看一眼江南水乡哎。
