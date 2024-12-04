@@ -5,9 +5,9 @@ export default defineCachedEventHandler(async (event) => {
 
   const data = await $fetch(`https://api.github.com/repos/hsinyau/moments/issues`, {
     headers: {
-      Authorization: `Bearer ${github.apiKey ?? ''}`,
-      Accept: 'application/vnd.github.v3+json',
-      UserAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko), hsinyau',
+      'Authorization': `Bearer ${github.apiKey ?? ''}`,
+      'Accept': 'application/vnd.github.v3+json',
+      'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko), hsinyau',
     },
   })
 
