@@ -16,6 +16,10 @@ defineProps({
   href: {
     type: String,
   },
+  target: {
+    type: String,
+    default: '_blank',
+  },
 })
 </script>
 
@@ -25,7 +29,7 @@ defineProps({
       :popper="{ placement: position }"
       :text="hover"
     >
-      <NuxtLink v-if="href" :href="href" target="_black">
+      <NuxtLink v-if="href" :href="href" :target="target" class="no-underline">
         <strong class="leading-3 cursor-point">{{ text }}</strong>
       </NuxtLink>
       <strong v-else class="leading-3 cursor-help">{{ text }}</strong>
