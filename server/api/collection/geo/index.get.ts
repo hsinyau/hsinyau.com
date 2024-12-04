@@ -3,6 +3,6 @@ export default defineCachedEventHandler(async () => {
 
   return data
 }, {
-  maxAge: 24 * 60 * 60,
+  maxAge: 24 * 60 * 60 * 30,
   name: 'geo',
 })
