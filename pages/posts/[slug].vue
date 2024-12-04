@@ -21,16 +21,6 @@ useSeoMeta({
   twitterDescription: post.value?.summary,
 })
 
-function getDetails() {
-  const likes = postDB.value?.likes ?? 0
-  const views = postDB.value?.views ?? 0
-
-  return {
-    likes: `${likes} 点赞`,
-    views: `${views} 查看`,
-  }
-}
-
 const likeCookie = useCookie<boolean>(`post:like:${route.params.slug}`, {
   maxAge: 7200,
 })
@@ -45,7 +35,7 @@ async function handleLike() {
 </script>
 
 <template>
-  <main v-if="post && postDB">
+  <main v-if="post">
     <div class="flex">
       <NuxtLink
         class="flex items-center gap-2 mb-8 group text-sm hover:text-black dark:hover:text-white duration-300"
@@ -59,27 +49,29 @@ async function handleLike() {
         返回上页
       </NuxtLink>
     </div>
-    <div class="border-l-2 pl-2 border-gray-300 dark:border-gray-700 rounded-sm flex gap-1 items-center">
-      <UIcon name="i-ph-heart-duotone" size="16" />
-      <p>{{ getDetails().likes }}</p>·
-      <UIcon name="i-ph-eye-duotone" size="16" />
-      <p>{{ getDetails().views }}</p>
-    </div>
     <div class="mt-2">
       <div class="flex items-end gap-4 flex-wrap">
-        <h1
-          class="font-bold text-3xl text-black dark:text-white"
-        >
+        <h1 class="font-bold text-3xl text-black dark:text-white">
           {{ post.title }}
         </h1>
-        <div
-          class="text-sm text-neutral-500 duration-300 flex items-center gap-1"
-        >
-          <UIcon name="ph:calendar-duotone" size="16" />
-          <p>{{ useDateFormat(post.created, 'YYYY-MM-DD').value }} </p>·
-          <UIcon name="ph:timer-duotone" size="16" />
-          <p>10 分钟</p>
-        </div>
+      </div>
+      <div class="border-l-2 pl-2 mt-2 border-gray-300 dark:border-gray-700 rounded-sm flex gap-1 items-center">
+        <UIcon name="i-ph-heart-duotone" size="16" />
+        <p class="text-sm">
+          {{ `${postDB?.likes ?? 0} 赞` }}
+        </p>·
+        <UIcon name="i-ph-eye-duotone" size="16" />
+        <p class="text-sm">
+          {{ `${postDB?.views ?? 0} 浏览` }}
+        </p>·
+        <UIcon name="ph:calendar-duotone" size="16" />
+        <p class="text-sm">
+          {{ useTimeAgo(post.created, options) }}
+        </p>·
+        <UIcon name="ph:timer-duotone" size="16" />
+        <p class="text-sm">
+          {{ Math.round(post.readingTime.words / 400) }}分钟阅读
+        </p>
       </div>
       <div class="mt-4 text-base">
         AI 生成的摘要：{{ post.summary }}
@@ -106,7 +98,7 @@ async function handleLike() {
         </p>
         <div class="flex gap-4 items-center flex-wrap">
           <UButton
-            :label="`${postDB?.likes} 赞`"
+            :label="`${postDB?.likes || '0'} 赞`"
             :color="likeCookie ? 'red' : 'white'"
             icon="i-ph-heart-duotone"
             size="lg"

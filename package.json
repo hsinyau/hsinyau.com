@@ -27,6 +27,7 @@
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
     "remark-parse": "^11.0.0",
+    "remark-reading-time": "^2.0.1",
     "remark-rehype": "^11.1.1",
     "vue": "^3.5.13",
     "vue-photo-album": "^1.2.4",

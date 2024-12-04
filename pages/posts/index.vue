@@ -34,9 +34,11 @@ const { data: posts } = await useAsyncData('all-posts', () => queryContent('/pos
             </h1>
             <div class="text-sm text-neutral-500 duration-300 flex items-center gap-1">
               <UIcon name="ph:calendar-duotone" size="16" />
-              <p>{{ useDateFormat(post.created, 'YYYY-MM-DD').value }} </p>·
+              <p>
+                {{ useTimeAgo(post.created, options) }}
+              </p>·
               <UIcon name="ph:timer-duotone" size="16" />
-              <p>{{ post.readingTime }}12 分钟</p>·
+              <p>{{ Math.round(post.readingTime.words / 400) }}分钟阅读</p>·
               <UIcon name="ph:tag-duotone" size="16" />
               <p>{{ post.tag }}</p>
             </div>
