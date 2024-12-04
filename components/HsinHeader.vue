@@ -81,6 +81,13 @@ defineShortcuts({
           color="white"
           size="sm"
           variant="solid"
+          :ui="{
+            color: {
+              white: {
+                solid: 'dark:bg-zinc-500/20',
+              },
+            },
+          }"
         />
       </UTooltip>
       <ClientOnly>

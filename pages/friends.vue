@@ -29,6 +29,7 @@ const { data: friends } = await useAsyncData('all-friends', () => queryContent('
                 :src="item.avatar"
                 alt="Avatar"
                 size="2xl"
+                placeholder
               />
             </div>
             <div class="space-y-3">

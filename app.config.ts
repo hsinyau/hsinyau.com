@@ -2,7 +2,10 @@ export default defineAppConfig({
   site: {
     title: '疏影横斜',
     description: '欲笺心事，独语斜阑。',
-    author: 'Hsinyau',
+    author: {
+      name: 'Hsinyau',
+      avatar: 'https://cdn.jsdelivr.net/gh/hsinyau/static@master/avatar.jpg',
+    },
     domain: 'https://hsinyau.com',
     twitter: '@yau1204',
   },
@@ -64,4 +67,24 @@ export default defineAppConfig({
     icon: 'butterfly-duotone',
     to: '/collection',
   }],
+  ui: {
+    tabs: {
+      list: {
+        background: 'bg-zinc-600/5 dark:bg-zinc-500/20',
+        marker: {
+          background: 'bg-white dark:bg-neutral-900',
+        },
+      },
+    },
+    button: {
+      color: {
+        white: {
+          solid: 'dark:bg-zinc-500/20',
+        },
+      },
+    },
+    tooltip: {
+      background: 'bg-zinc-600/5 dark:bg-zinc-500/20',
+    },
+  },
 })

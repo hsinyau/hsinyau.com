@@ -27,12 +27,13 @@ export default defineNuxtConfig({
       'zinc',
       'red',
       'orange',
-      'amber',
+      'rose',
       'green',
       'emerald',
       'sky',
       'blue',
       'purple',
+      'neutral',
     ],
   },
   // Nuxt Color Mode Config
@@ -64,7 +65,12 @@ export default defineNuxtConfig({
       },
     },
     markdown: {
-      remarkPlugins: ['remark-math'],
+      remarkPlugins: {
+        'remark-math': {},
+        'remark-reading-time': {
+          wordsPerMinute: 400,
+        },
+      },
       rehypePlugins: {
         'rehype-katex': {
           output: 'mathml',
