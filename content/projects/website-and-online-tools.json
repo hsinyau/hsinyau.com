@@ -7,6 +7,13 @@
       "description": "一个极简主义的个人网站，采用了 Nuxt.js 框架和 Tailwindcss 原子化 CSS 库。",
       "color": "pink",
       "link": "https://hsinyau.com",
+      "icon": "i-ph:castle-turret-duotone"
+    },
+    {
+      "title": "Next.js 写的老版本博客",
+      "description": "一个抄了很多网站风格的个人网站，采用了 Next.js 14、UnoCSS、Drizzle ORM 的组合。",
+      "color": "pink",
+      "link": "https://latemist.vercel.app",
       "icon": "i-ph:flower-duotone"
     },
     {
