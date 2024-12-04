@@ -14,22 +14,35 @@ useSeoMeta({
 const tags = [
   {
     label: '动态',
+    value: 'moments',
     icon: 'i-ph:confetti-duotone',
     color: 'black',
   },
   {
     label: '画廊',
+    value: 'gallery',
     icon: 'i-ph:camera-duotone',
     color: 'black',
   },
   {
     label: '足迹',
+    value: 'travel',
     icon: 'i-ph:footprints-duotone',
     color: 'black',
   },
 ]
 
+const route = useRoute()
 const activeTab = ref(0)
+
+// 根据URL参数设置初始tab
+const tabParam = route.query.tab as string
+if (tabParam) {
+  const tabIndex = tags.findIndex(tag => tag.value === tabParam)
+  if (tabIndex !== -1) {
+    activeTab.value = tabIndex
+  }
+}
 
 const { data: moments } = await useFetch<Moments>('/api/collection/moments')
 const { data: photos } = await useFetch<Photos>('/api/collection/photos')
