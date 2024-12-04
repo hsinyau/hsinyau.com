@@ -61,4 +61,36 @@ body {
   opacity: 0;
   transform: translateY(5px);
 }
+
+* {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-width: 6px;
+  scrollbar-color: transparent;
+}
+
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.5);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.7);
+  opacity: 1;
+  display: block !important
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: rgba(128, 128, 128, 0.9);
+  border-radius: 3px;
+}
 </style>

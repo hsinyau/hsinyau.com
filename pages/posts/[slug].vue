@@ -126,6 +126,11 @@ async function handleLike() {
         </div>
       </div>
     </article>
+    <UDivider
+      class="my-16"
+      icon="i-ph:messenger-logo-duotone"
+    />
+    <HsinComment />
   </main>
 </template>
 
