@@ -81,7 +81,7 @@ export default defineNuxtConfig({
   // Nuxt Nitro Config
   nitro: {
     prerender: {
-      routes: ['/sitemap.xml'],
+      routes: ['/sitemap.xml', '/rss.xml'],
     },
   },
   // Nuxt Hub
