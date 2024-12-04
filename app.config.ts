@@ -98,7 +98,7 @@ export default defineAppConfig({
       },
     },
     tooltip: {
-      background: 'bg-zinc-600/5 dark:bg-zinc-500/20',
+      background: 'bg-zinc-600/5 dark:bg-zinc-800',
     },
   },
 })
