@@ -35,14 +35,15 @@ const tags = [
 const route = useRoute()
 const activeTab = ref(0)
 
-// 根据URL参数设置初始tab
-const tabParam = route.query.tab as string
-if (tabParam) {
-  const tabIndex = tags.findIndex(tag => tag.value === tabParam)
-  if (tabIndex !== -1) {
-    activeTab.value = tabIndex
+// 监听路由参数变化并更新 activeTab
+watch(() => route.query.tab, (newTab) => {
+  if (newTab) {
+    const tabIndex = tags.findIndex(tag => tag.value === newTab)
+    if (tabIndex !== -1) {
+      activeTab.value = tabIndex
+    }
   }
-}
+}, { immediate: true })
 
 const { data: moments } = await useFetch<Moments>('/api/collection/moments')
 const { data: photos } = await useFetch<Photos>('/api/collection/photos')
@@ -58,6 +59,14 @@ const displayData = computed(() => {
     default:
       return moments.value?.moments || []
   }
+})
+
+// 监听 activeTab 变化时更新 URL 参数
+watch(activeTab, (newValue) => {
+  const newTab = tags[newValue].value
+  navigateTo({
+    query: { ...route.query, tab: newTab },
+  }, { replace: true })
 })
 </script>
 
