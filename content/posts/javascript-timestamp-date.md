@@ -2,8 +2,7 @@
 title: JavaScript 时间处理（Timestamp ⇄ Date 对象）
 created: 2022-07-07 14:12:21
 tag: 分享境
-summary: '本文介绍了如何使用 JavaScript 中的 Date 对象来创建日期，包括使用当前时间、传递年、月、日、小时、分钟和秒值来创建、以及通过传递字符串来创建。此外，文章还讲解了如何将 UnixTime 转换为日期对象以及如何将日期对象转换为 UnixTime。在这个过程中，还涉及了UTC和时间戳的概念。'
-cover: https://t.mwm.moe/pc/
+summary: 介绍创建 Date 对象的多种方式，包括用当前时间、传年等参数、传字符串创建，还阐述时间戳概念及 UTC 含义，演示了时间戳与日期对象相互转换的方法，并给出相关参考资料助力深入了解 JavaScript 日期处理知识。
 ---
 
 ## 创建日期对象

@@ -1,9 +1,8 @@
 ---
 title: Hello World~
 tag: 事件簿
-summary: 这篇文章介绍了作者开始自己的第一个博客，并选择了Typecho作为博客平台。作者认为个人博客仍然具有独特的价值和意义，并希望读者会喜欢他的博客。
+summary: 文章介绍作者开始自己的第一个博客，并选择了 Typecho 作为博客平台。作者认为个人博客仍然具有独特的价值和意义，并希望读者会喜欢他的博客。
 created: 2019-08-23
-cover: https://t.mwm.moe/pc/
 ---
 
 ## Hello world

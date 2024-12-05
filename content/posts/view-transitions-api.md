@@ -1,9 +1,8 @@
 ---
 title: View Transitions API 初体验
 tag: 笔记本
-summary: 作者 2023 年在直播中听闻 View Transitions API ，近期因项目需求深入了解并应用。介绍其用于 SPA 过渡切换动画，是实验性功能，部分浏览器可用。工作原理是浏览器管理和处理页面视图变化，包括创建快照、分析差异和计算动画路径等。可通过修改伪元素树和覆盖 CSS 自定义动画，动画执行前后有相应的 Promise 实现。
+summary: 文章围绕 View Transitions API 展开，先介绍其概念与适用场景，指出它目前是实验性功能及可用浏览器版本情况，接着阐述工作原理、用法，包括启动方法及相关回调，还详述自定义过渡动画的 CSS 和 JS 实现方式，最后总结要点并给出参考资料。
 created: 2024-04-6 07:59:45
-cover: https://bu.dusays.com/2024/08/16/66be42c38d31c.jpg
 ---
 
 还记得在 2023 年的时候，偶然在 [antfu](https://antfu.me){target="_blank"} 大佬的一次直播里听闻了 View Transitions API 这个新鲜名词。

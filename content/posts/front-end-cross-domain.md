@@ -2,8 +2,7 @@
 title: 前端跨域及解决方案
 created: 2021-08-12
 tag: 笔记本
-summary: 这篇博文介绍了JavaScript语言的主要组成部分、基本语法和数据类型。包括语言核心ECMAScript、文档对象模型DOM和浏览器对象模型BOM。阐述了JavaScript的运算符、条件语句、循环语句的语法结构,并给出了代码示例。
-cover: https://bu.dusays.com/2024/08/15/66bdc813229aa.webp
+summary: 文章阐述前端跨域问题，先介绍同源策略，指出跨域根源是违背该策略，接着以 CORS 为核心介绍多种跨域解决方案，包括前端代理、服务端配置、服务器配置、反向代理、WebSocket 等，并提供相关参考资料辅助理解。
 ---
 
 ## 前言

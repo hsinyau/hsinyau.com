@@ -2,8 +2,7 @@
 title: JavaScript Void 运算符
 tag: 分享境
 created: 2022-06-18 12:28:33
-summary: 在大厂里，var变量不能直接赋值undefined，而是要用void 0来赋值。void操作符用于将表达式求值为undefined，常用于获取undefined原始值和防止变量被赋值。同时，void还可以将函数声明转化为函数表达式，防止a标签默认事件和在箭头函数中避免泄漏。
-cover: https://t.mwm.moe/pc/
+summary: 介绍 void 操作符，它对表达式求值后返回 undefined。解释了为何大厂多用 void 0 而非直接赋 undefined，还阐述 void 在函数表达式、阻止 a 标签默认事件、箭头函数避免泄漏等方面的作用及相关应用场景。
 ---
 最近看到一个大佬直播时提到，在大厂里 var 变量是不能直接赋值 undefined 的，而是要用 void 0 来赋值。
 
