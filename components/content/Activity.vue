@@ -27,7 +27,7 @@ const { data: activity, refresh } = await useAsyncData<Activity>('activity', () 
 
 useIntervalFn(async () => await refresh(), 5000)
 
-const codingActivity = computed(() => activity.value!.data.activities.find(activity => ides.some(ide => ide.name === activity.name)))
+const codingActivity = computed(() => activity.value?.data?.activities?.find(activity => ides.some(ide => ide.name === activity.name)))
 
 const getActivity = computed(() => {
   if (!codingActivity.value)
@@ -93,7 +93,7 @@ const getActivity = computed(() => {
       </div>
       <div v-else class="space-x-1">
         <UIcon
-          :name="ides.find(ide => ide.name === getActivity!.name)!.icon"
+          :name="`i-logos:${ides.find(ide => ide.name === getActivity!.name)!.icon}`"
           size="16"
         />
         <strong>{{ getActivity.name }}</strong>
@@ -109,41 +109,3 @@ const getActivity = computed(() => {
     </div>
   </ClientOnly>
 </template>
-
-<!-- <i18n lang="json">
-{
-  "en": {
-    "offline": "I'm currently offline. Come back later to see what I'm working on.",
-    "working": "I'm actually working on {project}, editing {state}, using {editor}. I've started {start}, the {format}.",
-    "idling": "I'm idling on my computer with {editor} running in background.",
-    "tooltip": {
-      "online": "",
-      "offline": "I'm offline 🫥",
-      "idling": "I'm sleeping 😴"
-    },
-    "separator": "at"
-  },
-  "fr": {
-    "offline": "Je suis actuellement hors ligne. Revenez plus tard pour voir sur quoi je travaille.",
-    "working": "Je travaille actuellement sur {project}, éditant {state}, en utilisant {editor}. J'ai commencé il y a {start}, le {format}.",
-    "idling": "Je suis en veille sur mon ordinateur avec {editor} en arrière-plan.",
-    "tooltip": {
-      "online": "Je suis connecté 👋",
-      "offline": "Je suis déconnecté 🫥",
-      "idling": "Je dors 😴"
-    },
-    "separator": "à"
-  },
-  "es": {
-    "offline": "Ahora mismo estoy desconectado. Vuelve más tarde para ver en lo que estoy trabajando.",
-    "working": "Estoy trabajando en {project}, editando {state}, y utilizando {editor}. He empezado hace {start}, el {format}.",
-    "idling": "Estoy en reposo en mi ordenador con {editor} en segundo plano.",
-    "tooltip": {
-      "online": "Estoy conectado 👋",
-      "offline": "Estoy desconectado 🫥",
-      "idling": "Estoy durmiendo 😴"
-    },
-    "separator": "a"
-  }
-}
-</i18n> -->
