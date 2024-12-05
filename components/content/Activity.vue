@@ -104,7 +104,7 @@ const getActivity = computed(() => {
         <span class="cursor-not-allowed h-3 w-3 inline-flex rounded-full bg-red-500 mt-2" />
       </UTooltip>
       <p class="not-prose">
-        {{ '我现在不在线 🫥' }}
+        我目前离线。稍后回来看看我正在做什么？
       </p>
     </div>
   </ClientOnly>
