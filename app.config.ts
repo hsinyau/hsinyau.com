@@ -25,11 +25,6 @@ export default defineAppConfig({
   },
   socials: [
     {
-      icon: 'ph:x-logo-duotone',
-      label: 'Twitter',
-      link: 'https://twitter.com/yau1204',
-    },
-    {
       icon: 'ph:github-logo-duotone',
       label: 'GitHub',
       link: 'https://github.com/hsinyau',
@@ -43,11 +38,6 @@ export default defineAppConfig({
       icon: 'ph:telegram-logo-duotone',
       label: 'Telegram',
       link: 'https://t.me/hsinyau_channel',
-    },
-    {
-      icon: 'ph:threads-logo-duotone',
-      label: 'Threads',
-      link: 'https://www.threads.net/@hsinyau_zz',
     },
     {
       icon: 'tabler:brand-netease-music',

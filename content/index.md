@@ -27,5 +27,8 @@ description: 欲笺心事，独语斜阑。
 ::stats
 ::
 
+::activity
+::
+
 ::catch-phrase
 ::

@@ -22,8 +22,16 @@ const { data: stats } = await useFetch<Stats>('/api/stats')
         hover="为啥这么久了还是这么菜 😮"
         :text="usePrecision(stats.seconds / 3600, 0).value"
       />
-      小时。过去一年我使用最多的编辑器是 <b>VS Code</b>、
-      使用最多的操作系统是 <b>Windows</b>、使用最多的语言是
+      小时。过去一年我使用最多的编辑器是
+      <HoverText
+        text="VS Code"
+        hover="要不了多久就是 Cursor 了 😄"
+      />、
+      使用最多的操作系统是
+      <HoverText
+        text="Windows"
+        hover="没实力 买不起 Mac 😭"
+      />、使用最多的语言是
       <HoverText
         :hover="`约 ${usePrecision(stats.languages[0].total_seconds / 3600, 0).value} 小时`"
         :text="stats.languages[0].name"

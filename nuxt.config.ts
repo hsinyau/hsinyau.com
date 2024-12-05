@@ -102,6 +102,9 @@ export default defineNuxtConfig({
     gallery: {
       apiKey: '',
     },
+    discord: {
+      userId: '',
+    },
     public: {
       mapbox: {
         accessToken: '',
