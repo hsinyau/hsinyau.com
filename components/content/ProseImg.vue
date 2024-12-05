@@ -28,7 +28,7 @@ const img = useImage()
     :width="props.width"
     :height="props.height"
     :placeholder="img(props.src, { h: 10, f: 'png', blur: 2, q: 50 })"
-    class="rounded-lg w-full h-full overflow-hidden duration-300"
+    class="rounded-lg w-full h-full overflow-hidden duration-300 dark:brightness-75"
     loading="lazy"
   />
 </template>

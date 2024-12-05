@@ -16,7 +16,7 @@ const nuxtImgProps = computed(() => {
       v-bind="nuxtImgProps"
       loading="lazy"
       placeholder
-      class="rounded-md hover:scale-105 transition-all duration-500"
+      class="rounded-md hover:scale-105 transition-all duration-500 dark:brightness-75"
     />
   </div>
 </template>
