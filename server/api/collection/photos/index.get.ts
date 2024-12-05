@@ -10,7 +10,7 @@ export default defineCachedEventHandler(async (event) => {
     },
   })
 
-  const photos = (data as any).data.data.slice(0, 30).map((item: Photo) => ({
+  const photos = (data as any).data.data.slice(0, 21).map((item: Photo) => ({
     width: item.width,
     height: item.height,
     src: item.links.url,
@@ -18,7 +18,4 @@ export default defineCachedEventHandler(async (event) => {
   }))
 
   return { photos }
-}, {
-  maxAge: 24 * 60 * 60 * 7,
-  name: 'photos',
 })
