@@ -42,7 +42,7 @@ NuxtHub 是 Nuxt 的部署和管理平台，它可以在您的 Cloudflare 帐户
 
 下面是我使用这个 API 获取到的状态：
 
-```json
+```json [返回数据]
 {
   "data": {
     "kv": {

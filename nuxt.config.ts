@@ -60,9 +60,26 @@ export default defineNuxtConfig({
     highlight: {
       theme: {
         default: 'vitesse-light',
-        light: 'vitesse-light',
         dark: 'vitesse-dark',
       },
+      langs: [
+        'json',
+        'js',
+        'jsx',
+        'ts',
+        'tsx',
+        'html',
+        'css',
+        'vue',
+        'shell',
+        'mdc',
+        'md',
+        'yaml',
+        'c',
+        'cpp',
+        'java',
+        'xml',
+      ],
     },
     markdown: {
       remarkPlugins: {
