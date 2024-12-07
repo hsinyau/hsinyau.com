@@ -1,5 +1,11 @@
 <script setup lang="ts">
 const { data: home } = await useAsyncData('home', () => queryContent('/').findOne())
+const { site } = useAppConfig()
+
+useSeoMeta({
+  title: site.title,
+  description: site.description,
+})
 </script>
 
 <template>
