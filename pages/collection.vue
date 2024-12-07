@@ -93,7 +93,7 @@ watch(activeTab, (newValue) => {
             placeholder
             loading="lazy"
           />
-          <div class="flex flex-col items-center self-start md:flex-row md:gap-2">
+          <div class="flex flex-col md:items-center items-start self-start md:flex-row md:gap-2">
             <span class="self-start text-lg font-medium md:self-auto">{{ site.author.name }}</span>
             <span class="text-xs opacity-80 md:-translate-y-1 md:self-end">{{ useTimeAgo(Number(item.title) * 1000, options) }}</span>
           </div>
