@@ -35,12 +35,17 @@ const getActivity = computed(() => {
 
   const { name, details, state, timestamps, assets } = codingActivity.value
 
+  // 检查必要的属性是否存在
+  if (!assets?.large_text || !assets?.small_text || !timestamps?.start) {
+    return null
+  }
+
   const isActive = name === 'Visual Studio Code'
-    ? !details.includes('Idling')
-    : state.toLowerCase().includes('editing')
+    ? !details?.includes('Idling')
+    : state?.toLowerCase()?.includes('editing')
 
   const project = details ? details.charAt(0).toUpperCase() + details.slice(1).replace('Workspace:', '').trim() : ''
-  const stateWord = state.split(' ')[1]
+  const stateWord = state?.split(' ')?.[1] || ''
   const timeAgo = useTimeAgo(timestamps.start, options).value
 
   return {
@@ -63,10 +68,6 @@ const getActivity = computed(() => {
       <UTooltip :text="getActivity.active ? '我现在在线 👋' : '我开始摸鱼了 🐟'">
         <div class="relative flex h-3 w-3 mt-2">
           <div
-            v-if="getActivity.active"
-            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"
-          />
-          <div
             :class="getActivity.active ? 'bg-green-500' : 'bg-amber-500'"
             class="relative inline-flex rounded-full h-3 w-3"
           />
@@ -75,14 +76,14 @@ const getActivity = computed(() => {
       <div v-if="getActivity.active">
         我正在使用
         <span class="space-x-1">
-          <UIcon :name="`i-logos:${ides.find(ide => ide.name === getActivity!.name)!.icon}`" size="12" />
+          <UIcon :name="`i-logos:${ides.find(ide => ide.name === getActivity!.name)?.icon}`" size="12" />
           <strong>{{ getActivity.assets.small_text }}</strong>
         </span>
         处理一个
         <span class="space-x-1">
           <UIcon
             v-if="language.find(lang => lang.name === getActivity!.assets.large_text.toLowerCase())"
-            :name="`i-logos:${language.find(lang => lang.name === getActivity!.assets.large_text.toLowerCase())!.icon}`"
+            :name="`i-logos:${language.find(lang => lang.name === getActivity!.assets.large_text.toLowerCase())?.icon}`"
             size="12"
           />
           <strong>{{ getActivity.assets.large_text }}</strong>
@@ -92,11 +93,12 @@ const getActivity = computed(() => {
         {{ getActivity.start }}。
       </div>
       <div v-else class="space-x-1">
-        <UIcon
-          :name="`i-logos:${ides.find(ide => ide.name === getActivity!.name)!.icon}`"
-          size="16"
-        />
-        <strong>{{ getActivity.name }}</strong>
+        我现在打开了
+        <span class="space-x-1">
+          <UIcon :name="`i-logos:${ides.find(ide => ide.name === getActivity!.name)?.icon}`" size="12" />
+          <strong>{{ getActivity.assets.small_text }}</strong>
+        </span>，
+        但我现在并没有在写代码。
       </div>
     </div>
     <div v-else class="my-5 flex md:items-start gap-2">
