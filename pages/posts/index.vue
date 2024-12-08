@@ -29,7 +29,7 @@ const { data: posts } = await useAsyncData('all-posts', () => queryContent('/pos
           class=" h-full border p-4 shadow-sm border-neutral-200 rounded-md hover:border-neutral-500 dark:border-neutral-700 dark:hover:border-neutral-500  duration-300"
         >
           <article class="space-y-2">
-            <h1 class="font-bold text-lg duration-300 text-black dark:text-white">
+            <h1 class="font-bold text-lg duration-300 text-black dark:text-white line-clamp-1">
               {{ post.title }}
             </h1>
             <div class="text-sm text-neutral-500 duration-300 flex items-center gap-1">

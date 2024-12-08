@@ -68,7 +68,7 @@ async function handleLike() {
             </p>·
             <UIcon name="ph:calendar-duotone" size="16" />
             <p class="text-sm">
-              {{ useTimeAgo(post.created, options) }}
+              {{ useDateFormat(post.created, 'YYYY-MM-DD') }}
             </p>·
             <UIcon name="ph:timer-duotone" size="16" />
             <p class="text-sm">
