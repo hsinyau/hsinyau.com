@@ -27,8 +27,8 @@ created: 2024-12-06 10:00:00
 
 NuxtHub 是 Nuxt 的部署和管理平台，它可以在您的 Cloudflare 帐户上以零配置的方式部署包含 D1 数据库、KV 和 Blob 存储、Analytics 分析、Cache 缓存的 Nuxt 应用程序。Nuxt Studio 是专为 Nuxt 开发者设计的基于 Git 的 CMS，可以实时预览和测试您的 Nuxt 应用程序。
 
-![NuxtHub](https://file.hsinyau.com/image/be00f274391057c9b9c8e1084b5bb9f3.png)
-![Nuxt Studio](https://file.hsinyau.com/image/521019b945914d8fcb9c87b1df5ace7e.png)
+![NuxtHub](/image/be00f274391057c9b9c8e1084b5bb9f3.png)
+![Nuxt Studio](/image/521019b945914d8fcb9c87b1df5ace7e.png)
 
 和 Vercel 类似，首次部署时将 Git 仓库与 NuxtHub、Cloudflare 关联后，每次只需要将更改的代码提交到 GitHub 后，NuxtHub 会进行自动化的部署。Cloudflare 真的太良心了，免费额度对我唯一的限制就是每月 500 次构建，不过我目前大概率用不到 500 次，所以对我来说完全够用。
 
@@ -133,6 +133,6 @@ NuxtHub 是 Nuxt 的部署和管理平台，它可以在您的 Cloudflare 帐户
 
 效果展示：
 
-![状态](https://file.hsinyau.com/image/cb347d80af738a57c3a74bff6e56b265.png)
+![状态](/image/cb347d80af738a57c3a74bff6e56b265.png)
 
 Todo: 等我什么时候有时间了，搞个 QQ 音乐和网易云音乐的展示，Spotify 在国内使用还是有点不方便的。

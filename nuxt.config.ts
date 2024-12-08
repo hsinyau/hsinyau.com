@@ -45,6 +45,12 @@ export default defineNuxtConfig({
   icon: {
     serverBundle: 'remote',
   },
+  // Nuxt Image Config
+  image: {
+    cloudflare: {
+      baseURL: 'https://file.hsinyau.com',
+    },
+  },
   // Nuxt Google Fonts Config
   googleFonts: {
     display: 'swap',
@@ -79,6 +85,7 @@ export default defineNuxtConfig({
         'cpp',
         'java',
         'xml',
+        'sql',
       ],
     },
     markdown: {

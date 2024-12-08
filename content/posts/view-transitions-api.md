@@ -132,7 +132,7 @@ transition.finished.then(() => {
 
 动画效果为从点击位置扩散开的一个圆形遮罩，具体效果查看下图或点击页面右上角主题切换按钮尝试。
 
-![浅色 / 暗色模式切换](https://file.hsinyau.com/image/c88daa8da42e600251bca1d601e21a56.gif)
+![浅色 / 暗色模式切换](/image/c88daa8da42e600251bca1d601e21a56.gif)
 
 除了使用 CSS 来自定义动画，我们还可以使用 JS 来实现更加复杂的过渡动画。当 ViewTransition.ready 完成时，运用 document.documentElement.animate 来实现动画。
 
@@ -194,7 +194,7 @@ export function toggleDark(event: MouseEvent) {
 
 具体效果查看下图或前往 [antfu](https://antfu.me){target="_blank"} 尝试
 
-![Antfu 浅色 / 暗色模式切换](https://file.hsinyau.com/image/f9c6c7ac72e78cf1aaa5a4435dec9b62.gif)
+![Antfu 浅色 / 暗色模式切换](/image/f9c6c7ac72e78cf1aaa5a4435dec9b62.gif)
 
 这样就实现了完美的使用 View Transitions API 实现了一个主题切换的功能。
 

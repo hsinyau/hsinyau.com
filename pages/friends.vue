@@ -24,10 +24,11 @@ const { data: friends } = await useAsyncData('all-friends', () => queryContent('
           class="flex items-center gap-4 cursor-pointer relative group"
         >
           <div class="group-hover:rotate-[360deg] transition-transform duration-500">
-            <UAvatar
+            <NuxtImg
+              provider="cloudflare"
+              class="rounded-full size-16"
               :src="item.avatar"
               alt="Avatar"
-              size="2xl"
               placeholder
             />
           </div>

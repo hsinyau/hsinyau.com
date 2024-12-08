@@ -17,18 +17,17 @@ const props = defineProps({
     default: undefined,
   },
 })
-
-const img = useImage()
 </script>
 
 <template>
   <NuxtImg
+    provider="cloudflare"
     :src="props.src"
     :alt="props.alt"
     :width="props.width"
     :height="props.height"
-    :placeholder="img(props.src, { h: 10, f: 'png', blur: 2, q: 50 })"
-    class="rounded-lg w-full h-full overflow-hidden duration-300 dark:brightness-75"
+    placeholder
+    class="rounded-lg w-full h-full overflow-hidden duration-300 dark:brightness-75 cursor-pointer"
     loading="lazy"
   />
 </template>

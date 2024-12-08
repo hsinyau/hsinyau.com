@@ -21,7 +21,7 @@ created: 2020-12-07 17:38:24
 
 #### 重定向
 
-![redirection](https://file.hsinyau.com/image/27b4be0a010d6eb71d76622ad9c4deed.webp)
+![redirection](/image/27b4be0a010d6eb71d76622ad9c4deed.webp)
 
 ①：A对B说，帮忙拿下快递
 
@@ -33,7 +33,7 @@ created: 2020-12-07 17:38:24
 
 #### 请求转发
 
-![request-forwarding](https://file.hsinyau.com/image/a1844fef003254958b1a07b8b892a312.webp)
+![request-forwarding](/image/a1844fef003254958b1a07b8b892a312.webp)
 
 ①：A对B说，帮忙拿下快递
 
@@ -45,7 +45,7 @@ created: 2020-12-07 17:38:24
 
 ### 流程图
 
-![redirection](https://file.hsinyau.com/image/6a67d4edcf617f42e0536ac42e9426e6.webp)
+![redirection](/image/6a67d4edcf617f42e0536ac42e9426e6.webp)
 
 ### 代码BoyServlet
 
@@ -155,7 +155,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
 
 ### 流程图
 
-![request-forwarding](https://file.hsinyau.com/image/d177326e254e182e3a8fbda4914c6a0b.webp)
+![request-forwarding](/image/d177326e254e182e3a8fbda4914c6a0b.webp)
 
 ### 代码BoyServlet
 

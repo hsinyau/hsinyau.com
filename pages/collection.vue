@@ -88,7 +88,8 @@ watch(activeTab, (newValue) => {
       <li v-for="item in displayData" :key="item.node_id" class="group mb-2 flex flex-col gap-2">
         <div class="flex gap-4">
           <NuxtImg
-            :src="site.author.avatar"
+            provider="cloudflare"
+            src="/image/avatar.jpg"
             class="size-[40px] rounded-full ring-2 ring-slate-200 dark:ring-zinc-800"
             placeholder
             loading="lazy"
@@ -108,7 +109,7 @@ watch(activeTab, (newValue) => {
       </li>
     </ul>
     <div v-if="activeTab === 1">
-      <Gallery :photos="displayData" layout="columns" />
+      <Gallery :photos="displayData" layout="columns" provider="ipx" />
     </div>
     <div v-if="activeTab === 2">
       <div class="flex items-center justify-center mt-4 flex-col space-y-1">
