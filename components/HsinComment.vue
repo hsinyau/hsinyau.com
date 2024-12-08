@@ -9,15 +9,17 @@ const path = computed(() => useRoute().path)
 </script>
 
 <template>
-  <Waline
-    :path="path"
-    :server-u-r-l="site.waline.serverURL"
-    :locale="{
-      sofa: site.waline.locale.sofa,
-      placeholder: site.waline.locale.placeholder,
-    }"
-    :emoji="site.waline.emoji"
-  />
+  <ClientOnly>
+    <Waline
+      :path="path"
+      :server-u-r-l="site.waline.serverURL"
+      :locale="{
+        sofa: site.waline.locale.sofa,
+        placeholder: site.waline.locale.placeholder,
+      }"
+      :emoji="site.waline.emoji"
+    />
+  </ClientOnly>
 </template>
 
 <style>
