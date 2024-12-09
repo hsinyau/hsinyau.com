@@ -1,15 +1,6 @@
 <script lang="ts" setup>
 const route = useRoute()
 const { data: post } = await useAsyncData(`post:${route.params.slug}`, () => queryContent(`/posts/${route.params.slug}`).findOne())
-const {
-  data: postDB,
-  refresh,
-} = await useAsyncData(`post:${route.params.slug}:db`, () => $fetch(`/api/posts/${route.params.slug}`, { method: 'POST' }))
-
-const { copy, copied } = useClipboard({
-  source: `https://hsinyau.com/posts/${route.params.slug}`,
-  copiedDuring: 4000,
-})
 
 useSeoMeta({
   title: post.value?.title,
@@ -19,6 +10,18 @@ useSeoMeta({
   ogImage: '/opengraph.jpg',
   twitterTitle: post.value?.title,
   twitterDescription: post.value?.summary,
+})
+
+const {
+  data: postDB,
+  refresh,
+} = await useAsyncData(`post:${route.params.slug}:db`, () => $fetch(`/api/posts/${route.params.slug}`, { method: 'POST' }), {
+  watch: [post], // 等博文加载完再加载数据
+})
+
+const { copy, copied } = useClipboard({
+  source: `https://hsinyau.com/posts/${route.params.slug}`,
+  copiedDuring: 4000,
 })
 
 const likeCookie = useCookie<boolean>(`post:like:${route.params.slug}`, {

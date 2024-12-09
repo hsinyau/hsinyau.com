@@ -19,7 +19,7 @@ defineProps({
     />
     <span
       :class="`text-${color}-500 decoration-${color}-300`"
-      class="sofia font-medium underline-offset-2 underline"
+      class="font-medium underline-offset-2 underline"
     >
       <slot />
     </span>

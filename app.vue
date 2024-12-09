@@ -39,12 +39,8 @@ useHead({
 
 <style>
 body {
-  font-family: 'DM Sans', 'Noto Sans SC', sans-serif;
+  font-family: 'Noto Sans SC', sans-serif;
   @apply h-full w-full text-neutral-700 dark:text-neutral-300;
-}
-
-.sofia {
-  font-family: 'Sofia Sans', sans-serif;
 }
 
 .page-enter-active,

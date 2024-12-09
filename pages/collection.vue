@@ -45,9 +45,10 @@ watch(() => route.query.tab, (newTab) => {
   }
 }, { immediate: true })
 
-const { data: moments } = await useFetch<Moments>('/api/collection/moments')
-const { data: photos } = await useFetch<Photos>('/api/collection/photos')
-const { data: geo } = await useFetch<any>('/api/collection/geo')
+const { data: moments } = await useAsyncData<Moments>('moments', () => $fetch('/api/collection/moments'))
+const { data: photos } = await useAsyncData<Photos>('photos', () => $fetch('/api/collection/photos'))
+const { data: geo } = await useAsyncData<any>('geo', () => $fetch('/api/collection/geo'))
+
 const displayData = computed(() => {
   switch (activeTab.value) {
     case 0:
@@ -96,7 +97,15 @@ watch(activeTab, (newValue) => {
           />
           <div class="flex flex-col md:items-center items-start self-start md:flex-row md:gap-2">
             <span class="self-start text-lg font-medium md:self-auto">{{ site.author.name }}</span>
-            <span class="text-xs opacity-80 md:-translate-y-1 md:self-end">{{ useTimeAgo(Number(item.title) * 1000, options) }}</span>
+            <div class="text-xs opacity-80 md:-translate-y-1 md:self-end">
+              <span>{{ useTimeAgo(Number(item.title) * 1000, options) }}</span>
+              <span
+                v-if="item.labels.name"
+                :class="`text-[#${item.labels.color}]`"
+              >
+                #{{ item.labels.name }}
+              </span>
+            </div>
           </div>
         </div>
         <div class="min-w-0 max-w-full mt-2 pl-4 md:mt-0 md:-translate-y-4 md:pl-14">
