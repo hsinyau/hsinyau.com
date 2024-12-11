@@ -18,6 +18,7 @@ const path = computed(() => useRoute().path)
         placeholder: site.waline.locale.placeholder,
       }"
       :emoji="site.waline.emoji"
+      :search="false"
     />
   </ClientOnly>
 </template>

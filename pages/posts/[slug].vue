@@ -12,29 +12,10 @@ useSeoMeta({
   twitterDescription: post.value?.summary,
 })
 
-const {
-  data: postDB,
-  refresh,
-} = await useAsyncData(`post:${route.params.slug}:db`, () => $fetch(`/api/posts/${route.params.slug}`, { method: 'POST' }), {
-  watch: [post], // 等博文加载完再加载数据
-})
-
 const { copy, copied } = useClipboard({
   source: `https://hsinyau.com/posts/${route.params.slug}`,
   copiedDuring: 4000,
 })
-
-const likeCookie = useCookie<boolean>(`post:like:${route.params.slug}`, {
-  maxAge: 7200,
-})
-
-async function handleLike() {
-  if (likeCookie.value)
-    return
-  await $fetch(`/api/posts/like/${route.params.slug}`, { method: 'PUT' })
-  await refresh()
-  likeCookie.value = true
-}
 </script>
 
 <template>
@@ -61,13 +42,9 @@ async function handleLike() {
             </h1>
           </div>
           <div class="border-l-2 pl-2 mt-2 border-gray-300 dark:border-gray-700 rounded-sm flex gap-1 items-center">
-            <UIcon name="i-ph-heart-duotone" size="16" />
+            <UIcon name="ph:tag-duotone" size="16" />
             <p class="text-sm">
-              {{ `${postDB?.likes ?? 0} 赞` }}
-            </p>·
-            <UIcon name="i-ph-eye-duotone" size="16" />
-            <p class="text-sm">
-              {{ `${postDB?.views ?? 0} 浏览` }}
+              {{ post.tag }}
             </p>·
             <UIcon name="ph:calendar-duotone" size="16" />
             <p class="text-sm">
@@ -102,14 +79,6 @@ async function handleLike() {
               <strong>感谢您阅读这篇文章！如果您喜欢它，请考虑与您的朋友分享。别忘了点个赞哦！</strong>
             </p>
             <div class="flex gap-4 items-center flex-wrap">
-              <UButton
-                :label="`${postDB?.likes || '0'} 赞`"
-                :color="likeCookie ? 'red' : 'white'"
-                icon="i-ph-heart-duotone"
-                size="lg"
-                variant="solid"
-                @click.prevent="handleLike()"
-              />
               <UButton
                 v-if="copied"
                 color="green"

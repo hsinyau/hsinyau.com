@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Activity } from '~/types'
+import type { Activity } from '~/types/lanyard'
 
 const { socials } = useAppConfig()
 

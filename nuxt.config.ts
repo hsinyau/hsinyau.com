@@ -110,7 +110,6 @@ export default defineNuxtConfig({
   hub: {
     cache: true,
     kv: true,
-    database: true,
     analytics: true,
   },
   // Nuxt Env
