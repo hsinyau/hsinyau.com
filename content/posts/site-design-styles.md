@@ -1,17 +1,19 @@
 ---
-title: 中文測試
+title: 站点设计风格排版测试
 tag: 随心记
-summary: 這要幹嘛的？沒有意義的文字組合（文章？），供排版時填充版面用，但不會因為字義而左右版型的判斷。文字、標點符號出現機率大致符合中文文章習慣。
+summary: 这是干嘛的？沒有意义的文字組合（文章？），供排版时填充版面用，但不会因为字意而左右版型的判断。文字、标点符号出现概率大致符合中文文章习惯。
 created: 2019-11-02
 ---
 
+## 中文排版
+
 Q&A：
 
-這要幹嘛的？
+这是干嘛的？
 
-沒有意義的文字組合（文章？），供排版時填充版面用，但不會因為字義而左右版型的判斷。文字、標點符號出現機率大致符合中文文章習慣。
+沒有意义的文字組合（文章？），供排版时填充版面用，但不会因为字意而左右版型的判断。文字、标点符号出现概率大致符合中文文章习惯。
 
-## 流十兒人世系起到屋起雲天
+### 流十兒人世系起到屋起雲天
 
 自可造家更他內顧的投裡提字進，利步家室備許了差法也頭賽精呢子：們大望離的皮！有被有春是之的還雨中親出類王信收生片開格政。這差狀保魚野多相灣傳到要指。
 
@@ -39,7 +41,7 @@ Q&A：
 
 来源 [亂數假文產生器 - Chinese Lorem Ipsum](http://www.richyli.com/tool/loremipsum/){target="_blank"}
 
-## 问题的关键究竟为何？
+### 问题的关键究竟为何？
 
 那么， 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。 我认为， 在这种困难的抉择下，本人思来想去，寝食难安。 佚名在不经意间这样说过，感激每一个新的挑战，因为它会锻造你的意志和品格。这不禁令我深思。 可是，即使是这样，问题的关键究竟为何？的出现仍然代表了一定的意义。 本人也是经过了深思熟虑，在每个日日夜夜思考这个问题。 而这些并不是完全重要，更加重要的问题是， 总结的来说， 问题的关键究竟为何。
 
@@ -54,3 +56,116 @@ Q&A：
 经过上述讨论， 奥普拉·温弗瑞说过一句富有哲理的话，你相信什么，你就成为什么样的人。这句话语虽然很短，但令我浮想联翩。 现在，解决问题的关键究竟为何？的问题，是非常非常重要的。 所以， 我们不得不面对一个非常尴尬的事实，那就是， 总结的来说， 这样看来， 我们一般认为，抓住了问题的关键，其他一切则会迎刃而解。 经过上述讨论， 而这些并不是完全重要，更加重要的问题是。
 
 来源 [狗屁不通文章生成器](https://suulnnka.github.io/BullshitGenerator/){target="_blank"}
+
+## 代码块
+
+```typescript [代码块测试]
+export default function MyApp() {
+  const [count, setCount] = useState(0)
+
+  function handleClick() {
+    setCount(count + 1)
+  }
+
+  return (
+    <div>
+      <h1>Counters that update together</h1>
+      <MyButton count={count} onClick={handleClick} />
+      <MyButton count={count} onClick={handleClick} />
+    </div>
+  )
+}
+```
+
+```vue [代码块测试]
+<!-- BEFORE -->
+<template>
+  <section class="posts">
+    <article v-for="post in posts">
+      <a :href="getUrl(post)">{{ getTitle(post) }}</a>
+    </article>
+  </section>
+</template>
+
+<script>
+export default {
+  methods: {
+    getUrl (post) { ... },
+    getTitle (post) { ... }
+  }
+}
+</script>
+
+<!-- AFTER -->
+<!-- 1. PostList.vue -->
+<template>
+  <section class="posts">
+    <PostItem v-for="post in posts" :post="post"/>
+  </section>
+</template>
+
+<!-- 2. PostItem.vue -->
+<template>
+  <article v-for="post in posts">
+    <a :href="url">{{ title }}</a>
+  </article>
+</template>
+
+<script>
+export default {
+  props: ['post'],
+  computed: {
+    url () { /* compute on this.post */ },
+    title () { /* compute on this.post */ }
+  }
+}
+</script>
+```
+
+## 数学公式
+
+**代数**
+
+$\left ( \frac{a}{b}\right )^{n}= \frac{a^{n}}{b^{n}}$
+
+**几何**
+
+$\alpha \parallel \beta , \gamma \cap \alpha =a, \gamma \cap \beta =b \Rightarrow a \parallel b $
+
+**积分**
+
+$\int u \frac{\mathrm{d}v}{\mathrm{d}x}\,\mathrm{d}x=uv-\int \frac{\mathrm{d}u}{\mathrm{d}x}v\,\mathrm{d}x $
+
+**矩阵**
+
+$
+O = \begin{bmatrix}
+  0 & 0 & \cdots & 0 \\
+  0 & 0 & \cdots & 0 \\
+  \vdots & \vdots & \ddots & \vdots \\
+  0 & 0 & \cdots & 0
+\end{bmatrix}
+$
+
+## 自定义 MDC 组件
+
+::alert{type="success"}
+你一个小时没回我的消息，在我孜孜不倦地骚扰下你终于舍得回我了“在做爱”，这其中一定有什么含义，我想了很久，“在做爱”这简简单单的三个字肯定是三句话，分别是我在忙、做你女朋友、我爱你，想到这里我不禁流下了眼泪，我这么长时间的喜欢没有白费，不知道你现在忙干嘛，但我很想你。
+::
+
+::alert{type="warning"}
+今天把你的备注改成了「对方正在输入...」，这样我就知道你不是不想回我，刚又给你发了消息，看到你在思考怎么回我，我就知道你和我一样，心里有我。
+::
+
+::alert{type="tip"}
+昨天给你发了99条约你一起植树的消息，今天你终于肯回我了， 你说“你先去植发吧，死秃子。” 我一下子就哭了 ，原来努力真的有用 ，你已经开始关心我了，你也是挺喜欢我的吧。
+::
+
+::alert{type="danger"}
+今天他终于约我出去吃饭了，好开心，到了火锅店我发现，他正和另一个女孩子坐一起，他想得真周到，叫上其他人不会容易冷场，我走过去发现他们好像已经吃完了，他说你别吃了去买一下单，他真贴心，知道我最近减肥不能吃太多。我更爱他了！
+::
+
+今早你又拉黑了我的 :hover-text{hover="QwQ114514OvO" text="微信"}，我很难过，还好我还有小号可以继续舔你，你没想到吧，你总得意的觉得自己有很多舔狗，不少我一个，但其实都只是我一个人而已。
+
+::gallery{:photos='[{"alt":"Kakako","src":"/image/5ac3263717276d4ceba18e4b5ee9d96e.jpg","width":990,"height":660},{"alt":"Kakako","src":"/image/318aac8b08a92b64934b2cfeb4b68277.jpg","width":1024,"height":687},{"alt":"Kakako","src":"/image/383ad32b110d5f2df3f83fee8b1426a8.jpg","width":1000,"height":1500},{"alt":"Kakako","src":"/image/87566db0d85ecfbca95fa1c8218bfef6.jpg","width":2400,"height":1600},{"alt":"Kakako","src":"/image/055ca1238750d6900dcba473e3ee77d1.jpg","width":990,"height":660},{"alt":"Kakako","src":"/image/877ed68aeddf0328fcc13fb079983dc2.jpg","width":990,"height":660},{"alt":"Kakako","src":"/image/0288422e75339b245bbae29b0d0ed416.jpg","width":990,"height":660},{"alt":"Kakako","src":"/image/13d6a7859478c6759b1b5bdfe59d7318.jpg","width":990,"height":660},{"alt":"Kakako","src":"/image/6955123136e6d3f0a90133d36c00b686.jpg","width":1660,"height":2400}]'}
+::
