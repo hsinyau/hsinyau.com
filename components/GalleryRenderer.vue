@@ -20,7 +20,7 @@ const isCloudflare = computed(() => !nuxtImgProps.value.src?.includes('https://'
       v-bind="nuxtImgProps"
       loading="lazy"
       placeholder
-      class="rounded-md hover:scale-105 transition-all duration-500 dark:brightness-75"
+      class="rounded-md hover:scale-105 transition-all duration-500 dark:brightness-75 w-fill h-full object-cover"
     />
     <img
       v-else
