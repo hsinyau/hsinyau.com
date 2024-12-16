@@ -63,10 +63,10 @@ defineShortcuts({
 <template>
   <header class="flex items-center justify-between my-8 gap-2">
     <NuxtLink
-      class="handwriting text-xl sm:text-3xl text-nowrap gap-2 font-bold duration-300 dark:brightness"
+      class="handwriting text-xl sm:text-3xl text-nowrap gap-2 font-bold duration-300 text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
       to="/"
     >
-      <HsinLogo width="90" height="31.3" />
+      Hsinyau
     </NuxtLink>
     <nav class="flex gap-2 items-center justify-end flex-wrap">
       <UTooltip
@@ -109,6 +109,10 @@ defineShortcuts({
 </template>
 
 <style>
+.handwriting {
+  font-family: 'Dancing Script', cursive;
+}
+
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;

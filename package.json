@@ -10,14 +10,18 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
     "@nuxt/content": "2.13.4",
     "@nuxt/image": "1.8.1",
     "@nuxt/ui": "2.19.2",
+    "@nuxthub/core": "0.8.8",
     "@nuxtjs/google-fonts": "3.2.0",
     "@vueuse/nuxt": "12.0.0",
+    "consola": "^3.2.3",
+    "drizzle-orm": "^0.38.2",
     "h3-zod": "^0.5.3",
     "nuxt": "^3.14.1592",
     "nuxt-mapbox": "1.6.1",
@@ -41,6 +45,7 @@
     "@types/node": "^22.10.1",
     "@types/rss": "^0.0.32",
     "@waline/client": "^3.4.1",
+    "drizzle-kit": "^0.30.1",
     "eslint": "^9.16.0",
     "mapbox-gl": "^3.8.0",
     "nuxt-mapbox": "1.6.1",

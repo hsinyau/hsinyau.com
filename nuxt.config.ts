@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/google-fonts',
     '@nuxt/content',
+    '@nuxthub/core',
     '@vueuse/nuxt',
     '@nuxt/image',
     'nuxt-mapbox',
@@ -52,6 +53,7 @@ export default defineNuxtConfig({
     families: {
       'DM Sans': [400, 500, 600, 700, 800, 900],
       'Noto Sans SC': [400, 500, 600, 700, 800, 900],
+      'Dancing Script': [400, 700],
     },
   },
   // Nuxt Content
@@ -94,6 +96,13 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+  // Nuxt Hub
+  hub: {
+    database: true,
+    cache: true,
+    kv: true,
+    analytics: true,
   },
   // Nuxt Nitro Config
   nitro: {
