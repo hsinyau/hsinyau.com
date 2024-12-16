@@ -15,7 +15,6 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxt/content',
     '@vueuse/nuxt',
-    '@nuxthub/core',
     '@nuxt/image',
     'nuxt-mapbox',
     '@nuxthq/studio',
@@ -40,10 +39,6 @@ export default defineNuxtConfig({
   colorMode: {
     preference: 'system',
     fallback: 'light',
-  },
-  // Nuxt Icon
-  icon: {
-    serverBundle: 'remote',
   },
   // Nuxt Image Config
   image: {
@@ -105,12 +100,6 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/sitemap.xml', '/rss.xml'],
     },
-  },
-  // Nuxt Hub
-  hub: {
-    cache: true,
-    kv: true,
-    analytics: true,
   },
   // Nuxt Env
   runtimeConfig: {

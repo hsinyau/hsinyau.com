@@ -1,11 +1,5 @@
 <script setup lang="ts">
-import type { Activity } from '~/types/lanyard'
-
 const { socials } = useAppConfig()
-
-const { data: activity, refresh } = await useAsyncData<Activity>('activity', () => $fetch('/api/activity'))
-
-useIntervalFn(async () => await refresh(), 5000)
 </script>
 
 <template>
@@ -18,19 +12,6 @@ useIntervalFn(async () => await refresh(), 5000)
       />
     </div>
     <div class="space-y-4">
-      <ClientOnly>
-        <div v-if="activity?.data?.spotify">
-          <span class="flex items-center">
-            <UIcon
-              name="i-logos:spotify-icon"
-              size="18"
-            />
-            <span class="ml-1">
-              正在听：<strong>{{ activity?.data?.spotify.song }} - {{ activity?.data?.spotify.artist }}</strong>
-            </span>
-          </span>
-        </div>
-      </ClientOnly>
       <div class="flex flex-col md:flex-row gap-2 md:items-center">
         <h1>找到我</h1>
         <div class="flex gap-2 flex-wrap">
