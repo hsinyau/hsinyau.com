@@ -45,9 +45,9 @@ watch(() => route.query.tab, (newTab) => {
   }
 }, { immediate: true })
 
-const { data: moments } = await useAsyncData<Moments>('moments', () => $fetch('/api/collection/moments'))
-const { data: photos } = await useAsyncData<Photos>('photos', () => $fetch('/api/collection/photos'))
-const { data: geo } = await useAsyncData<any>('geo', () => $fetch('/api/collection/geo'))
+const { data: moments } = await useAsyncData<Moments>('moments', () => $fetch('/api/collection/moments'), { lazy: true })
+const { data: photos } = await useAsyncData<Photos>('photos', () => $fetch('/api/collection/photos'), { lazy: true })
+const { data: geo } = await useAsyncData<any>('geo', () => $fetch('/api/collection/geo'), { lazy: true })
 
 const displayData = computed(() => {
   switch (activeTab.value) {
@@ -85,46 +85,52 @@ watch(activeTab, (newValue) => {
         <span class="truncate">{{ item.label }}</span>
       </template>
     </UTabs>
-    <ul v-if="activeTab === 0">
-      <li v-for="item in displayData" :key="item.node_id" class="group mb-2 flex flex-col gap-2">
-        <div class="flex gap-4">
-          <NuxtImg
-            provider="cloudflare"
-            src="/image/avatar.jpg"
-            class="size-[40px] rounded-full ring-2 ring-slate-200 dark:ring-zinc-800"
-            placeholder
-            loading="lazy"
-          />
-          <div class="flex flex-col md:items-center items-start self-start md:flex-row md:gap-2">
-            <span class="self-start text-lg font-medium md:self-auto">{{ site.author.name }}</span>
-            <div class="text-xs opacity-80 md:-translate-y-1 md:self-end">
-              <span>{{ useTimeAgo(Number(item.title) * 1000, options) }}</span>
-              <span
-                v-if="item.labels.name"
-                :class="`text-[#${item.labels.color}]`"
-              >
-                #{{ item.labels.name }}
-              </span>
+    <Suspense>
+      <ul v-if="activeTab === 0">
+        <li v-for="item in displayData" :key="item.node_id" class="group mb-2 flex flex-col gap-2">
+          <div class="flex gap-4">
+            <NuxtImg
+              provider="cloudflare"
+              src="/image/avatar.jpg"
+              class="size-[40px] rounded-full ring-2 ring-slate-200 dark:ring-zinc-800"
+              placeholder
+              loading="lazy"
+            />
+            <div class="flex flex-col md:items-center items-start self-start md:flex-row md:gap-2">
+              <span class="self-start text-lg font-medium md:self-auto">{{ site.author.name }}</span>
+              <div class="text-xs opacity-80 md:-translate-y-1 md:self-end">
+                <span>{{ useTimeAgo(Number(item.title) * 1000, options) }}</span>
+                <span
+                  v-if="item.labels.name"
+                  :class="`text-[#${item.labels.color}]`"
+                >
+                  #{{ item.labels.name }}
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="min-w-0 max-w-full mt-2 pl-4 md:mt-0 md:-translate-y-4 md:pl-14">
-          <div class="relative w-full min-w-0">
-            <div class="moments-content relative inline-block rounded-xl p-3 text-zinc-800 dark:text-zinc-200 rounded-tl-sm bg-zinc-600/5 dark:bg-zinc-500/20 max-w-full overflow-auto">
-              <HsinMarkdown :md="item.body" :cid="item.node_id" />
+          <div class="min-w-0 max-w-full mt-2 pl-4 md:mt-0 md:-translate-y-4 md:pl-14">
+            <div class="relative w-full min-w-0">
+              <div class="moments-content relative inline-block rounded-xl p-3 text-zinc-800 dark:text-zinc-200 rounded-tl-sm bg-zinc-600/5 dark:bg-zinc-500/20 max-w-full overflow-auto">
+                <HsinMarkdown :md="item.body" :cid="item.node_id" />
+              </div>
             </div>
           </div>
-        </div>
-      </li>
-    </ul>
-    <div v-if="activeTab === 1">
-      <Gallery :photos="displayData" layout="columns" provider="ipx" />
-    </div>
-    <div v-if="activeTab === 2">
-      <div class="flex items-center justify-center mt-4 flex-col space-y-1">
-        <HsinMap :geo-data="geo" />
+        </li>
+      </ul>
+    </Suspense>
+    <Suspense>
+      <div v-if="activeTab === 1">
+        <Gallery :photos="displayData" layout="columns" provider="ipx" />
       </div>
-    </div>
+    </Suspense>
+    <Suspense>
+      <div v-if="activeTab === 2">
+        <div class="flex items-center justify-center mt-4 flex-col space-y-1">
+          <HsinMap :geo-data="geo" />
+        </div>
+      </div>
+    </Suspense>
   </main>
 </template>
 
