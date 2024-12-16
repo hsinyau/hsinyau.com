@@ -50,6 +50,10 @@ const { copy, copied } = useClipboard({
             <p class="text-sm">
               {{ useDateFormat(post.created, 'YYYY-MM-DD') }}
             </p>·
+            <UIcon name="ph:cursor-text-duotone" size="16" />
+            <p class="text-sm">
+              {{ post.readingTime.words }}字
+            </p>·
             <UIcon name="ph:timer-duotone" size="16" />
             <p class="text-sm">
               {{ Math.round(post.readingTime.words / 400) }}分钟阅读
