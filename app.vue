@@ -39,7 +39,7 @@ useHead({
 
 <style>
 body {
-  font-family: 'Noto Sans SC', sans-serif;
+  font-family: 'Noto Sans SC', system-ui, -apple-system, 'PingFang SC', "Microsoft YaHei", 'Segoe UI','Roboto','Helvetica','noto sans sc','hiragino sans gb',"sans-serif",'Apple Color Emoji','Segoe UI Emoji','Not Color Emoji';
   @apply h-full w-full text-neutral-700 dark:text-neutral-300;
 }
 
