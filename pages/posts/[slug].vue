@@ -15,7 +15,7 @@ useSeoMeta({
 const {
   data: postDB,
   refresh,
-} = await useAsyncData(`portfolio:${route.params.slug}:db`, () => $fetch(`/api/posts/${route.params.slug}`, { method: 'POST' }), { lazy: true })
+} = await useAsyncData(`post:${route.params.slug}:db`, () => $fetch(`/api/posts/${route.params.slug}`, { method: 'POST' }), { lazy: true })
 
 function getDetails() {
   const likes = postDB.value?.likes ?? 0
