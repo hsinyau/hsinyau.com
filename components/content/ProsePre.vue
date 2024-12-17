@@ -33,7 +33,7 @@ const { copied, copy } = useClipboard({
 </script>
 
 <template>
-  <div class="relative [&>pre]:!rounded-t-none [&>pre]:!my-0">
+  <div class="code-block relative [&>pre]:!rounded-t-none [&>pre]:!my-0">
     <div class="flex items-center justify-between py-1.5 border border-gray-200 dark:border-gray-700 border-b-0 relative rounded-t-md px-4 not-prose">
       <span class="flex items-center gap-1.5">
         <UIcon :name="`vscode-icons:file-type-${language}`" />
@@ -61,6 +61,10 @@ const { copied, copy } = useClipboard({
 </template>
 
 <style>
+.code-block ~ .code-block {
+  @apply mb-4
+}
+
 pre code .line {
   display: block;
 }

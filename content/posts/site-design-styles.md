@@ -167,5 +167,12 @@ $
 
 今早你又拉黑了我的 :hover-text{hover="QwQ114514OvO" text="微信"}，我很难过，还好我还有小号可以继续舔你，你没想到吧，你总得意的觉得自己有很多舔狗，不少我一个，但其实都只是我一个人而已。
 
+::bilibili{:src="//player.bilibili.com/player.html?aid=615209469&bvid=BV1ph4y1g75E&cid=1174279662&page=1&autoplay=0"}
+::
+
 ::gallery{:photos='[{"alt":"Kakako","src":"/image/5ac3263717276d4ceba18e4b5ee9d96e.jpg","width":990,"height":660},{"alt":"Kakako","src":"/image/318aac8b08a92b64934b2cfeb4b68277.jpg","width":1024,"height":687},{"alt":"Kakako","src":"/image/383ad32b110d5f2df3f83fee8b1426a8.jpg","width":1000,"height":1500},{"alt":"Kakako","src":"/image/87566db0d85ecfbca95fa1c8218bfef6.jpg","width":2400,"height":1600},{"alt":"Kakako","src":"/image/055ca1238750d6900dcba473e3ee77d1.jpg","width":990,"height":660},{"alt":"Kakako","src":"/image/877ed68aeddf0328fcc13fb079983dc2.jpg","width":990,"height":660},{"alt":"Kakako","src":"/image/0288422e75339b245bbae29b0d0ed416.jpg","width":990,"height":660},{"alt":"Kakako","src":"/image/13d6a7859478c6759b1b5bdfe59d7318.jpg","width":990,"height":660},{"alt":"Kakako","src":"/image/6955123136e6d3f0a90133d36c00b686.jpg","width":1660,"height":2400}]'}
 ::
+
+
+
+

@@ -3,7 +3,7 @@ const { socials } = useAppConfig()
 </script>
 
 <template>
-  <footer class="my-8">
+  <footer class="mt-8">
     <div class="flex justify-center mb-16">
       <UDivider
         class="md:w-2/3"
