@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const { data: home } = await useAsyncData('home', () => queryContent('/').findOne())
 const { site } = useAppConfig()
 
 useSeoMeta({
@@ -10,6 +9,8 @@ useSeoMeta({
 
 <template>
   <main class="!max-w-none prose dark:prose-invert">
-    <ContentDoc :path="home?.path" />
+    <HsinHero />
+    <LatestPosts />
+    <HsinPhotos />
   </main>
 </template>

@@ -59,10 +59,6 @@ export default defineAppConfig({
     to: '/projects',
     icon: 'books-duotone',
   }, {
-    label: '装备',
-    to: '/uses',
-    icon: 'backpack-duotone',
-  }, {
     label: '友链',
     icon: 'link-break-duotone',
     to: '/friends',
@@ -70,7 +66,25 @@ export default defineAppConfig({
     label: '动态',
     icon: 'butterfly-duotone',
     to: '/collection',
+  }, {
+    label: '关于',
+    icon: 'seal-check-duotone',
+    to: '/about',
   }],
+  hero: [
+    {
+      text: '前端小学生',
+      className: 'bg-clip-text text-center text-transparent bg-gradient-to-r from-[#f43f5e] to-[#a855f7]',
+    },
+    {
+      text: '摄影爱好者',
+      className: 'bg-clip-text text-center text-transparent bg-gradient-to-r from-[#3b82f6] to-[#22c55e]',
+    },
+    {
+      text: '旅行探索家',
+      className: 'bg-clip-text text-center text-transparent bg-gradient-to-r from-[#f97316] to-[#f43f5e]',
+    },
+  ],
   ui: {
     tabs: {
       list: {
