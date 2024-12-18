@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <div class="flex justify-center my-4">
-    <div class="relative h-0 w-full" style="padding-bottom: 50%;">
+    <div class="relative h-0 w-full" style="padding-bottom: 55%;">
       <iframe
         :src="src"
         scrolling="no"
