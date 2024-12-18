@@ -43,13 +43,13 @@ export default defineAppConfig({
       color: 'sky',
     },
     {
-      icon: 'tabler:brand-netease-music',
+      icon: 'custom:neteasecloudmusic',
       label: '网易云',
       link: 'https://music.163.com/#/user/home?id=1352085491',
       color: 'red',
     },
     {
-      icon: 'tabler:brand-bilibili',
+      icon: 'custom:bilibili',
       label: '哔哩哔哩',
       link: 'https://space.bilibili.com/221029937',
       color: 'pink',
