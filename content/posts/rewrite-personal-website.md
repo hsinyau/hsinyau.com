@@ -17,7 +17,12 @@ created: 2024-12-06 10:00:00
 
 上一个版本是 2022 年底，使用 Next.js + TailwindCSS + Drizzle + PostgreSQL 搭建的，并部署在 Vercel 上。
 
-最近一年 Next.js 的更新我越来越看不懂了，写起来心智负担超级大，每次程序出错都要先去查一下 issue 列表，然后才能找到解决方案。就像 :hover-text{hover="https://x.com/Dreamer__Paul" text="奇趣保罗" href="https://x.com/Dreamer__Paul/status/1779098449880953328"} 说的：当代码强行引入 Next 以及它的所有功能和特性了，你就已经没法再摆脱它了。所以，我决定换一个框架重写个人网站，这一次我选择了 Nuxt.js。
+最近一年 Next.js 的更新我越来越看不懂了，写起来心智负担超级大，每次程序出错都要先去查一下 issue 列表，然后才能找到解决方案。网上吐槽 Next.js 的帖子也多的数不清...
+
+::gallery{:photos='[{"alt":"雷峰塔","src":"/image/033619dc205ec4fd5851c2a4df39973e.webp","width":2464,"height":1836},{"alt":"雷峰塔","src":"/image/1bead84d5f9acf713d29dcb9190af099.webp","width":2464,"height":1350}]'}
+::
+
+就像 :hover-text{hover="https://x.com/Dreamer__Paul" text="奇趣保罗" href="https://x.com/Dreamer__Paul/status/1779098449880953328"} 说的：当代码强行引入 Next 以及它的所有功能和特性了，你就已经没法再摆脱它了。所以，我决定换一个框架重写个人网站，这一次我选择了 Nuxt.js。
 
 还有一点，我预想中的个人网站会像是 :hover-text{hover="https://antfu.me" text="Antfu" href="https://antfu.me"} 那样的简约风的，上一个版本风格还是有点杂乱了(还不是因为抄了太多网站)。所以就有了现在这个网站，风格简约，没有太多花哨的东西。
 
