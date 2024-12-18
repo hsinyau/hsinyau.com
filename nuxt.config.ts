@@ -37,13 +37,7 @@ export default defineNuxtConfig({
     ],
   },
   icon: {
-    serverBundle: 'local',
-    customCollections: [
-      {
-        prefix: 'custom',
-        dir: './assets/icon',
-      },
-    ],
+    serverBundle: 'remote',
   },
   // Nuxt Color Mode Config
   colorMode: {
