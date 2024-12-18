@@ -2,11 +2,11 @@
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
-const { hero } = useAppConfig()
+const { hero, socials } = useAppConfig()
 </script>
 
 <template>
-  <div class="space-y-6 select-none slide-enter-content">
+  <div class="space-y-6 select-none slide-enter-content not-prose">
     <div class="flex flex-col justify-between sm:flex-row">
       <div class="flex flex-col gap-4 will-change-[transform,opacity] md:max-w-xl">
         <h1 class="bg-gradient-to-b from-black via-black/90 to-black/70 to-90% bg-clip-text font-title text-2xl font-bold leading-9 text-transparent dark:from-white dark:via-white/90 dark:to-white/70 sm:text-4xl sm:leading-[3.5rem]">
@@ -36,6 +36,18 @@ const { hero } = useAppConfig()
           <br>
           欢迎酷酷的你来到这个小小的网站。
         </h1>
+        <div class="text-sm flex gap-5 mt-2 mb-6 text-muted-foreground">
+          <NuxtLink v-for="item in socials" :key="item.icon" :href="item.link" target="_blank">
+            <UButton
+              :icon="item.icon"
+              :ui="{ rounded: 'rounded-full' }"
+              :color="item.color"
+              size="md"
+              square
+              variant="solid"
+            />
+          </NuxtLink>
+        </div>
       </div>
       <div class="relative hidden size-28 md:block">
         <NuxtImg

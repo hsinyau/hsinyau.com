@@ -84,6 +84,9 @@ importers:
       '@iconify-json/ph':
         specifier: ^1.2.1
         version: 1.2.1
+      '@iconify-json/tabler':
+        specifier: ^1.2.13
+        version: 1.2.13
       '@iconify-json/vscode-icons':
         specifier: ^1.2.4
         version: 1.2.4
@@ -1195,6 +1198,9 @@ packages:
 
   '@iconify-json/ph@1.2.1':
     resolution: {integrity: sha512-x0DNfwWrS18dbsBYOq3XGiZnGz4CgRyC+YSl/TZvMQiKhIUl1woWqUbMYqqfMNUBzjyk7ulvaRovpRsIlqIf8g==}
+
+  '@iconify-json/tabler@1.2.13':
+    resolution: {integrity: sha512-vXnl0db3Q/v1e+lMEGmdrzJeFVyR//20gbUU2HFOrJP08nbz1EGRa8urNS4zL3oEV6Wjgo11AHJLSs628I6swQ==}
 
   '@iconify-json/vscode-icons@1.2.4':
     resolution: {integrity: sha512-cmSNh18IMlOgCIYqqW5zqvXn7/6bRpr246c+/ywE/Uq3F0zQPcpHhuJp1nAIj275PF7+ouj+MU1jlmuL59pPRA==}
@@ -7049,6 +7055,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/ph@1.2.1':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/tabler@1.2.13':
     dependencies:
       '@iconify/types': 2.0.0
 

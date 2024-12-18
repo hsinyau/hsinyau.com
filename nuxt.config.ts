@@ -36,6 +36,9 @@ export default defineNuxtConfig({
       'neutral',
     ],
   },
+  icon: {
+    serverBundle: 'local',
+  },
   // Nuxt Color Mode Config
   colorMode: {
     preference: 'system',

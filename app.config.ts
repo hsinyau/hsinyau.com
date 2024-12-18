@@ -28,26 +28,37 @@ export default defineAppConfig({
       icon: 'ph:github-logo-duotone',
       label: 'GitHub',
       link: 'https://github.com/hsinyau',
+      color: 'black',
     },
     {
       icon: 'ph:instagram-logo-duotone',
       label: 'Instagram',
       link: 'https://www.instagram.com/hsinyau_zz',
+      color: 'rose',
     },
     {
       icon: 'ph:telegram-logo-duotone',
       label: 'Telegram',
       link: 'https://t.me/hsinyau_channel',
+      color: 'sky',
     },
     {
       icon: 'tabler:brand-netease-music',
       label: '网易云',
       link: 'https://music.163.com/#/user/home?id=1352085491',
+      color: 'red',
     },
     {
       icon: 'tabler:brand-bilibili',
       label: '哔哩哔哩',
       link: 'https://space.bilibili.com/221029937',
+      color: 'pink',
+    },
+    {
+      icon: 'ph:envelope-duotone',
+      label: 'Email',
+      link: 'mailto:hi@hsinyau.com',
+      color: 'orange',
     },
   ],
   menu: [{
