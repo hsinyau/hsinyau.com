@@ -32,9 +32,9 @@ const { data: photos, status, error } = await useAsyncData<any>('photos', () => 
 
     <div v-else class="flex justify-between gap-3 overflow-hidden">
       <div
-        v-for="item in photos?.photos.slice(0, 4)"
-        :key="item.sha1"
-        class="rounded-xl w-1/4 h-1/4 aspect-[1/1] bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 overflow-hidden group"
+        v-for="item in photos?.photos?.slice(0, 4)"
+        :key="item.id"
+        class="rounded-xl w-1/4 h-1/4 aspect-[1/1] relative  bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 overflow-hidden group"
       >
         <NuxtImg
           :src="item.src"

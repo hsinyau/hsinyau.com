@@ -135,7 +135,7 @@ watch(activeTab, (newValue) => {
     <Suspense>
       <ClientOnly>
         <div v-if="activeTab === 1">
-          <Gallery :photos="displayData" layout="columns" provider="ipx" />
+          <Gallery :photos="displayData" layout="columns" />
         </div>
       </ClientOnly>
     </Suspense>

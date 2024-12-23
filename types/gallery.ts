@@ -3,10 +3,15 @@ export interface Photos {
 }
 
 export interface Photo {
+  image: Image
+}
+
+export interface Image {
+  _id: string
   width: number
   height: number
-  links: {
-    url: string
-  }
-  sha1: string
+  description: string
+  responsive_url: string
+  capture_date: number
+  location_coords: string
 }

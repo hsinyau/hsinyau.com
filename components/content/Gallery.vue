@@ -25,8 +25,8 @@ defineProps({
       :photos="photos"
       :layout="layout"
       :columns="columns"
-      spacing="5"
       :photo-renderer="GalleryRenderer"
+      spacing="5"
     />
   </div>
 </template>
