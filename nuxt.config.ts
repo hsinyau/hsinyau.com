@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-mapbox',
     '@nuxthq/studio',
+    'nuxt-umami',
   ],
   // Nuxt UI Module Config
   ui: {
@@ -111,6 +112,11 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/sitemap.xml', '/rss.xml'],
     },
+  },
+  umami: {
+    id: '1f684620-67e5-444f-84a2-077f031436f9',
+    host: 'https://cloud.umami.is',
+    autoTrack: true,
   },
   // Nuxt Env
   runtimeConfig: {

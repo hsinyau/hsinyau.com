@@ -38,8 +38,8 @@ const isCloudflare = computed(() => !nuxtImgProps.value.src?.includes('https://'
         placeholder
         class="rounded-md group-hover:scale-105 transition-all duration-500 dark:brightness-75 w-fill h-full object-cover"
       />
-      <div v-if="nuxtImgProps.description || nuxtImgProps.date" class="absolute top-0 left-0 w-full h-full overflow-hidden hidden group-hover:flex flex-col justify-end">
-        <div v-if="nuxtImgProps.description" class="text-white text-sm bg-zinc-800/60 backdrop-blur-sm p-2 w-full text-center duration-300">
+      <div v-if="nuxtImgProps.description" class="absolute top-0 left-0 w-full h-full overflow-hidden hidden group-hover:flex flex-col justify-end">
+        <div class="text-white text-sm bg-zinc-800/60 backdrop-blur-sm p-2 w-full text-center duration-300">
           {{ nuxtImgProps.description }}
         </div>
       </div>
