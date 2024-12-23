@@ -1,11 +1,11 @@
 import type { Moment } from '~/types/moments'
 
 export default defineCachedEventHandler(async (event) => {
-  const { github } = useRuntimeConfig(event)
+  const { githubToken } = useRuntimeConfig(event)
 
   const data = await $fetch(`https://api.github.com/repos/hsinyau/moments/issues`, {
     headers: {
-      'Authorization': `Bearer ${github.apiKey ?? ''}`,
+      'Authorization': `Bearer ${githubToken ?? ''}`,
       'Accept': 'application/vnd.github.v3+json',
       'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko), hsinyau',
     },

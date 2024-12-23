@@ -1,20 +1,24 @@
 import type { Photo } from '~/types/gallery'
 
 export default defineCachedEventHandler(async (event) => {
-  const { gallery } = useRuntimeConfig(event)
+  const { vscoToken } = useRuntimeConfig(event)
 
-  const data = await $fetch(`https://7bu.top/api/v1/images?album_id=1151&order=newest`, {
+  const data = await $fetch(`https://vsco.volta.eu.org/api/3.0/medias/profile?site_id=304275568&limit=21`, {
     headers: {
-      Authorization: `Bearer ${gallery.apiKey ?? ''}`,
-      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': `Bearer ${vscoToken}`,
     },
   })
 
-  const photos = (data as any).data.data.slice(0, 21).map((item: Photo) => ({
-    width: item.width,
-    height: item.height,
-    src: item.links.url,
-    sha1: item.sha1,
+  const photos = (data as any).media.map((item: Photo) => ({
+    width: item.image.width,
+    height: item.image.height,
+    id: item.image._id,
+    date: item.image.capture_date,
+    description: item.image.description,
+    location: item.image.location_coords,
+    src: `https://${item.image.responsive_url}`,
   }))
 
   return { photos }

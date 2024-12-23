@@ -114,18 +114,8 @@ export default defineNuxtConfig({
   },
   // Nuxt Env
   runtimeConfig: {
-    wakatime: {
-      apiKey: '',
-    },
-    github: {
-      apiKey: '',
-    },
-    gallery: {
-      apiKey: '',
-    },
-    discord: {
-      userId: '',
-    },
+    githubToken: '',
+    vscoToken: '',
     public: {
       mapbox: {
         accessToken: '',
