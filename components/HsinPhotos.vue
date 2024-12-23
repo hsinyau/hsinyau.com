@@ -30,19 +30,26 @@ const { data: photos, status, error } = await useAsyncData<any>('photos', () => 
       </p>
     </div>
 
-    <div v-else class="flex justify-between gap-3 overflow-hidden">
+    <div v-else class="grid grid-cols-2 md:flex gap-3 overflow-hidden">
       <div
         v-for="item in photos?.photos?.slice(0, 4)"
         :key="item.id"
-        class="rounded-xl w-1/4 h-1/4 aspect-[1/1] relative  bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 overflow-hidden group"
+        class="rounded-xl md:w-1/4 aspect-[1/1] relative bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 overflow-hidden group"
       >
         <NuxtImg
           :src="item.src"
           :alt="item.description"
+          :width="item.width"
+          :height="item.height"
           placeholder
-          class="rounded-lg w-full h-full object-cover cursor-pointer group-hover:scale-110 transition-all duration-500"
+          class="rounded-lg w-full h-full object-cover cursor-pointer group-hover:scale-105 transition-all duration-500 dark:brightness-75"
           loading="lazy"
         />
+        <div v-if="item.description" class="absolute bottom-0 left-0 w-full overflow-hidden">
+          <div class="text-white text-sm bg-zinc-800/60 backdrop-blur-sm p-2 w-full text-center transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
+            {{ item.description }}
+          </div>
+        </div>
       </div>
     </div>
   </div>

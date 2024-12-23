@@ -1,6 +1,6 @@
 import type { Moment } from '~/types/moments'
 
-export default defineCachedEventHandler(async (event) => {
+export default defineEventHandler(async (event) => {
   const { githubToken } = useRuntimeConfig(event)
 
   const data = await $fetch(`https://api.github.com/repos/hsinyau/moments/issues`, {

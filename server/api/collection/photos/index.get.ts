@@ -1,6 +1,6 @@
 import type { Photo } from '~/types/gallery'
 
-export default defineCachedEventHandler(async (event) => {
+export default defineEventHandler(async (event) => {
   const { vscoToken } = useRuntimeConfig(event)
 
   const data = await $fetch(`https://vsco.volta.eu.org/api/3.0/medias/profile?site_id=304275568&limit=21`, {
