@@ -38,7 +38,8 @@ const { data: photos, status, error } = await useAsyncData<any>('photos', () => 
       >
         <NuxtImg
           :src="item.src"
-          alt="照片"
+          :alt="item.description"
+          placeholder
           class="rounded-lg w-full h-full object-cover cursor-pointer group-hover:scale-110 transition-all duration-500"
           loading="lazy"
         />

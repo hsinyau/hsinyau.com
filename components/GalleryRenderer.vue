@@ -32,9 +32,8 @@ const isCloudflare = computed(() => !nuxtImgProps.value.src?.includes('https://'
       />
       <NuxtImg
         v-else
-        provider="ipx"
         v-bind="nuxtImgProps"
-        alt="ipx"
+        :alt="nuxtImgProps.description"
         loading="lazy"
         placeholder
         class="rounded-md group-hover:scale-105 transition-all duration-500 dark:brightness-75 w-fill h-full object-cover"
