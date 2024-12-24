@@ -42,11 +42,11 @@ const { data: photos, status, error } = await useAsyncData<any>('photos', () => 
           :width="item.width"
           :height="item.height"
           placeholder
-          class="rounded-lg w-full h-full object-cover cursor-pointer group-hover:scale-105 transition-all duration-500 dark:brightness-75"
+          class="rounded-lg w-full h-full object-cover cursor-pointer transform group-hover:scale-105 transition-transform duration-500 dark:brightness-75"
           loading="lazy"
         />
         <div v-if="item.description" class="absolute bottom-0 left-0 w-full overflow-hidden">
-          <div class="text-white text-sm bg-zinc-800/60 backdrop-blur-sm p-2 w-full text-center transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
+          <div class="text-white text-sm rounded-b-xl bg-zinc-800/60 backdrop-blur-sm w-full p-2 text-center opacity-0 group-hover:opacity-100 transition-all duration-500">
             {{ item.description }}
           </div>
         </div>
