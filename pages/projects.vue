@@ -16,15 +16,19 @@ const { data: projects } = await useAsyncData('all-projects', () => queryContent
       :title="title"
       :description="description"
     />
-    <HsinDivider
+    <div
       v-for="project in projects"
       :key="project.id"
-      :title="project.category"
     >
+      <div class="select-none relative h-12 pointer-events-none">
+        <span class="text-7xl font-sans absolute font-bold opacity-10 dark:opacity-[0.15]" style="-webkit-text-stroke: 1px #777; -webkit-text-fill-color: transparent;">
+          {{ project.category }}
+        </span>
+      </div>
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <li v-for="item in project.data" :key="item.link" class="border border-neutral-200 shadow-sm rounded-md hover:border-neutral-500 dark:border-neutral-700 dark:hover:border-neutral-500 duration-300">
+        <li v-for="item in project.data" :key="item.link" class="border border-neutral-200 shadow-sm rounded-md hover:border-neutral-500 dark:border-neutral-700 dark:bg-neutral-900 dark:hover:border-neutral-500 duration-300">
           <NuxtLink
-            class="text-accent self-start font-normal no-underline relative p-2.5 bg-transparent transition-colors flex flex-row items-center gap-2 place-items-stretch"
+            class="text-accent self-start font-normal no-underline relative p-2.5 flex flex-row items-center gap-2 place-items-stretch"
             :title="item.title"
             target="_blank"
             rel="noopener noreferrer"
@@ -38,17 +42,17 @@ const { data: projects } = await useAsyncData('all-projects', () => queryContent
             </span>
             <div class="flex flex-col gap-0.5">
               <div class="flex flex-row gap-3 items-center">
-                <p class="font-medium text-xs text-primary-txt line-clamp-1">
+                <p class="font-medium text-base text-primary-txt line-clamp-1">
                   {{ item.title }}
                 </p>
               </div>
-              <p class="text-2xs text-secondary-txt line-clamp-2">
+              <p class="text-sm text-secondary-txt line-clamp-2">
                 {{ item.description }}
               </p>
             </div>
           </NuxtLink>
         </li>
       </ul>
-    </HsinDivider>
+    </div>
   </main>
 </template>

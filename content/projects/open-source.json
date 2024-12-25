@@ -1,6 +1,6 @@
 {
-  "category": "NPM 包",
-  "order": "3",
+  "category": "开源",
+  "order": "0",
   "data": [
     {
       "title": "hexo-sitemap-generator",
