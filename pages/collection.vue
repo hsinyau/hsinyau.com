@@ -114,7 +114,8 @@ watch(activeTab, (newValue) => {
               <div class="min-w-0 max-w-full mt-2 pl-4 md:mt-0 md:-translate-y-4 md:pl-14">
                 <div class="relative w-full min-w-0">
                   <div class="moments-content relative inline-block rounded-xl p-3 text-zinc-800 dark:text-zinc-200 rounded-tl-sm bg-zinc-600/5 dark:bg-zinc-500/20 max-w-full overflow-auto">
-                    <HsinMarkdown :md="item.body" :cid="item.node_id" />
+                    <!-- <HsinMarkdown :md="item.body" :cid="item.node_id" /> -->
+                    {{ item.body }}
                   </div>
                 </div>
               </div>
