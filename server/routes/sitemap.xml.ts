@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
   const { site } = useAppConfig()
   const staticRoutes = ['/', '/about', '/uses', '/projects', '/friends', '/collection']
   // Fetch all documents
-  const docs = await serverQueryContent(event, 'posts').find()
+  const docs = await serverQueryContent(event, 'posts').sort({ created: -1 }).find()
 
   const sitemap = new SitemapStream({
     hostname: site.domain,

@@ -3,7 +3,7 @@ import RSS from 'rss'
 
 export default defineEventHandler(async (event) => {
   const { site } = useAppConfig()
-  const docs = await serverQueryContent(event, 'posts').find()
+  const docs = await serverQueryContent(event, 'posts').sort({ created: -1 }).find()
 
   const feed = new RSS({
     title: site.title,
