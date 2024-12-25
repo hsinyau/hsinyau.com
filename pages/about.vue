@@ -5,7 +5,7 @@ const { data: about } = await useAsyncData('home', () => queryContent('/about').
 <template>
   <main class="!max-w-none prose dark:prose-invert">
     <div class="relative flex justify-center filter dark:brightness-50 pb-8">
-      <div class="relative w-36 h-36 bg-gray-200 rounded-full overflow-hidden flex items-center justify-center">
+      <div class="relative w-[134px] h-[134px] bg-gray-200 rounded-full overflow-hidden flex items-center justify-center">
         <span class="absolute inset-5 rounded-full bg-white z-1" />
         <NuxtImg
           provider="cloudflare"
@@ -14,6 +14,7 @@ const { data: about } = await useAsyncData('home', () => queryContent('/about').
           width="128"
           height="128"
           class="m-auto rounded-full overflow-hidden w-32 h-32 z-10"
+          placeholder
         />
       </div>
     </div>
