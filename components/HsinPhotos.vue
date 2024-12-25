@@ -3,7 +3,7 @@ const { data: photos, status, error } = await useAsyncData<any>('photos', () => 
 </script>
 
 <template>
-  <div v-if="photos" class="not-prose">
+  <div class="not-prose">
     <div class="flex justify-between items-center mt-6 mb-4">
       <span class="font-bold text-gray-600 dark:text-gray-300 text-lg"><span class="animate-pulse">✨</span>最近捕获</span>
       <NuxtLink
@@ -18,14 +18,16 @@ const { data: photos, status, error } = await useAsyncData<any>('photos', () => 
         />
       </NuxtLink>
     </div>
-    <div v-if="status === 'pending'" class="h-24 flex items-center justify-center">
-      <p class="text-sm text-gray-500">
+    <div v-if="status === 'pending'" class="h-56 flex flex-col items-center justify-center">
+      <span class="w-4 h-4 rounded-full bg-rose-300 animate-bounce" />
+      <p class="text-sm mt-4 text-gray-500">
         画卷徐展，景致渐明
       </p>
     </div>
 
-    <div v-else-if="error" class="h-24 flex items-center justify-center">
-      <p class="text-sm text-red-500">
+    <div v-else-if="error" class="h-56 flex flex-col items-center justify-center">
+      <UIcon name="i-ph-cloud-lightning-duotone" size="40" class="text-red-500" />
+      <p class="text-sm mt-4 text-red-500">
         云雾蔽日，未达所愿
       </p>
     </div>
@@ -41,7 +43,7 @@ const { data: photos, status, error } = await useAsyncData<any>('photos', () => 
           :alt="item.description"
           :width="item.width"
           :height="item.height"
-          placeholder
+          :placeholder="[item.width, item.height]"
           class="rounded-lg w-full h-full object-cover cursor-pointer transform group-hover:scale-105 transition-transform duration-500 dark:brightness-75"
           loading="lazy"
         />
