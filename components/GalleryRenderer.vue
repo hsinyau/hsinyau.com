@@ -29,7 +29,7 @@ const isCloudflare = computed(() => !nuxtImgProps.value.src?.includes('https://'
         :width="nuxtImgProps.width"
         :height="nuxtImgProps.height"
         loading="lazy"
-        :placeholder="[100, 100]"
+        placeholder
         class="rounded-md group-hover:scale-105 transition-all duration-500 dark:brightness-75 w-fill h-full object-cover"
       />
       <NuxtImg
@@ -39,7 +39,7 @@ const isCloudflare = computed(() => !nuxtImgProps.value.src?.includes('https://'
         :width="nuxtImgProps.width"
         :height="nuxtImgProps.height"
         loading="lazy"
-        :placeholder="[nuxtImgProps.width, nuxtImgProps.height]"
+        placeholder
         class="rounded-md group-hover:scale-105 transition-all duration-500 dark:brightness-75 w-fill h-full object-cover"
       />
       <div v-if="nuxtImgProps.description" class="absolute bottom-0 left-0 w-full overflow-hidden">
