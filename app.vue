@@ -27,7 +27,7 @@ useHead({
   <Html lang="zh-CN">
     <Body>
       <NuxtLoadingIndicator color="#808080" />
-      <UContainer class="z-50 relative max-w-5xl flex flex-col min-h-[calc(100vh-24px)]">
+      <UContainer class="z-50 relative flex flex-col min-h-[calc(100vh-24px)]">
         <HsinHeader />
         <NuxtPage class="mt-12 grow" />
         <HsinFooter />
