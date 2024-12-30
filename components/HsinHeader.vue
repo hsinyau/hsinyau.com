@@ -63,7 +63,7 @@ defineShortcuts({
 <template>
   <header class="flex items-center justify-between py-8">
     <NuxtLink
-      class="handwriting text-xl sm:text-3xl text-nowrap gap-2 font-bold duration-300 text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white"
+      class="handwriting text-xl sm:text-3xl text-nowrap gap-2 font-bold duration-300 text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white"
       to="/"
     >
       Hsinyau

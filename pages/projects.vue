@@ -26,7 +26,7 @@ const { data: projects } = await useAsyncData('all-projects', () => queryContent
         </span>
       </div>
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <li v-for="item in project.data" :key="item.link" class="border border-neutral-200 shadow-sm rounded-md hover:border-neutral-500 dark:border-neutral-700 dark:bg-neutral-900 dark:hover:border-neutral-500 duration-300">
+        <li v-for="item in project.data" :key="item.link" class="border border-zinc-200 shadow-sm rounded-md hover:border-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-500 duration-300">
           <NuxtLink
             class="text-accent self-start font-normal no-underline relative p-2.5 flex flex-row items-center gap-2 place-items-stretch"
             :title="item.title"

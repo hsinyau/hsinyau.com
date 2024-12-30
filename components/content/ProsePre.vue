@@ -34,10 +34,10 @@ const { copied, copy } = useClipboard({
 
 <template>
   <div class="code-block relative [&>pre]:!rounded-t-none [&>pre]:!my-0">
-    <div class="flex items-center justify-between py-1.5 border border-gray-200 dark:border-gray-700 border-b-0 relative rounded-t-md px-4 not-prose">
+    <div class="flex items-center justify-between py-1.5 border border-zinc-200 dark:border-zinc-800 border-b-0 relative rounded-t-md px-4 not-prose">
       <span class="flex items-center gap-1.5">
         <UIcon :name="`vscode-icons:file-type-${language}`" />
-        <span class="text-gray-700 dark:text-gray-200 text-sm/6">{{ filename }}</span>
+        <span class="text-zinc-700 dark:text-zinc-200 text-sm/6">{{ filename }}</span>
       </span>
       <span class="flex items-center gap-1.5">
         <UTooltip v-if="copied" text="已复制">
@@ -56,7 +56,7 @@ const { copied, copy } = useClipboard({
         </UTooltip>
       </span>
     </div>
-    <pre :class="props.class" class="bg-[#f9f9f9] dark:bg-[#18181b] border border-gray-200 dark:border-gray-700"><slot /></pre>
+    <pre :class="props.class" class="bg-[#f9f9f9] dark:bg-[#18181b] border border-zinc-200 dark:border-zinc-800"><slot /></pre>
   </div>
 </template>
 
