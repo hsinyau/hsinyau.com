@@ -3,7 +3,7 @@ import RSS from 'rss'
 
 export default defineEventHandler(async (event) => {
   const { site } = useAppConfig()
-  const docs = await serverQueryContent(event, 'posts').sort({ created: -1 }).find()
+  const docs = await serverQueryContent(event, 'posts').sort({ created: -1 }).limit(10).find()
 
   const feed = new RSS({
     title: site.title,
@@ -17,8 +17,8 @@ export default defineEventHandler(async (event) => {
     custom_elements: [
       {
         follow_challenge: [
-          { 'follow:feedId': '96482750945854468' },
-          { 'follow:userId': '45701580278965248' },
+          { feedId: '96482750945854468' },
+          { userId: '45701580278965248' },
         ],
       },
     ],
@@ -35,7 +35,7 @@ export default defineEventHandler(async (event) => {
 
   return new Response(feed.xml(), {
     headers: {
-      'Content-Type': 'application/xml',
+      'Content-Type': 'application/rss+xml',
     },
   })
 })
