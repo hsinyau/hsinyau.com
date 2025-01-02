@@ -36,7 +36,11 @@ export default defineEventHandler(async (event) => {
       url: `${site.domain}${doc._path}`,
       date: doc.created,
       description: doc.summary,
-      custom_elements: [{ 'content:encoded': `<![CDATA[ ${extractedContent} ]]>` }],
+      custom_elements: [
+        {
+          'content:encoded': `<![CDATA[ <blockquote>该渲染可能存在排版问题，最佳体验请前往：<a href="${site.domain}${doc._path}">${site.domain}${doc._path}</a></blockquote>${extractedContent} ]]>`,
+        },
+      ],
     })
   }
 
