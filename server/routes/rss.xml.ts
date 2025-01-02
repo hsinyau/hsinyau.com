@@ -1,9 +1,14 @@
 import { serverQueryContent } from '#content/server'
 import RSS from 'rss'
+import { extractContent } from '../utils/extract-content'
 
 export default defineEventHandler(async (event) => {
   const { site } = useAppConfig()
-  const docs = await serverQueryContent(event, 'posts').sort({ created: -1 }).limit(10).find()
+  const docs = await serverQueryContent(event, 'posts')
+    .only(['title', 'summary', 'created', '_path', 'body'])
+    .sort({ created: -1 })
+    .limit(10)
+    .find()
 
   const feed = new RSS({
     title: site.title,
@@ -25,17 +30,19 @@ export default defineEventHandler(async (event) => {
   })
 
   for (const doc of docs) {
+    const extractedContent = extractContent(doc.body)
     feed.item({
       title: doc.title ?? `${doc._path} - ${site.title}`,
       url: `${site.domain}${doc._path}`,
       date: doc.created,
       description: doc.summary,
+      custom_elements: [{ 'content:encoded': `<![CDATA[ ${extractedContent} ]]>` }],
     })
   }
 
   return new Response(feed.xml(), {
     headers: {
-      'Content-Type': 'application/rss+xml',
+      'Content-Type': 'application/xml',
     },
   })
 })
