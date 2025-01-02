@@ -54,6 +54,7 @@ const { hero, socials } = useAppConfig()
           provider="cloudflare"
           src="/image/avatar.jpg"
           class="rounded-full"
+          placeholder
           width="112"
           height="112"
           alt="Avatar"
