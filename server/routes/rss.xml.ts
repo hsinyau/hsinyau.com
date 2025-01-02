@@ -11,6 +11,17 @@ export default defineEventHandler(async (event) => {
     site_url: site.domain,
     image_url: `${site.domain}/favicon.svg`,
     feed_url: `${site.domain}/rss.xml`,
+    custom_namespaces: {
+      follow: 'http://www.follow.is',
+    },
+    custom_elements: [
+      {
+        'follow:challenge': [
+          { 'follow:feedId': '41215011978385440' },
+          { 'follow:userId': '41229460898486272' },
+        ],
+      },
+    ],
   })
 
   for (const doc of docs) {
