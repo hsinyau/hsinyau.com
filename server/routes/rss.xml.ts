@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
     custom_elements: [
       {
         'follow:challenge': [
-          { 'follow:feedId': '41215011978385440' },
+          { 'follow:feedId': '96482750945854468' },
           { 'follow:userId': '41229460898486272' },
         ],
       },
