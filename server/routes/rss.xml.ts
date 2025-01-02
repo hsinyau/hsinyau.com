@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
       {
         'follow:challenge': [
           { 'follow:feedId': '96482750945854468' },
-          { 'follow:userId': '41229460898486272' },
+          { 'follow:userId': '45701580278965248' },
         ],
       },
     ],
