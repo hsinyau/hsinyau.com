@@ -49,7 +49,7 @@ function scrollToHeading(id: string) {
 </script>
 
 <template>
-  <nav v-if="toc.length > 0" class="sticky top-12 p-4 text-gray-500 text-sm">
+  <nav v-if="toc.length > 0" class="text-gray-500 text-sm">
     <div class="text-sm font-medium mb-2">
       目录
     </div>
@@ -91,6 +91,5 @@ function scrollToHeading(id: string) {
         </template>
       </template>
     </ul>
-    <div>{{ }}</div>
   </nav>
 </template>

@@ -46,12 +46,19 @@ const { copy, copied } = useClipboard({
 
 // 阅读进度
 const progress = ref(0)
-onMounted(() => {
-  window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight
-    progress.value = Math.round((scrollTop / docHeight) * 100)
-  })
+const { y: scrollY } = useWindowScroll()
+const { height: windowHeight } = useWindowSize()
+
+useEventListener(document, 'scroll', () => {
+  const content = document.querySelector('.article-content')
+  if (!content)
+    return
+
+  const scrollTop = scrollY.value - (content as HTMLElement).offsetTop
+  const docHeight = content.scrollHeight
+
+  // 确保进度在 0-100 之间
+  progress.value = Math.min(100, Math.max(0, Math.round((scrollTop / (docHeight - windowHeight.value)) * 100)))
 })
 </script>
 
@@ -114,7 +121,7 @@ onMounted(() => {
                 icon="i-ph-pencil-line-duotone"
               />
               <div class="mt-8 flex gap-8">
-                <article class="flex-1">
+                <article class="flex-1 article-content">
                   <ContentRenderer :value="post">
                     <ContentRendererMarkdown
                       :value="post"
@@ -123,7 +130,12 @@ onMounted(() => {
                   </ContentRenderer>
                 </article>
                 <aside class="hidden lg:block w-52">
-                  <PostToc :toc="post?.body?.toc?.links" />
+                  <div class="sticky top-8">
+                    <PostToc :toc="post?.body?.toc?.links" />
+                    <div class="flex items-center gap-2 text-sm mt-4 text-zinc-500">
+                      阅读进度：{{ progress }}%
+                    </div>
+                  </div>
                 </aside>
               </div>
               <UDivider
@@ -146,7 +158,7 @@ onMounted(() => {
                   <UButton
                     v-if="copied"
                     color="green"
-                    icon="i-ph-check-square-duotone"
+                    icon="i-ph-copy-simple-duotone"
                     label="复制成功"
                     size="lg"
                     variant="outline"
@@ -155,7 +167,7 @@ onMounted(() => {
                   <UButton
                     v-else
                     color="white"
-                    icon="i-ph-square-duotone"
+                    icon="i-ph-copy-simple-duotone"
                     label="复制链接"
                     size="lg"
                     variant="solid"
