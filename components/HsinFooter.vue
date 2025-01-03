@@ -28,6 +28,10 @@
         <NuxtLink href="/sitemap.xml" class="hover:underline" target="_blank">
           站点地图
         </NuxtLink>
+        <span class="px-1">•</span>
+        <NuxtLink href="https://travel.moe/go" class="hover:underline" target="_blank">
+          跃迁
+        </NuxtLink>
       </div>
     </div>
   </footer>
