@@ -41,7 +41,7 @@ const { hero, socials } = useAppConfig()
             <UButton
               :icon="item.icon"
               :ui="{ rounded: 'rounded-full' }"
-              :color="item.color"
+              :color="item.color as any"
               size="md"
               square
               variant="solid"
