@@ -9,7 +9,7 @@ useSeoMeta({
 
 const { data: posts } = await useAsyncData('all-posts', () => queryContent('/posts')
   .sort({ created: -1 })
-  .without('body')
+  .only(['title', 'summary', 'created', '_path', 'tag', 'readingTime'])
   .find())
 </script>
 
