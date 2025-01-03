@@ -66,8 +66,8 @@ importers:
         specifier: ^8.0.0
         version: 8.0.0
       swiper:
-        specifier: ^11.1.15
-        version: 11.1.15
+        specifier: ^11.2.0
+        version: 11.2.0
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.7.2)
@@ -5598,8 +5598,8 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  swiper@11.1.15:
-    resolution: {integrity: sha512-IzWeU34WwC7gbhjKsjkImTuCRf+lRbO6cnxMGs88iVNKDwV+xQpBCJxZ4bNH6gSrIbbyVJ1kuGzo3JTtz//CBw==}
+  swiper@11.2.0:
+    resolution: {integrity: sha512-rjjAKgDEs+grR2eQshVDCcE4KNPC7CI294nfcbV9gE8WCsLdvOYXDeZKUYevqAZZp8j5hE7kpT3dAGVKFBWlxQ==}
     engines: {node: '>= 4.7.0'}
 
   synckit@0.6.2:
@@ -12786,7 +12786,7 @@ snapshots:
       csso: 5.0.5
       picocolors: 1.1.1
 
-  swiper@11.1.15: {}
+  swiper@11.2.0: {}
 
   synckit@0.6.2:
     dependencies:
