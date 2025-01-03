@@ -3,7 +3,7 @@ import { SitemapStream, streamToPromise } from 'sitemap'
 
 export default defineEventHandler(async (event) => {
   const { site } = useAppConfig()
-  const staticRoutes = ['/', '/about', '/uses', '/projects', '/friends', '/collection']
+  const staticRoutes = ['/', '/about', '/projects', '/friends', '/collection']
   // Fetch all documents
   const docs = await serverQueryContent(event, 'posts').sort({ created: -1 }).find()
 
@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
   for (const doc of staticRoutes) {
     sitemap.write({
       url: doc,
-      priority: doc === '/' ? 1 : 0.8,
+      changefreq: 'daily',
     })
   }
 
@@ -22,7 +22,7 @@ export default defineEventHandler(async (event) => {
     sitemap.write({
       url: doc._path,
       lastmod: doc.created.slice(0, 10),
-      priority: 0.6,
+      changefreq: 'daily',
     })
   }
   sitemap.end()
