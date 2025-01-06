@@ -11,10 +11,6 @@ useSeoMeta({
   twitterDescription: post.value?.summary,
 })
 
-defineOgImageComponent('SitePost', {
-  title: post.value?.title,
-})
-
 const {
   data: postDB,
   refresh,

@@ -5,12 +5,11 @@ useSeoMeta({
   ogTitle: site.title,
   ogDescription: site.description,
   ogUrl: site.domain,
+  ogImage: '/opengraph.jpg',
   twitterTitle: site.title,
   twitterDescription: site.description,
   twitterCreator: site.twitter,
 })
-
-defineOgImageComponent('Site')
 
 useHead({
   title: site.title,
