@@ -1,10 +1,15 @@
 <script setup>
+const { site } = useAppConfig()
 const title = '友情链接'
 const description = '快来和我做朋友吧~'
 
 useSeoMeta({
   title,
   description,
+  ogTitle: `${title} | ${site.title}`,
+  ogDescription: description,
+  twitterTitle: `${title} | ${site.title}`,
+  twitterDescription: description,
 })
 
 const { data: friends } = await useAsyncData('all-friends', () => queryContent('/friends').find())

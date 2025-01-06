@@ -1,10 +1,15 @@
 <script setup lang="ts">
+const { site } = useAppConfig()
 const title = '我的项目'
 const description = '工作、个人、开源。自己的或参与开发的项目。'
 
 useSeoMeta({
   title,
   description,
+  ogTitle: `${title} | ${site.title}`,
+  ogDescription: description,
+  twitterTitle: `${title} | ${site.title}`,
+  twitterDescription: description,
 })
 
 const { data: projects } = await useAsyncData('all-projects', () => queryContent('/projects').sort({ order: -1 }).find())

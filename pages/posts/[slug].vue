@@ -7,9 +7,12 @@ useSeoMeta({
   description: post.value?.summary,
   ogTitle: post.value?.title,
   ogDescription: post.value?.summary,
-  ogImage: '/opengraph.jpg',
   twitterTitle: post.value?.title,
   twitterDescription: post.value?.summary,
+})
+
+defineOgImageComponent('SitePost', {
+  title: post.value?.title,
 })
 
 const {

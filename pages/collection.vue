@@ -9,6 +9,10 @@ const description = '对我的近况感兴趣？快来看看最近做了什么�
 useSeoMeta({
   title,
   description,
+  ogTitle: `${title} | ${site.title}`,
+  ogDescription: description,
+  twitterTitle: `${title} | ${site.title}`,
+  twitterDescription: description,
 })
 
 const tags = [

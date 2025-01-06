@@ -4,14 +4,13 @@ const { site } = useAppConfig()
 useSeoMeta({
   ogTitle: site.title,
   ogDescription: site.description,
-  ogImage: '/opengraph.jpg',
   ogUrl: site.domain,
   twitterTitle: site.title,
   twitterDescription: site.description,
-  twitterImage: '/opengraph.jpg',
-  twitterCard: 'summary_large_image',
   twitterCreator: site.twitter,
 })
+
+defineOgImageComponent('Site')
 
 useHead({
   title: site.title,

@@ -5,6 +5,10 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
   },
+  site: {
+    url: 'https://hsinyau.com',
+    name: 'HSINYAU',
+  },
   modules: [
     '@nuxt/ui',
     '@nuxtjs/google-fonts',
@@ -15,6 +19,7 @@ export default defineNuxtConfig({
     'nuxt-mapbox',
     '@nuxthq/studio',
     'nuxt-umami',
+    'nuxt-og-image',
   ],
   // Nuxt UI Module Config
   ui: {
@@ -31,6 +36,15 @@ export default defineNuxtConfig({
       'purple',
       'neutral',
     ],
+  },
+  ogImage: {
+    fonts: [
+      'Noto+Sans+SC:400',
+    ],
+    defaults: {
+      width: 1200,
+      height: 630,
+    },
   },
   icon: {
     serverBundle: 'remote',

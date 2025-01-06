@@ -1,4 +1,17 @@
 <script setup lang="ts">
+const { site } = useAppConfig()
+const title = '关于我'
+const description = '嗨，欢迎酷酷的你来到这个小小的网站，很高兴能在这里与你相遇。'
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: `${title} | ${site.title}`,
+  ogDescription: description,
+  twitterTitle: `${title} | ${site.title}`,
+  twitterDescription: description,
+})
+
 const { data: about } = await useAsyncData('home', () => queryContent('/about').findOne())
 </script>
 
