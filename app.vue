@@ -8,6 +8,8 @@ useSeoMeta({
   ogImage: '/opengraph.jpg',
   twitterTitle: site.title,
   twitterDescription: site.description,
+  twitterImage: '/opengraph.jpg',
+  twitterCard: 'summary',
   twitterCreator: site.twitter,
 })
 

@@ -118,8 +118,17 @@ watch(activeTab, (newValue) => {
               <div class="min-w-0 max-w-full mt-2 pl-4 md:mt-0 md:-translate-y-4 md:pl-14">
                 <div class="relative w-full min-w-0">
                   <div class="moments-content relative inline-block rounded-xl p-3 text-zinc-800 dark:text-zinc-200 rounded-tl-sm bg-zinc-600/5 dark:bg-zinc-500/20 max-w-full overflow-auto">
-                    <!-- <HsinMarkdown :md="item.body" :cid="item.node_id" /> -->
-                    {{ item.body }}
+                    <span>{{ item.body }}</span>
+                    <span v-if="item.images" class="moments-images">
+                      <NuxtImg
+                        v-for="img in item.images" :key="img"
+                        provider="cloudflare"
+                        :src="img"
+                        class="w-full h-full object-cover overflow-hidden aspect-[1/1] filter dark:brightness-50"
+                        placeholder
+                        loading="lazy"
+                      />
+                    </span>
                   </div>
                 </div>
               </div>
@@ -158,31 +167,31 @@ watch(activeTab, (newValue) => {
 
 <style>
 /* 一宫格 */
-.moments-content blockquote+p:has(img:nth-child(1)) {
+.moments-images:has(img:nth-child(1)) {
   @apply mt-2
 }
 
 /* 二宫格 */
-.moments-content blockquote+p:has(img:nth-child(2)) {
+.moments-images:has(img:nth-child(2)) {
   @apply grid grid-cols-2 gap-2 mt-2
 }
 
 /* 三宫格 */
-.moments-content blockquote+p:has(img:nth-child(3)) {
+.moments-images:has(img:nth-child(3)) {
   @apply grid grid-cols-3 gap-2 mt-2
 }
 
 /* 四宫格 */
-.moments-content blockquote+p:has(img:nth-child(4)) {
+.moments-images:has(img:nth-child(4)) {
   @apply grid grid-cols-2 gap-2 mt-2
 }
 
 /* 九宫格 */
-.moments-content blockquote+p:has(img:nth-child(9)) {
+.moments-images:has(img:nth-child(9)) {
   @apply grid grid-cols-3 gap-2 mt-2
 }
 
-.moments-content blockquote+p img{
+.moments-images img{
   @apply w-full h-full object-cover overflow-hidden aspect-[1/1] filter dark:brightness-50
 }
 </style>

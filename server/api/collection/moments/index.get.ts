@@ -1,6 +1,6 @@
 import type { Moment } from '~/types/moments'
 
-export default defineEventHandler(async (event) => {
+export default defineCachedEventHandler(async (event) => {
   const { githubToken } = useRuntimeConfig(event)
 
   const data = await $fetch(`https://api.github.com/repos/hsinyau/moments/issues`, {
@@ -18,12 +18,15 @@ export default defineEventHandler(async (event) => {
   const moments = data.map((item: Moment) => ({
     node_id: item.node_id,
     title: item.title,
-    body: item.body,
+    body: item.body.replace(/!\[.*?\]\((.*?)\)/g, ''),
     labels: {
       name: item.labels[0]?.name,
       color: item.labels[0]?.color,
     },
+    images: item.body.match(/!\[.*?\]\((.*?)\)/g)?.map(img => img.match(/\((.*?)\)/)?.[1]),
   }))
 
   return { moments }
+}, {
+  swr: true,
 })
