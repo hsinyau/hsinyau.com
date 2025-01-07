@@ -152,6 +152,7 @@ useEventListener(document, 'scroll', () => {
                     icon="i-ph-heart-duotone"
                     size="lg"
                     variant="solid"
+                    data-track="like post"
                     @click.prevent="handleLike()"
                   />
                   <UButton

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { useOpenpanel } from './composables/useOpenpanel'
+
 const { site } = useAppConfig()
 
 useSeoMeta({
@@ -21,6 +23,8 @@ useHead({
     { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.svg' },
   ],
 })
+
+useOpenpanel().track('')
 </script>
 
 <template>
