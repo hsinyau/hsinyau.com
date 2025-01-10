@@ -116,4 +116,12 @@ export default defineNuxtConfig({
       openPanelClientId: '',
     },
   },
+  routeRules: {
+    '/': { prerender: true },
+    '/posts': { prerender: true },
+    '/posts/**': { prerender: true },
+    '/projects/**': { prerender: true },
+    '/about': { prerender: true },
+    '/friends': { prerender: true },
+  },
 })
