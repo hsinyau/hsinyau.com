@@ -51,7 +51,7 @@ export default defineNuxtConfig({
   googleFonts: {
     display: 'swap',
     families: {
-      'Noto Sans SC': [400, 500, 600, 700, 800, 900],
+      'Noto Sans SC': [400, 700],
       'Dancing Script': [400, 700],
     },
   },
@@ -112,9 +112,7 @@ export default defineNuxtConfig({
     githubToken: '',
     vscoToken: '',
     public: {
-      mapbox: {
-        accessToken: '',
-      },
+      mapboxAccessToken: '',
       openPanelClientId: '',
     },
   },

@@ -37,7 +37,7 @@ const { hero, socials } = useAppConfig()
           欢迎酷酷的你来到这个小小的网站。
         </h1>
         <div class="text-sm flex gap-5 mt-2 mb-6 text-muted-foreground">
-          <NuxtLink v-for="item in socials" :key="item.icon" :href="item.link" target="_blank">
+          <NuxtLink v-for="item in socials" :key="item.icon" :href="item.link" target="_blank" :aria-label="item.label">
             <UButton
               :icon="item.icon"
               :ui="{ rounded: 'rounded-full' }"
@@ -45,6 +45,7 @@ const { hero, socials } = useAppConfig()
               size="md"
               square
               variant="solid"
+              :aria-label="item.label"
             />
           </NuxtLink>
         </div>
@@ -54,6 +55,8 @@ const { hero, socials } = useAppConfig()
           provider="cloudflare"
           src="/image/avatar.jpg"
           class="rounded-full"
+          format="webp"
+          quality="80"
           placeholder
           width="112"
           height="112"

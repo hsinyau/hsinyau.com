@@ -6,18 +6,16 @@ defineProps<{
 
 <template>
   <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <NuxtLink
+    <li
       v-for="(post, id) in posts"
       :key="id"
-      :to="post._path"
+      class=" h-full border p-4 shadow-sm border-zinc-200 rounded-md hover:border-zinc-500 dark:border-zinc-800 dark:hover:border-zinc-500  duration-300"
     >
-      <li
-        class=" h-full border p-4 shadow-sm border-zinc-200 rounded-md hover:border-zinc-500 dark:border-zinc-800 dark:hover:border-zinc-500  duration-300"
-      >
+      <NuxtLink :to="post._path">
         <article class="space-y-2">
-          <h1 class="font-bold text-lg duration-300 text-black dark:text-white line-clamp-1">
+          <h2 class="font-bold text-lg duration-300 text-black dark:text-white line-clamp-1">
             {{ post.title }}
-          </h1>
+          </h2>
           <div class="text-sm text-zinc-500 duration-300 flex items-center gap-1">
             <UIcon name="ph:calendar-duotone" size="16" />
             <p>
@@ -32,7 +30,7 @@ defineProps<{
             {{ post.summary }}
           </h3>
         </article>
-      </li>
-    </NuxtLink>
+      </NuxtLink>
+    </li>
   </ul>
 </template>

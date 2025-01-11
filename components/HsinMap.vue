@@ -85,7 +85,7 @@ class ResetControl {
   <div class="relative h-80 md:h-96 w-full border border-zinc-200 dark:border-zinc-800 rounded-lg">
     <MapboxMap
       :options="{
-        accessToken: config.public.mapbox.accessToken,
+        accessToken: config.public.mapboxAccessToken,
         style: isDark ? 'mapbox://styles/mapbox/dark-v11' : 'mapbox://styles/mapbox/light-v11',
         center: coordinates,
         zoom,
