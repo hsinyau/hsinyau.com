@@ -24,4 +24,5 @@ export default defineCachedEventHandler(async (event) => {
   return { photos }
 }, {
   swr: true,
+  maxAge: 60 * 60 * 24 * 30,
 })
