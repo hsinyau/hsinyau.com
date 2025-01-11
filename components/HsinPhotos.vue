@@ -43,6 +43,8 @@ const { data: photos, status, error } = await useAsyncData<any>('photos', () => 
           :alt="item.description"
           :width="item.width"
           :height="item.height"
+          format="webp"
+          quality="80"
           placeholder
           class="rounded-lg w-full h-full object-cover cursor-pointer transform group-hover:scale-105 transition-transform duration-500 dark:brightness-75"
           loading="lazy"

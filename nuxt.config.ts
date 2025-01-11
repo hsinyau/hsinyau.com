@@ -43,6 +43,8 @@ export default defineNuxtConfig({
   image: {
     cloudflare: {
       baseURL: 'https://file.hsinyau.com',
+      format: ['webp', 'avif'],
+      quality: 80,
     },
   },
   // Nuxt Google Fonts Config

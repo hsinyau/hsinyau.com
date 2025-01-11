@@ -28,6 +28,8 @@ const isCloudflare = computed(() => !nuxtImgProps.value.src?.includes('https://'
         v-bind="nuxtImgProps"
         :width="nuxtImgProps.width"
         :height="nuxtImgProps.height"
+        format="webp"
+        quality="80"
         loading="lazy"
         placeholder
         class="rounded-md group-hover:scale-105 transition-all duration-500 dark:brightness-75 w-fill h-full object-cover"
@@ -38,6 +40,7 @@ const isCloudflare = computed(() => !nuxtImgProps.value.src?.includes('https://'
         :alt="nuxtImgProps.description"
         :width="nuxtImgProps.width"
         :height="nuxtImgProps.height"
+        format="webp"
         loading="lazy"
         placeholder
         class="rounded-md group-hover:scale-105 transition-all duration-500 dark:brightness-75 w-fill h-full object-cover"
