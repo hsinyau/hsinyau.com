@@ -29,7 +29,6 @@ export default defineCachedEventHandler(async (event) => {
   return { moments }
 }, {
   swr: true,
-  maxAge: 60 * 60 * 24 * 30,
   name: 'getMomentsData',
   getKey: () => 'default',
 })

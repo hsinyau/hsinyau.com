@@ -18,13 +18,12 @@ export default defineCachedEventHandler(async (event) => {
     date: item.image.capture_date,
     description: item.image.description,
     location: item.image.location_coords,
-    src: `https://fly.webp.se/image?url=https://${item.image.responsive_url}`,
+    src: `${item.image.responsive_url.replace('im.vsco.co/aws-us-west-2', 'https://fbf0ebb.webp.li')}`,
   }))
 
   return { photos }
 }, {
   swr: true,
-  maxAge: 60 * 60 * 24 * 30,
   name: 'getPhotosData',
   getKey: () => 'default',
 })

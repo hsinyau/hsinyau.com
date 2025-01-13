@@ -4,7 +4,6 @@ export default defineCachedEventHandler(async () => {
   return data
 }, {
   swr: true,
-  maxAge: 60 * 60 * 24 * 30,
   name: 'getGeoData',
   getKey: () => 'default',
 })
