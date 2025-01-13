@@ -18,7 +18,7 @@ export default defineCachedEventHandler(async (event) => {
     date: item.image.capture_date,
     description: item.image.description,
     location: item.image.location_coords,
-    src: `https://${item.image.responsive_url}`,
+    src: `https://fly.webp.se/image?url=https://${item.image.responsive_url}`,
   }))
 
   return { photos }
