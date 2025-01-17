@@ -11,8 +11,6 @@ useSeoMeta({
   twitterTitle: `${title} | ${site.title}`,
   twitterDescription: description,
 })
-
-const { data: about } = await useAsyncData('home', () => queryContent('/about').findOne())
 </script>
 
 <template>
@@ -31,7 +29,7 @@ const { data: about } = await useAsyncData('home', () => queryContent('/about').
         />
       </div>
     </div>
-    <ContentDoc :path="about?.path" />
+    <ContentDoc path="/about" />
   </main>
 </template>
 

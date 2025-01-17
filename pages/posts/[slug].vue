@@ -59,6 +59,8 @@ useEventListener(document, 'scroll', () => {
   // 确保进度在 0-100 之间
   progress.value = Math.min(100, Math.max(0, Math.round((scrollTop / (docHeight - windowHeight.value)) * 100)))
 })
+
+const showComment = ref(false)
 </script>
 
 <template>
@@ -173,13 +175,22 @@ useEventListener(document, 'scroll', () => {
                     variant="solid"
                     @click.prevent="copy()"
                   />
+                  <UButton
+                    v-if="!showComment"
+                    color="white"
+                    icon="i-ph-messenger-logo-duotone"
+                    label="加载评论"
+                    size="lg"
+                    variant="solid"
+                    @click.prevent="showComment = true"
+                  />
                 </div>
               </div>
               <UDivider
                 class="my-16"
                 icon="i-ph:messenger-logo-duotone"
               />
-              <HsinComment />
+              <LazyHsinComment v-if="showComment" />
             </div>
           </div>
         </div>
