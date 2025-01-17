@@ -16,7 +16,7 @@ const { data: projects } = await useAsyncData('all-projects', () => queryContent
 </script>
 
 <template>
-  <main class="mt-12 space-y-12">
+  <main class="mt-12 space-y-4">
     <HsinTitle
       :title="title"
       :description="description"
@@ -26,7 +26,7 @@ const { data: projects } = await useAsyncData('all-projects', () => queryContent
       :key="project.id"
     >
       <div class="select-none relative h-12 pointer-events-none">
-        <span class="text-7xl font-sans absolute font-bold opacity-10 dark:opacity-[0.15]" style="-webkit-text-stroke: 1px #777; -webkit-text-fill-color: transparent;">
+        <span class="text-3xl md:text-5xl font-sans absolute top-1/2 font-bold opacity-10 dark:opacity-[0.15] z-10" style="-webkit-text-stroke: 1px #777; -webkit-text-fill-color: transparent;">
           {{ project.category }}
         </span>
       </div>

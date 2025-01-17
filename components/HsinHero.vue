@@ -9,7 +9,7 @@ const { hero, socials } = useAppConfig()
   <div class="space-y-6 select-none slide-enter-content not-prose">
     <div class="flex flex-col justify-between sm:flex-row">
       <div class="flex flex-col gap-4 will-change-[transform,opacity] md:max-w-xl">
-        <h1 class="bg-gradient-to-b from-black via-black/90 to-black/70 to-90% bg-clip-text font-title text-2xl font-bold leading-9 text-transparent dark:from-white dark:via-white/90 dark:to-white/70 sm:text-4xl sm:leading-[3.5rem]">
+        <h1 class="bg-gradient-to-b from-black via-black/90 to-black/70 to-90% bg-clip-text font-title text-xl font-bold leading-9 text-transparent dark:from-white dark:via-white/90 dark:to-white/70 sm:text-3xl sm:leading-[3.5rem]">
           嗨，很高兴能在这里与你相遇。<br>我是 𝐻𝑠𝑖𝑛𝑦𝑎𝑢, 一个
           <div class="inline-grid h-9 overflow-hidden sm:h-[3.5rem]">
             <Swiper

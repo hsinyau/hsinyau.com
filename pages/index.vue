@@ -8,7 +8,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="!max-w-none prose dark:prose-invert">
+  <main class="!max-w-none">
     <HsinHero />
     <LatestPosts />
     <HsinPhotos />
