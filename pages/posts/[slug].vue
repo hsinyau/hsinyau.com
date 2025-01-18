@@ -43,22 +43,7 @@ const { copy, copied } = useClipboard({
   copiedDuring: 4000,
 })
 
-// 阅读进度
-const progress = ref(0)
-const { y: scrollY } = useWindowScroll()
-const { height: windowHeight } = useWindowSize()
-
-useEventListener(document, 'scroll', () => {
-  const content = document.querySelector('.article-content')
-  if (!content)
-    return
-
-  const scrollTop = scrollY.value - (content as HTMLElement).offsetTop
-  const docHeight = content.scrollHeight
-
-  // 确保进度在 0-100 之间
-  progress.value = Math.min(100, Math.max(0, Math.round((scrollTop / (docHeight - windowHeight.value)) * 100)))
-})
+const { progress } = useReadingProgress()
 
 const showComment = ref(false)
 </script>
@@ -70,9 +55,9 @@ const showComment = ref(false)
         <div class="flex gap-8">
           <div class="flex-1">
             <div class="flex">
-              <NuxtLink
-                class="flex items-center gap-2 mb-8 group text-sm hover:text-black dark:hover:text-white duration-300"
-                to="/posts"
+              <span
+                class="flex items-center gap-2 mb-8 group text-sm hover:text-black dark:hover:text-white duration-300 cursor-pointer"
+                @click="$router.back()"
               >
                 <UIcon
                   class="group-hover:-translate-x-1 transform duration-300"
@@ -80,7 +65,7 @@ const showComment = ref(false)
                   size="20"
                 />
                 返回上页
-              </NuxtLink>
+              </span>
             </div>
             <div class="mt-2">
               <div class="flex items-end gap-4 flex-wrap">
