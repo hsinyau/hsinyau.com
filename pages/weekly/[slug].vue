@@ -1,30 +1,20 @@
 <script lang="ts" setup>
 const route = useRoute()
-const { data: post } = await useAsyncData(`post:${route.params.slug}`, () => queryContent(`/posts/${route.params.slug}`).findOne())
+const { data: weekly } = await useAsyncData(`weekly:${route.params.slug}`, () => queryContent(`/weekly/${route.params.slug}`).findOne())
 
 useSeoMeta({
-  title: post.value?.title,
-  description: post.value?.summary,
-  ogTitle: post.value?.title,
-  ogDescription: post.value?.summary,
-  twitterTitle: post.value?.title,
-  twitterDescription: post.value?.summary,
+  title: weekly.value?.title,
+  description: weekly.value?.summary,
+  ogTitle: weekly.value?.title,
+  ogDescription: weekly.value?.summary,
+  twitterTitle: weekly.value?.title,
+  twitterDescription: weekly.value?.summary,
 })
 
 const {
   data: postDB,
   refresh,
 } = await useAsyncData(`post:${route.params.slug}:db`, () => $fetch(`/api/posts/${route.params.slug}`, { method: 'POST' }), { lazy: true })
-
-function getDetails() {
-  const likes = postDB.value?.likes ?? 0
-  const views = postDB.value?.views ?? 0
-
-  return {
-    likes: `${likes} 点赞`,
-    views: `${views} 浏览`,
-  }
-}
 
 const likeCookie = useCookie<boolean>(`post:like:${route.params.slug}`, {
   maxAge: 7200,
@@ -38,144 +28,102 @@ async function handleLike() {
   likeCookie.value = true
 }
 
-const { copy, copied } = useClipboard({
-  source: `https://hsinyau.com/posts/${route.params.slug}`,
-  copiedDuring: 4000,
-})
-
 const { progress } = useReadingProgress()
-
-const showComment = ref(false)
 </script>
 
 <template>
   <main>
-    <ContentDoc :path="`/posts/${route.params.slug}`">
-      <template #default="{ doc: post }">
-        <div class="flex gap-8">
-          <div class="flex-1">
-            <div class="mt-2">
-              <div class="flex items-end gap-4 flex-wrap">
-                <h1 class="font-bold text-3xl text-black dark:text-white">
-                  {{ post.title }}
-                </h1>
-              </div>
-              <div class="border-l-2 pl-2 mt-2 border-gray-300 dark:border-gray-700 rounded-sm flex gap-1 items-center flex-wrap">
-                <UIcon name="ph:tag-duotone" size="16" />
-                <p class="text-sm">
-                  {{ post.tag }}
-                </p>·
-                <UIcon name="ph:calendar-duotone" size="16" />
-                <p class="text-sm">
-                  {{ useDateFormat(post.created, 'YYYY-MM-DD') }}
-                </p>·
-                <UIcon name="i-ph-heart-duotone" size="16" />
-                <p class="text-sm">
-                  {{ getDetails().likes }}
-                </p>·
-                <UIcon name="i-ph-eye-duotone" size="16" />
-                <p class="text-sm">
-                  {{ getDetails().views }}
-                </p>·
-                <UIcon name="ph:cursor-text-duotone" size="16" />
-                <p class="text-sm">
-                  {{ post.readingTime.words }}字
-                </p>·
-                <UIcon name="ph:timer-duotone" size="16" />
-                <p class="text-sm">
-                  {{ Math.round(post.readingTime.words / 400) }}分钟阅读
-                </p>
-              </div>
-              <div class="mt-4 text-base">
-                AI 生成的摘要：{{ post.summary }}
-              </div>
-              <UDivider
-                class="mt-8"
-                icon="i-ph-pencil-line-duotone"
-              />
-              <div class="mt-8 flex gap-8">
-                <article class="flex-1 article-content">
-                  <ContentRenderer :value="post">
-                    <ContentRendererMarkdown
-                      :value="post"
-                      class="!max-w-none prose dark:prose-invert"
-                    />
-                  </ContentRenderer>
-                </article>
-                <aside class="hidden lg:block w-52">
-                  <div class="sticky top-8">
-                    <PostToc :toc="post?.body?.toc?.links" />
-                    <div class="flex items-center gap-2 text-sm mt-4 text-zinc-500">
-                      阅读进度：{{ progress }}%
-                    </div>
-                    <span
-                      class="flex items-center gap-2 mt-4 group text-sm hover:text-black dark:hover:text-white duration-300 cursor-pointer"
-                      @click="$router.back()"
-                    >
-                      <UIcon
-                        class="group-hover:-translate-x-1 transform duration-300"
-                        name="i-ph-arrow-circle-left-duotone"
-                        size="20"
-                      />
-                      返回上页
+    <ContentDoc :path="`/weekly/${route.params.slug}`">
+      <template #default="{ doc: weekly }">
+        <div class="flex-1">
+          <div class="flex gap-6">
+            <aside class="hidden lg:block w-24">
+              <div class="sticky top-8">
+                <span
+                  class="flex justify-end gap-2 mb-8 group text-sm hover:text-black dark:hover:text-white duration-300 cursor-pointer"
+                  @click="$router.back()"
+                >
+                  <UIcon
+                    class="group-hover:-translate-x-1 transform duration-300"
+                    name="i-ph-arrow-left-duotone"
+                    size="20"
+                  />
+                  返回上页
+                </span>
+                <div class="flex flex-col items-center gap-4">
+                  <button aria-label="Like This Note Button" class="relative flex flex-col space-y-2 space-x-2" style="transform: none;" @click.prevent="handleLike()">
+                    <UIcon name="i-ph-heart-duotone" size="24" :class="likeCookie ? 'text-red-500' : ''" />
+                    <span class="absolute bottom-0 left-2 translate-x-[10px] text-[10px]">
+                      <span style="opacity: 1; transform: none;">
+                        {{ postDB?.likes ?? 0 }}
+                      </span>
                     </span>
-                  </div>
-                </aside>
-              </div>
-              <UDivider
-                class="my-16"
-                icon="i-ph-hands-clapping-duotone"
-              />
-              <div class="space-y-8">
-                <p>
-                  <strong>感谢您阅读这篇文章！如果您喜欢它，请考虑与您的朋友分享。别忘了点个赞哦！</strong>
-                </p>
-                <div class="flex gap-4 items-center flex-wrap">
-                  <UButton
-                    :label="`${postDB?.likes} 点赞`"
-                    :color="likeCookie ? 'red' : 'white'"
-                    icon="i-ph-heart-duotone"
-                    size="lg"
-                    variant="solid"
-                    data-track="like post"
-                    @click.prevent="handleLike()"
-                  />
-                  <UButton
-                    v-if="copied"
-                    color="green"
-                    icon="i-ph-copy-simple-duotone"
-                    label="复制成功"
-                    size="lg"
-                    variant="outline"
-                    @click.prevent="copy()"
-                  />
-                  <UButton
-                    v-else
-                    color="white"
-                    icon="i-ph-copy-simple-duotone"
-                    label="复制链接"
-                    size="lg"
-                    variant="solid"
-                    @click.prevent="copy()"
-                  />
-                  <UButton
-                    v-if="!showComment"
-                    color="white"
-                    icon="i-ph-messenger-logo-duotone"
-                    label="加载评论"
-                    size="lg"
-                    variant="solid"
-                    @click.prevent="showComment = true"
-                  />
+                  </button>
+                  <button aria-label="Views This Note Button" class="relative flex flex-col space-y-2 space-x-2 cursor-default" style="transform: none;">
+                    <UIcon name="i-ph-cursor-click-duotone" size="24" />
+                    <span class="absolute bottom-0 left-2 translate-x-[10px] text-[10px]">
+                      <span style="opacity: 1; transform: none;">
+                        {{ postDB?.views ?? 0 }}
+                      </span>
+                    </span>
+                  </button>
                 </div>
               </div>
-              <UDivider
-                class="my-16"
-                icon="i-ph:messenger-logo-duotone"
-              />
-              <LazyHsinComment v-if="showComment" />
-            </div>
+            </aside>
+            <article class="flex-1 article-content lg:border border-zinc-200 dark:border-zinc-800 rounded-lg">
+              <ContentRenderer :value="weekly">
+                <h2 class="text-3xl font-bold lg:m-4 my-4 text-black dark:text-white">
+                  {{ weekly?.title }}
+                </h2>
+                <div class="mt-2 lg:ml-4 border-gray-300 dark:border-gray-700 rounded-sm flex gap-1 items-center flex-wrap">
+                  <UIcon name="ph:calendar-duotone" size="16" />
+                  <p class="text-sm">
+                    {{ useDateFormat(weekly.created, 'YYYY-MM-DD') }}
+                  </p>·
+                  <UIcon name="ph:cursor-text-duotone" size="16" />
+                  <p class="text-sm">
+                    {{ weekly.readingTime.words }}字
+                  </p>·
+                  <UIcon name="ph:timer-duotone" size="16" />
+                  <p class="text-sm">
+                    {{ Math.round(weekly.readingTime.words / 400) }}分钟阅读
+                  </p>
+                </div>
+                <div class="space-y-2 rounded-xl border border-slate-200 p-4 lg:m-4 my-4 dark:border-neutral-800">
+                  <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="0.99em" height="1em" viewBox="0 0 256 260" fill="currentColor" class="mr-2">
+                      <path d="M239.184 106.203a64.716 64.716 0 0 0-5.576-53.103C219.452 28.459 191 15.784 163.213 21.74A65.586 65.586 0 0 0 52.096 45.22a64.716 64.716 0 0 0-43.23 31.36c-14.31 24.602-11.061 55.634 8.033 76.74a64.665 64.665 0 0 0 5.525 53.102c14.174 24.65 42.644 37.324 70.446 31.36a64.72 64.72 0 0 0 48.754 21.744c28.481.025 53.714-18.361 62.414-45.481a64.767 64.767 0 0 0 43.229-31.36c14.137-24.558 10.875-55.423-8.083-76.483Zm-97.56 136.338a48.397 48.397 0 0 1-31.105-11.255l1.535-.87l51.67-29.825a8.595 8.595 0 0 0 4.247-7.367v-72.85l21.845 12.636c.218.111.37.32.409.563v60.367c-.056 26.818-21.783 48.545-48.601 48.601Zm-104.466-44.61a48.345 48.345 0 0 1-5.781-32.589l1.534.921l51.722 29.826a8.339 8.339 0 0 0 8.441 0l63.181-36.425v25.221a.87.87 0 0 1-.358.665l-52.335 30.184c-23.257 13.398-52.97 5.431-66.404-17.803ZM23.549 85.38a48.499 48.499 0 0 1 25.58-21.333v61.39a8.288 8.288 0 0 0 4.195 7.316l62.874 36.272l-21.845 12.636a.819.819 0 0 1-.767 0L41.353 151.53c-23.211-13.454-31.171-43.144-17.804-66.405v.256Zm179.466 41.695l-63.08-36.63L161.73 77.86a.819.819 0 0 1 .768 0l52.233 30.184a48.6 48.6 0 0 1-7.316 87.635v-61.391a8.544 8.544 0 0 0-4.4-7.213Zm21.742-32.69l-1.535-.922l-51.619-30.081a8.39 8.39 0 0 0-8.492 0L99.98 99.808V74.587a.716.716 0 0 1 .307-.665l52.233-30.133a48.652 48.652 0 0 1 72.236 50.391v.205ZM88.061 139.097l-21.845-12.585a.87.87 0 0 1-.41-.614V65.685a48.652 48.652 0 0 1 79.757-37.346l-1.535.87l-51.67 29.825a8.595 8.595 0 0 0-4.246 7.367l-.051 72.697Zm11.868-25.58L128.067 97.3l28.188 16.218v32.434l-28.086 16.218l-28.188-16.218l-.052-32.434Z" />
+                    </svg>
+                    <span>AI 生成的摘要</span>
+                  </div>
+                  <div class="overflow-hidden">
+                    <div class="overflow-hidden">
+                      <div class="!m-0 text-sm leading-loose text-base-content/85">
+                        {{ weekly?.summary }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ContentRendererMarkdown
+                  :value="weekly"
+                  class="!max-w-none prose dark:prose-invert lg:p-4"
+                />
+              </ContentRenderer>
+            </article>
+            <aside class="hidden lg:block w-52">
+              <div class="sticky top-8">
+                <PostToc :toc="weekly?.body?.toc?.links" />
+                <div class="flex items-center gap-2 text-sm mt-4 text-zinc-500">
+                  阅读进度：{{ progress }}%
+                </div>
+              </div>
+            </aside>
           </div>
+          <UDivider
+            class="my-16"
+            icon="i-ph:messenger-logo-duotone"
+          />
+          <LazyHsinComment />
         </div>
       </template>
       <template #not-found>

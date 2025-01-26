@@ -16,6 +16,18 @@ const { data: posts } = await useAsyncData('all-posts', () => queryContent('/pos
   .sort({ created: -1 })
   .only(['title', 'summary', 'created', '_path', 'tag', 'readingTime'])
   .find())
+
+const { data: weeklys } = await useAsyncData('all-weeklys', () => queryContent('/weekly')
+  .sort({ created: -1 })
+  .only(['title', 'summary', 'created', '_path', 'tag', 'readingTime'])
+  .find())
+
+const allContent = computed(() => [
+  ...(posts.value || []),
+  ...(weeklys.value || []),
+].sort((a, b) => {
+  return new Date(b.created).getTime() - new Date(a.created).getTime()
+}))
 </script>
 
 <template>
@@ -25,7 +37,7 @@ const { data: posts } = await useAsyncData('all-posts', () => queryContent('/pos
       :description
     />
     <PostList
-      :posts="posts || []"
+      :posts="allContent"
     />
   </main>
 </template>

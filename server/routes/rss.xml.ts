@@ -4,11 +4,16 @@ import { extractContent } from '../utils/extract-content'
 
 export default defineEventHandler(async (event) => {
   const { site } = useAppConfig()
-  const docs = await serverQueryContent(event, 'posts')
+  const docs = await Promise.all([
+    serverQueryContent(event, 'posts'),
+    serverQueryContent(event, 'weekly'),
+  ].map(query => query
     .only(['title', 'summary', 'created', '_path', 'body'])
     .sort({ created: -1 })
-    .limit(10)
-    .find()
+    .find(),
+  )).then(results => results.flat().sort((a, b) =>
+    new Date(b.created).getTime() - new Date(a.created).getTime(),
+  ))
 
   const feed = new RSS({
     title: site.title,

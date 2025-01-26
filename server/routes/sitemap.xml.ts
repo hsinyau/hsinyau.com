@@ -3,9 +3,10 @@ import { SitemapStream, streamToPromise } from 'sitemap'
 
 export default defineEventHandler(async (event) => {
   const { site } = useAppConfig()
-  const staticRoutes = ['/', '/about', '/projects', '/friends', '/collection']
+  const staticRoutes = ['/', 'posts', 'weekly', '/about', '/projects', '/friends', '/collection']
   // Fetch all documents
   const docs = await serverQueryContent(event, 'posts').sort({ created: -1 }).find()
+  const weeklys = await serverQueryContent(event, 'weekly').sort({ created: -1 }).find()
 
   const sitemap = new SitemapStream({
     hostname: site.domain,
@@ -25,6 +26,15 @@ export default defineEventHandler(async (event) => {
       changefreq: 'daily',
     })
   }
+
+  for (const weekly of weeklys) {
+    sitemap.write({
+      url: weekly._path,
+      lastmod: weekly.created.slice(0, 10),
+      changefreq: 'daily',
+    })
+  }
+
   sitemap.end()
 
   return streamToPromise(sitemap)
