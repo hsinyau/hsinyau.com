@@ -90,18 +90,20 @@ defineShortcuts({
           }"
         />
       </UTooltip>
-      <UTooltip
-        text="主题"
-      >
-        <UButton
-          :icon="isDark ? 'i-ph-moon-duotone' : 'i-ph-sun-duotone'"
-          color="white"
-          aria-label="switch theme"
-          size="sm"
-          variant="solid"
-          @click="toggleTheme($event)"
-        />
-      </UTooltip>
+      <ClientOnly>
+        <UTooltip
+          text="主题"
+        >
+          <UButton
+            :icon="isDark ? 'i-ph-sun-duotone' : 'i-ph-moon-duotone'"
+            color="white"
+            aria-label="switch theme"
+            size="sm"
+            variant="solid"
+            @click="toggleTheme($event)"
+          />
+        </UTooltip>
+      </ClientOnly>
     </nav>
   </header>
 </template>
