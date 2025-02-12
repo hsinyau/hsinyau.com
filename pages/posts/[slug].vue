@@ -11,33 +11,6 @@ useSeoMeta({
   twitterDescription: post.value?.summary,
 })
 
-const {
-  data: postDB,
-  refresh,
-} = await useAsyncData(`post:${route.params.slug}:db`, () => $fetch(`/api/posts/${route.params.slug}`, { method: 'POST' }), { lazy: true })
-
-function getDetails() {
-  const likes = postDB.value?.likes ?? 0
-  const views = postDB.value?.views ?? 0
-
-  return {
-    likes: `${likes} 点赞`,
-    views: `${views} 浏览`,
-  }
-}
-
-const likeCookie = useCookie<boolean>(`post:like:${route.params.slug}`, {
-  maxAge: 7200,
-})
-
-async function handleLike() {
-  if (likeCookie.value)
-    return
-  await $fetch(`/api/posts/like/${route.params.slug}`, { method: 'PUT' })
-  await refresh()
-  likeCookie.value = true
-}
-
 const { copy, copied } = useClipboard({
   source: `https://hsinyau.com/posts/${route.params.slug}`,
   copiedDuring: 4000,
@@ -68,14 +41,6 @@ const showComment = ref(false)
                 <UIcon name="ph:calendar-duotone" size="16" />
                 <p class="text-sm">
                   {{ useDateFormat(post.created, 'YYYY-MM-DD') }}
-                </p>·
-                <UIcon name="i-ph-heart-duotone" size="16" />
-                <p class="text-sm">
-                  {{ getDetails().likes }}
-                </p>·
-                <UIcon name="i-ph-eye-duotone" size="16" />
-                <p class="text-sm">
-                  {{ getDetails().views }}
                 </p>·
                 <UIcon name="ph:cursor-text-duotone" size="16" />
                 <p class="text-sm">
@@ -131,15 +96,6 @@ const showComment = ref(false)
                   <strong>感谢您阅读这篇文章！如果您喜欢它，请考虑与您的朋友分享。别忘了点个赞哦！</strong>
                 </p>
                 <div class="flex gap-4 items-center flex-wrap">
-                  <UButton
-                    :label="`${postDB?.likes} 点赞`"
-                    :color="likeCookie ? 'red' : 'white'"
-                    icon="i-ph-heart-duotone"
-                    size="lg"
-                    variant="solid"
-                    data-track="like post"
-                    @click.prevent="handleLike()"
-                  />
                   <UButton
                     v-if="copied"
                     color="green"

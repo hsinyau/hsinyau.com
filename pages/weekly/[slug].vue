@@ -11,23 +11,6 @@ useSeoMeta({
   twitterDescription: weekly.value?.summary,
 })
 
-const {
-  data: postDB,
-  refresh,
-} = await useAsyncData(`post:${route.params.slug}:db`, () => $fetch(`/api/posts/${route.params.slug}`, { method: 'POST' }), { lazy: true })
-
-const likeCookie = useCookie<boolean>(`post:like:${route.params.slug}`, {
-  maxAge: 7200,
-})
-
-async function handleLike() {
-  if (likeCookie.value)
-    return
-  await $fetch(`/api/posts/like/${route.params.slug}`, { method: 'PUT' })
-  await refresh()
-  likeCookie.value = true
-}
-
 const { progress } = useReadingProgress()
 </script>
 
@@ -37,39 +20,6 @@ const { progress } = useReadingProgress()
       <template #default="{ doc: weekly }">
         <div class="flex-1">
           <div class="flex gap-6">
-            <aside class="hidden lg:block w-24">
-              <div class="sticky top-8">
-                <span
-                  class="flex justify-end gap-2 mb-8 group text-sm hover:text-black dark:hover:text-white duration-300 cursor-pointer"
-                  @click="$router.back()"
-                >
-                  <UIcon
-                    class="group-hover:-translate-x-1 transform duration-300"
-                    name="i-ph-arrow-left-duotone"
-                    size="20"
-                  />
-                  返回上页
-                </span>
-                <div class="flex flex-col items-center gap-4">
-                  <button aria-label="Like This Note Button" class="relative flex flex-col space-y-2 space-x-2" style="transform: none;" @click.prevent="handleLike()">
-                    <UIcon name="i-ph-heart-duotone" size="24" :class="likeCookie ? 'text-red-500' : ''" />
-                    <span class="absolute bottom-0 left-2 translate-x-[10px] text-[10px]">
-                      <span style="opacity: 1; transform: none;">
-                        {{ postDB?.likes ?? 0 }}
-                      </span>
-                    </span>
-                  </button>
-                  <button aria-label="Views This Note Button" class="relative flex flex-col space-y-2 space-x-2 cursor-default" style="transform: none;">
-                    <UIcon name="i-ph-cursor-click-duotone" size="24" />
-                    <span class="absolute bottom-0 left-2 translate-x-[10px] text-[10px]">
-                      <span style="opacity: 1; transform: none;">
-                        {{ postDB?.views ?? 0 }}
-                      </span>
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </aside>
             <article class="flex-1 article-content lg:border border-zinc-200 dark:border-zinc-800 rounded-lg">
               <ContentRenderer :value="weekly">
                 <h2 class="text-3xl font-bold lg:m-4 my-4 text-black dark:text-white">
@@ -116,6 +66,17 @@ const { progress } = useReadingProgress()
                 <div class="flex items-center gap-2 text-sm mt-4 text-zinc-500">
                   阅读进度：{{ progress }}%
                 </div>
+                <span
+                  class="flex items-center gap-2 mt-4 group text-sm hover:text-black dark:hover:text-white duration-300 cursor-pointer"
+                  @click="$router.back()"
+                >
+                  <UIcon
+                    class="group-hover:-translate-x-1 transform duration-300"
+                    name="i-ph-arrow-circle-left-duotone"
+                    size="20"
+                  />
+                  返回上页
+                </span>
               </div>
             </aside>
           </div>

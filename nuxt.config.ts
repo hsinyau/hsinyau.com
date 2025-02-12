@@ -9,11 +9,9 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxtjs/google-fonts',
     '@nuxt/content',
-    '@nuxthub/core',
     '@vueuse/nuxt',
     '@nuxt/image',
     'nuxt-mapbox',
-    '@nuxthq/studio',
   ],
   // Nuxt UI Module Config
   ui: {
@@ -91,19 +89,15 @@ export default defineNuxtConfig({
       },
     },
   },
-  // Nuxt Hub
-  hub: {
-    database: true,
-    cache: true,
-    kv: true,
-    analytics: true,
-  },
   // Nuxt Nitro Config
   nitro: {
     prerender: {
       routes: ['/', '/sitemap.xml', '/rss.xml'],
       crawlLinks: true,
     },
+  },
+  icon: {
+    serverBundle: 'local',
   },
   // Nuxt Env
   runtimeConfig: {
