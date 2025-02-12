@@ -104,11 +104,6 @@ export default defineNuxtConfig({
       routes: ['/', '/sitemap.xml', '/rss.xml'],
       crawlLinks: true,
     },
-    routeRules: {
-      '/': {
-        swr: 60, // 60秒后重新验证数据
-      },
-    },
   },
   // Nuxt Env
   runtimeConfig: {
