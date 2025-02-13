@@ -22,6 +22,6 @@ const classes = computed(() => {
 
 <template>
   <div :class="classes" class="flex w-full items-start gap-4 rounded-xl border px-4 my-4 text-sm filter dark:brightness-75">
-    <p><ContentSlot :use="$slots.default" unwrap="p" /></p>
+    <slot />
   </div>
 </template>
