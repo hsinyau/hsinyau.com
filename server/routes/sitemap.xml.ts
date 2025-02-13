@@ -1,12 +1,9 @@
-import { serverQueryContent } from '#content/server'
 import { SitemapStream, streamToPromise } from 'sitemap'
 
 export default defineEventHandler(async (event) => {
   const { site } = useAppConfig()
-  const staticRoutes = ['/', 'posts', 'weekly', '/about', '/projects', '/friends', '/collection']
-  // Fetch all documents
-  const docs = await serverQueryContent(event, 'posts').sort({ created: -1 }).find()
-  const weeklys = await serverQueryContent(event, 'weekly').sort({ created: -1 }).find()
+  const staticRoutes = ['/', 'posts', '/about', '/projects', '/friends', '/collection']
+  const posts = await queryCollection(event, 'posts').order('created', 'DESC').all()
 
   const sitemap = new SitemapStream({
     hostname: site.domain,
@@ -19,18 +16,10 @@ export default defineEventHandler(async (event) => {
     })
   }
 
-  for (const doc of docs) {
+  for (const post of posts) {
     sitemap.write({
-      url: doc._path,
-      lastmod: doc.created.slice(0, 10),
-      changefreq: 'daily',
-    })
-  }
-
-  for (const weekly of weeklys) {
-    sitemap.write({
-      url: weekly._path,
-      lastmod: weekly.created.slice(0, 10),
+      url: post.path,
+      lastmod: new Date(post.created),
       changefreq: 'daily',
     })
   }

@@ -12,7 +12,9 @@ useSeoMeta({
   twitterDescription: description,
 })
 
-const { data: friends } = await useAsyncData('all-friends', () => queryContent('/friends').find())
+const { data: friends } = await useAsyncData('friends', async () => {
+  return queryCollection('friends').all()
+})
 </script>
 
 <template>
@@ -22,7 +24,7 @@ const { data: friends } = await useAsyncData('all-friends', () => queryContent('
       :description
     />
     <ul class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 place-content-between">
-      <li v-for="item in friends[0].body" :key="item.link">
+      <li v-for="item in friends" :key="item.link">
         <NuxtLink
           :href="item.link"
           target="_black"

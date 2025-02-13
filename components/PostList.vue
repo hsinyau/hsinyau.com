@@ -11,7 +11,7 @@ defineProps<{
       :key="id"
       class=" h-full border p-4 shadow-sm border-zinc-200 rounded-md hover:border-zinc-500 dark:border-zinc-800 dark:hover:border-zinc-500  duration-300"
     >
-      <NuxtLink :to="post._path">
+      <NuxtLink :to="post.path">
         <article class="space-y-2">
           <h2 class="font-bold text-lg duration-300 text-black dark:text-white line-clamp-1">
             {{ post.title }}
@@ -22,7 +22,7 @@ defineProps<{
               {{ useTimeAgo(post.created, options) }}
             </p>·
             <UIcon name="ph:timer-duotone" size="16" />
-            <p>{{ Math.round(post.readingTime.words / 400) }}分钟阅读</p>·
+            <p>{{ Math.round(post.meta.readingTime.words / 400) }}分钟阅读</p>·
             <UIcon name="ph:tag-duotone" size="16" />
             <p>{{ post.tag }}</p>
           </div>

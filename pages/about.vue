@@ -11,6 +11,10 @@ useSeoMeta({
   twitterTitle: `${title} | ${site.title}`,
   twitterDescription: description,
 })
+
+const { data: about } = await useAsyncData('about', async () => {
+  return queryCollection('about').first()
+})
 </script>
 
 <template>
@@ -28,7 +32,7 @@ useSeoMeta({
         />
       </div>
     </div>
-    <ContentDoc path="/about" />
+    <ContentRenderer :value="about" class="!max-w-none prose dark:prose-invert" />
   </main>
 </template>
 

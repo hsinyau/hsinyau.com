@@ -1,20 +1,13 @@
 <script setup lang="ts">
-const { data: posts } = await useAsyncData('latest-posts', () => queryContent('/posts')
-  .sort({ created: -1 })
-  .only(['title', 'summary', 'created', '_path', 'tag', 'readingTime'])
-  .find())
+const { data: posts } = await useAsyncData('LatestPosts', async () => {
+  const posts = await queryCollection('posts')
+    .select('title', 'created', 'summary', 'tag', 'path', 'meta')
+    .order('created', 'DESC')
+    .limit(6)
+    .all()
 
-const { data: weeklys } = await useAsyncData('latest-weeklys', () => queryContent('/weekly')
-  .sort({ created: -1 })
-  .only(['title', 'summary', 'created', '_path', 'tag', 'readingTime'])
-  .find())
-
-const latestPosts = computed(() => [
-  ...(posts.value || []),
-  ...(weeklys.value || []),
-].sort((a, b) => {
-  return new Date(b.created).getTime() - new Date(a.created).getTime()
-}).slice(0, 6))
+  return posts
+})
 </script>
 
 <template>
@@ -33,6 +26,6 @@ const latestPosts = computed(() => [
         />
       </NuxtLink>
     </div>
-    <PostList :posts="latestPosts" />
+    <PostList :posts />
   </div>
 </template>

@@ -12,22 +12,14 @@ useSeoMeta({
   twitterDescription: description,
 })
 
-const { data: posts } = await useAsyncData('all-posts', () => queryContent('/posts')
-  .sort({ created: -1 })
-  .only(['title', 'summary', 'created', '_path', 'tag', 'readingTime'])
-  .find())
+const { data: posts } = await useAsyncData('allPosts', async () => {
+  const posts = await queryCollection('posts')
+    .select('title', 'created', 'summary', 'tag', 'path', 'meta')
+    .order('created', 'DESC')
+    .all()
 
-const { data: weeklys } = await useAsyncData('all-weeklys', () => queryContent('/weekly')
-  .sort({ created: -1 })
-  .only(['title', 'summary', 'created', '_path', 'tag', 'readingTime'])
-  .find())
-
-const allContent = computed(() => [
-  ...(posts.value || []),
-  ...(weeklys.value || []),
-].sort((a, b) => {
-  return new Date(b.created).getTime() - new Date(a.created).getTime()
-}))
+  return posts
+})
 </script>
 
 <template>
@@ -36,8 +28,6 @@ const allContent = computed(() => [
       :title
       :description
     />
-    <PostList
-      :posts="allContent"
-    />
+    <PostList :posts />
   </main>
 </template>

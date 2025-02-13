@@ -13,7 +13,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/image',
     'nuxt-mapbox',
-    '@nuxthq/studio',
   ],
   // Nuxt UI Module Config
   ui: {
@@ -54,39 +53,32 @@ export default defineNuxtConfig({
   },
   // Nuxt Content
   content: {
-    highlight: {
-      theme: {
-        default: 'vitesse-light',
-        dark: 'vitesse-dark',
-      },
-      langs: [
-        'json',
-        'js',
-        'jsx',
-        'ts',
-        'tsx',
-        'html',
-        'css',
-        'vue',
-        'shell',
-        'mdc',
-        'md',
-        'yaml',
-        'java',
-        'xml',
-        'sql',
-      ],
-    },
-    markdown: {
-      remarkPlugins: {
-        'remark-math': {},
-        'remark-reading-time': {
-          wordsPerMinute: 400,
+    build: {
+      markdown: {
+        toc: {
+          depth: 3,
         },
-      },
-      rehypePlugins: {
-        'rehype-katex': {
-          output: 'mathml',
+        remarkPlugins: {
+          'remark-math': {},
+          'remark-reading-time': {
+            wordsPerMinute: 400,
+          },
+        },
+        rehypePlugins: {
+          'rehype-katex': {
+            output: 'mathml',
+          },
+        },
+        highlight: {
+          theme: {
+            default: 'vitesse-light',
+            dark: 'vitesse-dark',
+          },
+          langs: [
+            'c',
+            'cpp',
+            'java',
+          ],
         },
       },
     },
