@@ -18,7 +18,7 @@ const { data: projects } = await useAsyncData('projects', async () => {
 </script>
 
 <template>
-  <main class="mt-12 space-y-4">
+  <main class="mt-12 space-y-12">
     <HsinTitle
       :title="title"
       :description="description"
