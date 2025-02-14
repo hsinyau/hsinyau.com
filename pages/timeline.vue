@@ -12,15 +12,23 @@ useSeoMeta({
   twitterDescription: description,
 })
 
-const [mastodon, bluesky, qzone] = await Promise.all([
-  $fetch('/api/social/mastodon'),
-  $fetch('/api/social/bluesky'),
-  $fetch('/api/social/qzone'),
-])
-const sortedFeed: any = [...mastodon, ...bluesky, ...(Array.isArray(qzone) ? qzone : [])]
-  .sort(
-    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
-  )
+const { data: timeline } = await useAsyncData('timeline', async () => {
+  const [mastodon, bluesky, qzone] = await Promise.all([
+    $fetch('/api/social/mastodon'),
+    $fetch('/api/social/bluesky'),
+    $fetch('/api/social/qzone'),
+  ])
+
+  return { mastodon, bluesky, qzone }
+})
+
+const sortedFeed = [
+  ...((timeline.value?.bluesky || []) as any[]),
+  ...((timeline.value?.mastodon || []) as any[]),
+  ...((timeline.value?.qzone || []) as any[]),
+].sort(
+  (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+)
 </script>
 
 <template>

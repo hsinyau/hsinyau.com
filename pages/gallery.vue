@@ -21,9 +21,11 @@ const { data: gallery } = await useAsyncData('gallery', () => $fetch('/api/photo
       :title
       :description
     />
-    <Gallery
-      :photos="gallery"
-      layout="columns"
-    />
+    <template v-if="gallery">
+      <Gallery
+        :photos="gallery"
+        layout="columns"
+      />
+    </template>
   </main>
 </template>

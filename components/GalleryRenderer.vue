@@ -11,9 +11,9 @@ const props = defineProps<PhotoRendererMetadata & {
 
 const nuxtImgProps = computed(() => {
   const { src, width, height, sizes: imgSize, loading, decoding, title, alt } = props.imageProps
-  const { description, date, location } = props.photo
+  const { description, date, location, width: w, height: h } = props.photo
   const sizes = 'xs sm md lg xl xxl 2xl'.split(' ').map(screen => `${screen}:${imgSize}`).join(' ')
-  return { src, width, height, sizes, loading, decoding, title, alt, description, date, location }
+  return { src, width, height, w, h, sizes, loading, decoding, title, alt, description, date, location }
 })
 
 const isCloudflare = computed(() => !nuxtImgProps.value.src?.includes('https://'))
@@ -38,8 +38,8 @@ const isCloudflare = computed(() => !nuxtImgProps.value.src?.includes('https://'
         v-else
         v-bind="nuxtImgProps"
         :alt="nuxtImgProps.description"
-        :width="nuxtImgProps.width"
-        :height="nuxtImgProps.height"
+        :width="nuxtImgProps.width ?? nuxtImgProps.w"
+        :height="nuxtImgProps.height ?? nuxtImgProps.h"
         format="webp"
         loading="lazy"
         placeholder

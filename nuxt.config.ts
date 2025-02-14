@@ -37,6 +37,11 @@ export default defineNuxtConfig({
   },
   // Nuxt Image Config
   image: {
+    domains: [
+      'fbf0ebb.webp.li',
+      'cdn.bsky.app',
+      'media.cmx.edu.kg',
+    ],
     cloudflare: {
       baseURL: 'https://file.hsinyau.com',
       format: ['webp', 'avif'],
@@ -95,6 +100,17 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/about', '/friends', '/projects', '/posts', '/sitemap.xml', '/rss.xml'],
+      ignore: ['/gallery', '/timeline'],
+    },
+    routeRules: {
+      '/api/social': {
+        isr: 60,
+        swr: 60,
+      },
+      '/api/photos': {
+        isr: 60,
+        swr: 60,
+      },
     },
   },
   // Nuxt Env

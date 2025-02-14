@@ -1,0 +1,4 @@
+export default defineEventHandler(async () => {
+  const data = await $fetch('https://static.758201.xyz/data/geo.json')
+  return data
+})

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: photos, status, error } = await useAsyncData<any>('photos', () => $fetch('/api/collection/photos'), { lazy: true })
+const { data: photos } = await useAsyncData<any>('photos', () => $fetch('/api/photos'), { lazy: true })
 </script>
 
 <template>
@@ -8,7 +8,7 @@ const { data: photos, status, error } = await useAsyncData<any>('photos', () => 
       <span class="font-bold text-gray-600 dark:text-gray-300 text-lg"><span class="animate-pulse">✨</span>最近捕获</span>
       <NuxtLink
         class="flex items-center gap-2 group text-sm hover:text-black dark:hover:text-white duration-300"
-        to="/collection?tab=gallery"
+        to="/gallery"
       >
         查看更多
         <UIcon
@@ -18,23 +18,10 @@ const { data: photos, status, error } = await useAsyncData<any>('photos', () => 
         />
       </NuxtLink>
     </div>
-    <div v-if="status === 'pending'" class="h-56 flex flex-col items-center justify-center">
-      <span class="w-4 h-4 rounded-full bg-rose-300 animate-bounce" />
-      <p class="text-sm mt-4 text-gray-500">
-        画卷徐展，景致渐明
-      </p>
-    </div>
 
-    <div v-else-if="error" class="h-56 flex flex-col items-center justify-center">
-      <UIcon name="i-ph-cloud-lightning-duotone" size="40" class="text-red-500" />
-      <p class="text-sm mt-4 text-red-500">
-        云雾蔽日，未达所愿
-      </p>
-    </div>
-
-    <div v-else class="grid grid-cols-2 md:flex gap-3 overflow-hidden">
+    <div v-if="photos" class="grid grid-cols-2 md:flex gap-3 overflow-hidden">
       <div
-        v-for="item in photos?.photos?.slice(0, 4)"
+        v-for="item in photos.slice(0, 4)"
         :key="item.id"
         class="rounded-xl md:w-1/4 aspect-[1/1] relative bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 overflow-hidden group"
       >
