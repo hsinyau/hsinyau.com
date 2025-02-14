@@ -76,7 +76,7 @@ export default defineAppConfig({
   }, {
     label: '动态',
     icon: 'butterfly-duotone',
-    to: '/collection',
+    to: '/timeline',
   }, {
     label: '关于',
     icon: 'seal-check-duotone',

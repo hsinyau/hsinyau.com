@@ -105,5 +105,14 @@ export default defineNuxtConfig({
       mapboxAccessToken: '',
       openPanelClientId: '',
     },
+    networks: {
+      bluesky: {
+        identifier: 'hsinyau.bsky.social',
+      },
+      mastodon: {
+        identifier: 'hsinyau@m.cmx.im',
+      },
+    },
   },
+
 })

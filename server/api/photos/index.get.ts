@@ -21,5 +21,5 @@ export default defineEventHandler(async (event) => {
     src: `${item.image.responsive_url.replace('im.vsco.co/aws-us-west-2', 'https://fbf0ebb.webp.li')}`,
   }))
 
-  return { photos }
+  return photos
 })

@@ -32,7 +32,7 @@ const { data: about } = await useAsyncData('about', async () => {
         />
       </div>
     </div>
-    <ContentRenderer :value="about" class="!max-w-none prose dark:prose-invert" />
+    <ContentRenderer v-if="about" :value="about" class="!max-w-none prose dark:prose-invert" />
   </main>
 </template>
 
