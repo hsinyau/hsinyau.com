@@ -36,7 +36,7 @@ const { copied, copy } = useClipboard({
   <div class="code-block relative [&>pre]:!rounded-t-none [&>pre]:!my-0">
     <div class="flex items-center justify-between py-1.5 border border-zinc-200 dark:border-zinc-800 border-b-0 relative rounded-t-md px-4 not-prose">
       <span class="flex items-center gap-1.5">
-        <UIcon :name="`vscode-icons:file-type-${language}`" />
+        <UIcon :name="`custom:${language}`" />
         <span class="text-zinc-700 dark:text-zinc-200 text-sm/6">{{ filename }}</span>
       </span>
       <span class="flex items-center gap-1.5">

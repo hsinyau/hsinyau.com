@@ -44,7 +44,7 @@ undefined 是 javascript 的七种原始数据类型之一。
 
 我们知道 undefined 在 JavaScript 中是一个保留字。哪既然他是一个保留字，我们就可以为它赋值。
 
-```javascript title="undefined 赋值"
+```js title="undefined 赋值"
 function test() {
   const undefined = 1
   console.log(undefined) // 1
@@ -63,14 +63,14 @@ console.log(undefined) // undefined
 
 在使用立即执行的函数表达式时，可以利用 void 运算符让 JavaScript 引擎把一个function 关键字识别成函数表达式而不是函数声明（语句）。
 在这以前我们要让一个函数立即调用(定义时就会立即执行)，会采用这样的写法：
-```javascript title="IIFE"
+```js title="IIFE"
 (function IIFE() {
   // ...
 })()
 ```
 
 而 void 可以起到跟上面代码一样的作用: 将函数声明式转化为函数表达式。
-```javascript title="将函数声明式转化为函数表达式"
+```js title="将函数声明式转化为函数表达式"
 void (function IIFE() {
   // ...
 }())
@@ -89,7 +89,7 @@ void (function IIFE() {
 
 箭头函数标准中，允许在函数体不使用括号来直接返回值。 如果右侧调用了一个原本没有返回值的函数，其返回值改变后，则会导致非预期的副作用。 安全起见，当函数返回值是一个不会被使用到的时候，应该使用 void 运算符，来确保返回 undefined，这样，当 API 改变时，并不会影响箭头函数的行为。
 
-```javascript title="在箭头函数中避免泄漏"
+```js title="在箭头函数中避免泄漏"
 button.onclick = () => void doSomething()
 ```
 

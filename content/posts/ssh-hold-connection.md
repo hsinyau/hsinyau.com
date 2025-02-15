@@ -9,7 +9,7 @@ created: 2021-06-17 13:24:31
 
 这种情况下，终端可能会显示以下错误信息：
 
-```bash
+```shell
 packet_write_wait: Connection to xxx.xxx.xxx.xxx port xxxx: Broken pipe
 ```
 
@@ -23,7 +23,7 @@ packet_write_wait: Connection to xxx.xxx.xxx.xxx port xxxx: Broken pipe
 
 一种常见的方法是调整 SSH 服务器的配置。你可以通过编辑 SSH 服务器的配置文件（通常是 `/etc/ssh/sshd_config`）来进行设置。在该配置文件中，你可以找到以下两个参数：
 
-```bash
+```shell
 ClientAliveInterval
 ClientAliveCountMax
 ```
@@ -39,7 +39,7 @@ ClientAliveCountMax 参数表示服务器在发送了多少个空包后，如果
 
 另一种方法是在本地 SSH 客户端进行设置。如果你已经配置了 SSH 密钥连接，可以在本地SSH文件夹（通常是.ssh）中的配置文件中添加以下参数：
 
-```bash
+```shell
 ServerAliveInterval 120
 ServerAliveCountMax 10
 ```
@@ -48,7 +48,7 @@ ServerAliveCountMax 10
 
 如果你尚未配置 SSH 连接，可以在 SSH 文件夹中创建一个新的 config 文件，并在其中添加类似以下的配置：
 
-```bash
+```shell
 Host *
   ServerAliveInterval 120
   ServerAliveCountMax 10
@@ -57,5 +57,3 @@ Host *
 然后，你可以使用`ssh [快捷方式]` 或 `ssh [IP地址]` 来连接服务器，并发送保持连接的请求。
 
 ## 参考
-
-[linux - Keep SSH session alive - Stack Overflow](https://stackoverflow.com/questions/25084288/keep-ssh-session-alive){target="_blank"}

@@ -25,7 +25,7 @@ ESLint 的强大之处在于它支持自定义规则，开发者可以通过自�
 
 以下是一个简单的规则定义示例，它检查变量名是否符合 camelCase 命名规范：
 
-```javascript
+```js
 module.exports = {
   rules: {
     camelcase: {

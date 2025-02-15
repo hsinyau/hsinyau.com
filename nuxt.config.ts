@@ -113,6 +113,14 @@ export default defineNuxtConfig({
       },
     },
   },
+  icon: {
+    customCollections: [
+      {
+        prefix: 'custom',
+        dir: './assets/custom',
+      },
+    ],
+  },
   // Nuxt Env
   runtimeConfig: {
     githubToken: '',

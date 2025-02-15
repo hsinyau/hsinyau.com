@@ -59,7 +59,7 @@ Q&A：
 
 ## 代码块
 
-```typescript [代码块测试]
+```ts [代码块测试]
 export default function MyApp() {
   const [count, setCount] = useState(0)
 
