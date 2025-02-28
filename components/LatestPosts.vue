@@ -26,6 +26,6 @@ const { data: posts } = await useAsyncData('LatestPosts', async () => {
         />
       </NuxtLink>
     </div>
-    <PostList :posts />
+    <PostList v-if="posts" :posts="posts" />
   </div>
 </template>

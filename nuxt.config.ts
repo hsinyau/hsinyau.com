@@ -99,7 +99,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/about', '/friends', '/projects', '/posts', '/sitemap.xml', '/rss.xml'],
-      ignore: ['/gallery', '/timeline'],
+      ignore: ['/timeline'],
     },
     routeRules: {
       '/api/social': {

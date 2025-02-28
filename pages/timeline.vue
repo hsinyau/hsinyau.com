@@ -36,6 +36,10 @@ const sortedFeed = [
     <HsinTitle
       :title
       :description
+      :other="{
+        title: '画廊',
+        link: 'https://photo.hsinyau.com',
+      }"
     />
     <ul>
       <li v-for="item in sortedFeed" :key="item.node_id" class="group mb-2 flex flex-col gap-2">
