@@ -12,7 +12,6 @@ export default defineNuxtConfig({
     '@nuxthub/core',
     '@vueuse/nuxt',
     '@nuxt/image',
-    'nuxt-mapbox',
   ],
   // Nuxt UI Module Config
   ui: {
