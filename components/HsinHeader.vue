@@ -1,12 +1,10 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+
+const router = useRouter()
 const colorMode = useColorMode()
-
-const isDark = ref(colorMode.value === 'dark')
-
+const isDark = computed(() => colorMode.value === 'dark')
 const { menu } = useAppConfig()
-watch(isDark, () => {
-  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
-})
 
 async function toggleTheme(event: MouseEvent) {
   // 检查浏览器是否支持 View Transitions API
@@ -15,7 +13,7 @@ async function toggleTheme(event: MouseEvent) {
     && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
   if (!isAppearanceTransition) {
-    isDark.value = !isDark.value
+    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
     return
   }
 
@@ -27,7 +25,7 @@ async function toggleTheme(event: MouseEvent) {
   )
 
   const transition = document.startViewTransition(async () => {
-    isDark.value = !isDark.value
+    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
     await nextTick()
   })
 
@@ -53,7 +51,6 @@ async function toggleTheme(event: MouseEvent) {
   })
 }
 
-const router = useRouter()
 defineShortcuts({
   backspace: () => router.back(),
 })
