@@ -45,8 +45,6 @@ const { copy, copied } = useClipboard({
 })
 
 const { progress } = useReadingProgress()
-
-const showComment = ref(false)
 </script>
 
 <template>
@@ -151,22 +149,13 @@ const showComment = ref(false)
               variant="solid"
               @click.prevent="copy()"
             />
-            <UButton
-              v-if="!showComment"
-              color="white"
-              icon="i-ph-messenger-logo-duotone"
-              label="加载评论"
-              size="lg"
-              variant="solid"
-              @click.prevent="showComment = true"
-            />
           </div>
         </div>
         <UDivider
           class="my-16"
           icon="i-ph:messenger-logo-duotone"
         />
-        <LazyHsinComment v-if="showComment" />
+        <LazyHsinComment />
       </div>
     </div>
   </main>
