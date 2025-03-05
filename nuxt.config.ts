@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
   },
+  css: ['~/assets/css/main.css'],
   modules: [
     '@nuxt/ui',
     '@nuxtjs/google-fonts',
@@ -74,10 +75,7 @@ export default defineNuxtConfig({
           },
         },
         highlight: {
-          theme: {
-            default: 'vitesse-light',
-            dark: 'vitesse-dark',
-          },
+          theme: 'vitesse-dark',
           langs: [
             'c',
             'cpp',
