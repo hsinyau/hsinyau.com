@@ -1,5 +1,5 @@
 <template>
-  <footer class="mt-8">
+  <footer class="mt-8 mb-4">
     <div class="flex justify-center mb-8">
       <USeparator
         class="md:w-2/3"
