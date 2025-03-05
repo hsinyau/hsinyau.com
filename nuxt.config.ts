@@ -89,16 +89,6 @@ export default defineNuxtConfig({
       routes: ['/', '/about', '/friends', '/projects', '/posts', '/sitemap.xml', '/rss.xml'],
       ignore: ['/timeline'],
     },
-    routeRules: {
-      '/api/social': {
-        isr: 60,
-        swr: 60,
-      },
-      '/api/photos': {
-        isr: 60,
-        swr: 60,
-      },
-    },
   },
   icon: {
     customCollections: [
@@ -125,5 +115,4 @@ export default defineNuxtConfig({
       },
     },
   },
-
 })

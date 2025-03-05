@@ -1,14 +1,15 @@
 <script setup>
-const { site } = useAppConfig()
+import { SITE_NAME } from '~/lib/constants'
+
 const title = '友情链接'
 const description = '快来和我做朋友吧~'
 
 useSeoMeta({
   title,
   description,
-  ogTitle: `${title} | ${site.title}`,
+  ogTitle: `${title} | ${SITE_NAME}`,
   ogDescription: description,
-  twitterTitle: `${title} | ${site.title}`,
+  twitterTitle: `${title} | ${SITE_NAME}`,
   twitterDescription: description,
 })
 

@@ -1,14 +1,15 @@
 <script setup lang="ts">
-const { site } = useAppConfig()
+import { SITE_NAME } from '~/lib/constants'
+
 const title = '文稿'
 const description = '阅读我关于软件开发、设计及生活等方面的想法。'
 
 useSeoMeta({
   title,
   description,
-  ogTitle: `${title} | ${site.title}`,
+  ogTitle: `${title} | ${SITE_NAME}`,
   ogDescription: description,
-  twitterTitle: `${title} | ${site.title}`,
+  twitterTitle: `${title} | ${SITE_NAME}`,
   twitterDescription: description,
 })
 
@@ -28,6 +29,6 @@ const { data: posts } = await useAsyncData('allPosts', async () => {
       :title
       :description
     />
-    <PostList :posts />
+    <PostList v-if="posts" :posts="posts" />
   </main>
 </template>

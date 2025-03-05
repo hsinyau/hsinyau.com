@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-
-const { hero, socials } = useAppConfig()
+import { SITE_HERO, SITE_SOCIALS } from '~/lib/constants'
 </script>
 
 <template>
@@ -23,7 +22,7 @@ const { hero, socials } = useAppConfig()
               class="h-9 sm:h-[3.5rem] ease-in-out"
             >
               <SwiperSlide
-                v-for="item in hero"
+                v-for="item in SITE_HERO"
                 :key="item.text"
                 class="flex items-center"
                 :class="item.className"
@@ -37,7 +36,7 @@ const { hero, socials } = useAppConfig()
           欢迎酷酷的你来到这个小小的网站。
         </h1>
         <div class="text-sm flex gap-5 mt-2 mb-6">
-          <NuxtLink v-for="item in socials" :key="item.icon" :href="item.link" target="_blank" :aria-label="item.label">
+          <NuxtLink v-for="item in SITE_SOCIALS" :key="item.icon" :href="item.link" target="_blank" :aria-label="item.label">
             <UTooltip :text="item.label" :delay-duration="0">
               <UIcon :name="item.icon" size="24" class="rounded-full cursor-pointer" :aria-label="item.label" />
             </UTooltip>

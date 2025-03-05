@@ -2,9 +2,9 @@
 import { Waline } from '@waline/client/component'
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { SITE_COMMENT } from '~/lib/constants'
 import '@waline/client/style'
 
-const { site } = useAppConfig()
 const path = computed(() => useRoute().path)
 </script>
 
@@ -12,12 +12,12 @@ const path = computed(() => useRoute().path)
   <ClientOnly>
     <Waline
       :path="path"
-      :server-u-r-l="site.waline.serverURL"
+      :server-u-r-l="SITE_COMMENT.serverURL"
       :locale="{
-        sofa: site.waline.locale.sofa,
-        placeholder: site.waline.locale.placeholder,
+        sofa: SITE_COMMENT.locale.sofa,
+        placeholder: SITE_COMMENT.locale.placeholder,
       }"
-      :emoji="site.waline.emoji"
+      :emoji="SITE_COMMENT.emoji"
       :search="false"
     />
   </ClientOnly>

@@ -1,5 +1,3 @@
-import type { Photo } from '~/types/gallery'
-
 export default defineCachedEventHandler(async (event) => {
   const { vscoToken } = useRuntimeConfig(event)
 
@@ -11,7 +9,7 @@ export default defineCachedEventHandler(async (event) => {
     },
   })
 
-  const photos = (data as any).media.map((item: Photo) => ({
+  const photos = (data as any).media.map((item: any) => ({
     width: item.image.width,
     height: item.image.height,
     id: item.image._id,

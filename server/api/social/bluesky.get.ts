@@ -2,7 +2,7 @@ import type { FeedViewPost } from '@atproto/api/dist/client/types/app/bsky/feed/
 import { AppBskyEmbedImages, AppBskyFeedPost, AtpAgent } from '@atproto/api'
 import MagicString from 'magic-string'
 
-export default defineEventHandler(async (event) => {
+export default defineCachedEventHandler(async (event) => {
   const agent = new AtpAgent({ service: 'https://public.api.bsky.app' })
   const { identifier } = useRuntimeConfig(event).networks.bluesky
 
@@ -73,4 +73,9 @@ export default defineEventHandler(async (event) => {
       })),
     }
   }))
+}, {
+  maxAge: 60 * 60 * 12,
+  swr: true,
+  name: 'bluesky',
+  getKey: () => 'bluesky',
 })

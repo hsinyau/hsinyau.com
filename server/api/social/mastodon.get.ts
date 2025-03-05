@@ -1,7 +1,7 @@
 import { createRestAPIClient } from 'masto'
 import { parseURL, withProtocol } from 'ufo'
 
-export default defineEventHandler(async (event) => {
+export default defineCachedEventHandler(async (event) => {
   const acct = useRuntimeConfig(event).networks.mastodon.identifier
 
   const server = acct.split('@')[1]
@@ -55,4 +55,9 @@ export default defineEventHandler(async (event) => {
         html: p.content,
       })),
   )
+}, {
+  maxAge: 60 * 60 * 12,
+  swr: true,
+  name: 'mastodon',
+  getKey: () => 'mastodon',
 })

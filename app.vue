@@ -1,23 +1,22 @@
 <script lang="ts" setup>
 import { useOpenpanel } from './composables/useOpenpanel'
-
-const { site } = useAppConfig()
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from './lib/constants'
 
 useSeoMeta({
-  ogTitle: site.title,
-  ogDescription: site.description,
-  ogUrl: site.domain,
+  ogTitle: SITE_NAME,
+  ogDescription: SITE_DESCRIPTION,
+  ogUrl: SITE_URL,
   ogImage: '/opengraph.jpg',
-  twitterTitle: site.title,
-  twitterDescription: site.description,
+  twitterTitle: SITE_NAME,
+  twitterDescription: SITE_DESCRIPTION,
   twitterImage: '/opengraph.jpg',
   twitterCard: 'summary',
-  twitterCreator: site.twitter,
+  twitterCreator: '@hsinyau_zz',
 })
 
 useHead({
-  title: site.title,
-  titleTemplate: title => title === site.title ? `${site.title} - ${site.description}` : `${title} - ${site.title}`,
+  title: SITE_NAME,
+  titleTemplate: title => title === SITE_NAME ? `${SITE_NAME} - ${SITE_DESCRIPTION}` : `${title} - ${SITE_NAME}`,
   link: [
     { rel: 'icon', type: 'image/png', href: '/favicon.png' },
     { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.svg' },

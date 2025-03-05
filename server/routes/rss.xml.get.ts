@@ -1,17 +1,16 @@
 import RSS from 'rss'
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '~/lib/constants'
 import { extractContent } from '~/server/utils/extract-content'
 
 export default defineEventHandler(async (event) => {
   const posts = await queryCollection(event, 'posts').order('created', 'DESC').limit(10).all()
 
-  const { site } = useAppConfig()
-
   const feed = new RSS({
-    title: site.title,
-    description: site.description,
-    site_url: site.domain,
-    image_url: `${site.domain}/favicon.svg`,
-    feed_url: `${site.domain}/rss.xml`,
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    site_url: SITE_URL,
+    image_url: `${SITE_URL}/favicon.svg`,
+    feed_url: `${SITE_URL}/rss.xml`,
     custom_namespaces: {
       follow: 'http://www.follow.is',
     },
@@ -28,12 +27,12 @@ export default defineEventHandler(async (event) => {
   for (const post of posts) {
     feed.item({
       title: post.title,
-      url: `${site.domain}${post.path}`,
+      url: `${SITE_URL}${post.path}`,
       date: new Date(post.created),
       description: post.summary,
       custom_elements: [
         {
-          'content:encoded': `<![CDATA[ <blockquote>该渲染可能存在排版问题，最佳体验请前往：<a href="${site.domain}${post.path}">${site.domain}${post.path}</a></blockquote> ${extractContent(post.body)}]]>`,
+          'content:encoded': `<![CDATA[ <blockquote>该渲染可能存在排版问题，最佳体验请前往：<a href="${SITE_URL}${post.path}">${SITE_URL}${post.path}</a></blockquote> ${extractContent(post.body)}]]>`,
         },
       ],
     })

@@ -1,12 +1,12 @@
 import { SitemapStream, streamToPromise } from 'sitemap'
+import { SITE_URL } from '~/lib/constants'
 
 export default defineEventHandler(async (event) => {
-  const { site } = useAppConfig()
   const staticRoutes = ['/', 'posts', '/about', '/projects', '/friends', '/collection']
   const posts = await queryCollection(event, 'posts').order('created', 'DESC').all()
 
   const sitemap = new SitemapStream({
-    hostname: site.domain,
+    hostname: SITE_URL,
   })
 
   for (const doc of staticRoutes) {

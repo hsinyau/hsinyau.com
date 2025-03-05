@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { SITE_MENU } from '~/lib/constants'
 
 const router = useRouter()
 const colorMode = useColorMode()
 const isDark = computed(() => colorMode.value === 'dark')
-const { menu } = useAppConfig()
 
 async function toggleTheme(event: MouseEvent) {
   // 检查浏览器是否支持 View Transitions API
@@ -66,7 +66,7 @@ defineShortcuts({
     </NuxtLink>
     <nav class="flex gap-2 items-center justify-end flex-wrap">
       <UTooltip
-        v-for="nav in menu"
+        v-for="nav in SITE_MENU"
         :key="nav.label"
         :text="nav.label"
         :delay-duration="0"

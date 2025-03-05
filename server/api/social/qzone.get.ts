@@ -1,4 +1,4 @@
-export default defineEventHandler(async (event) => {
+export default defineCachedEventHandler(async (event) => {
   const { githubToken } = useRuntimeConfig(event)
 
   const data = await $fetch(`https://api.github.com/repos/hsinyau/moments/issues`, {
@@ -25,4 +25,9 @@ export default defineEventHandler(async (event) => {
       media: item.body.match(/!\[.*?\]\((.*?)\)/g)?.map((img: { match: (arg0: RegExp) => any[] }) => img.match(/\((.*?)\)/)?.[1]),
     })),
   )
+}, {
+  maxAge: 60 * 60 * 12,
+  swr: true,
+  name: 'qzone',
+  getKey: () => 'qzone',
 })

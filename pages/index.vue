@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const { site } = useAppConfig()
+import { SITE_DESCRIPTION, SITE_NAME } from '~/lib/constants'
 
 useSeoMeta({
-  title: site.title,
-  description: site.description,
+  title: SITE_NAME,
+  description: SITE_DESCRIPTION,
 })
 </script>
 

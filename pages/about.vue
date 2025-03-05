@@ -1,14 +1,15 @@
 <script setup lang="ts">
-const { site } = useAppConfig()
+import { SITE_NAME } from '~/lib/constants'
+
 const title = '关于我'
 const description = '嗨，欢迎酷酷的你来到这个小小的网站，很高兴能在这里与你相遇。'
 
 useSeoMeta({
   title,
   description,
-  ogTitle: `${title} | ${site.title}`,
+  ogTitle: `${title} | ${SITE_NAME}`,
   ogDescription: description,
-  twitterTitle: `${title} | ${site.title}`,
+  twitterTitle: `${title} | ${SITE_NAME}`,
   twitterDescription: description,
 })
 
