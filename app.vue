@@ -35,6 +35,7 @@ useOpenpanel().track('')
           <HsinHeader />
           <NuxtPage class="mt-12 grow" />
           <HsinFooter />
+          <BackTop />
         </UContainer>
       </Body>
     </Html>

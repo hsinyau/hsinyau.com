@@ -126,10 +126,10 @@ const { progress } = useReadingProgress()
             <UTooltip :text="likeCookie ? '已点赞' : '点赞'" :disabled="!likeCookie" :delay-duration="0">
               <UButton
                 :label="`${postDB?.likes} 点赞`"
-                :color="likeCookie ? 'success' : 'neutral'"
+                :color="likeCookie ? 'error' : 'neutral'"
                 icon="i-ph-heart-duotone"
                 size="lg"
-                variant="outline"
+                :variant="likeCookie ? 'solid' : 'outline'"
                 @click.prevent="handleLike()"
               />
             </UTooltip>
