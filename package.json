@@ -45,6 +45,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^3.11.2",
     "@iconify-json/ph": "^1.2.2",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.10.1",
     "@types/rss": "^0.0.32",
     "@waline/client": "^3.4.1",
