@@ -24,7 +24,7 @@ const { data: projects } = await useAsyncData('projects', async () => {
       :description="description"
     />
     <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <li v-for="project in projects" :key="project.link" class="border border-zinc-200 shadow-sm rounded-md hover:border-zinc-500 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:border-zinc-500 duration-300">
+      <li v-for="project in projects" :key="project.link" class="border border-neutral-200 rounded-md hover:border-neutral-400 dark:border-neutral-800 dark:hover:border-neutral-600 duration-300">
         <NuxtLink
           class="text-accent self-start font-normal no-underline relative p-2.5 flex flex-row items-center gap-2 place-items-stretch"
           :title="project.title"

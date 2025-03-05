@@ -40,14 +40,14 @@ const { copied, copy } = useClipboard({
         <span class="text-zinc-700 dark:text-zinc-200 text-sm/6">{{ filename }}</span>
       </span>
       <span class="flex items-center gap-1.5">
-        <UTooltip v-if="copied" text="已复制">
+        <UTooltip v-if="copied" text="已复制" :delay-duration="0">
           <UIcon
             name="i-ph:copy-simple-duotone"
             class="text-green-500 my-1.5 cursor-pointer"
             @click.prevent="copy()"
           />
         </UTooltip>
-        <UTooltip v-else text="复制">
+        <UTooltip v-else text="复制" :delay-duration="0">
           <UIcon
             name="i-ph:copy-simple-duotone"
             class="my-1.5 cursor-pointer"
@@ -61,6 +61,8 @@ const { copied, copy } = useClipboard({
 </template>
 
 <style>
+@reference "tailwindcss";
+
 .code-block ~ .code-block {
   @apply mb-4
 }

@@ -69,33 +69,29 @@ defineShortcuts({
         v-for="nav in menu"
         :key="nav.label"
         :text="nav.label"
+        :delay-duration="0"
       >
         <UButton
           :icon="`i-ph:${nav.icon}`"
           :to="nav.to"
           :aria-label="nav.label"
-          color="white"
+          color="neutral"
           size="sm"
-          variant="solid"
-          :ui="{
-            color: {
-              white: {
-                solid: 'dark:bg-zinc-500/20',
-              },
-            },
-          }"
+          variant="outline"
         />
       </UTooltip>
       <ClientOnly>
         <UTooltip
           text="主题"
+          :delay-duration="0"
         >
           <UButton
             :icon="isDark ? 'i-ph-sun-duotone' : 'i-ph-moon-duotone'"
-            color="white"
+            color="neutral"
             aria-label="switch theme"
             size="sm"
-            variant="solid"
+            variant="outline"
+            class="cursor-pointer"
             @click="toggleTheme($event)"
           />
         </UTooltip>

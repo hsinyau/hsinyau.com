@@ -36,17 +36,11 @@ const { hero, socials } = useAppConfig()
           <br>
           欢迎酷酷的你来到这个小小的网站。
         </h1>
-        <div class="text-sm flex gap-5 mt-2 mb-6 text-muted-foreground">
+        <div class="text-sm flex gap-5 mt-2 mb-6">
           <NuxtLink v-for="item in socials" :key="item.icon" :href="item.link" target="_blank" :aria-label="item.label">
-            <UButton
-              :icon="item.icon"
-              :ui="{ rounded: 'rounded-full' }"
-              :color="item.color as any"
-              size="md"
-              square
-              variant="solid"
-              :aria-label="item.label"
-            />
+            <UTooltip :text="item.label" :delay-duration="0">
+              <UIcon :name="item.icon" size="24" class="rounded-full cursor-pointer" :aria-label="item.label" />
+            </UTooltip>
           </NuxtLink>
         </div>
       </div>
@@ -54,7 +48,7 @@ const { hero, socials } = useAppConfig()
         <NuxtImg
           provider="cloudflare"
           src="/image/avatar.jpg"
-          class="rounded-full"
+          class="rounded-full border border-neutral-300"
           format="webp"
           quality="80"
           placeholder

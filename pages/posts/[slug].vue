@@ -56,7 +56,7 @@ const { progress } = useReadingProgress()
             {{ post.title }}
           </h1>
         </div>
-        <div class="border-l-2 pl-2 mt-2 border-gray-300 dark:border-gray-700 rounded-sm flex gap-1 items-center flex-wrap">
+        <div class="border-l-2 pl-2 mt-2 border-neutral-300 dark:border-neutral-700 flex gap-1 items-center flex-wrap">
           <UIcon name="ph:tag-duotone" size="16" />
           <p class="text-sm">
             {{ post.tag }}
@@ -85,7 +85,7 @@ const { progress } = useReadingProgress()
         <div class="mt-4 text-base">
           AI 生成的摘要：{{ post.summary }}
         </div>
-        <UDivider
+        <USeparator
           class="mt-8"
           icon="i-ph-pencil-line-duotone"
         />
@@ -96,6 +96,7 @@ const { progress } = useReadingProgress()
           <aside class="hidden lg:block w-52">
             <div class="sticky top-8">
               <PostToc :toc="post?.body?.toc?.links" />
+              <USeparator class="mt-4" />
               <div class="flex items-center gap-2 text-sm mt-4 text-zinc-500">
                 阅读进度：{{ progress }}%
               </div>
@@ -113,7 +114,7 @@ const { progress } = useReadingProgress()
             </div>
           </aside>
         </div>
-        <UDivider
+        <USeparator
           class="my-16"
           icon="i-ph-hands-clapping-duotone"
         />
@@ -122,18 +123,19 @@ const { progress } = useReadingProgress()
             <strong>感谢您阅读这篇文章！如果您喜欢它，请考虑与您的朋友分享。别忘了点个赞哦！</strong>
           </p>
           <div class="flex gap-4 items-center flex-wrap">
-            <UButton
-              :label="`${postDB?.likes} 点赞`"
-              :color="likeCookie ? 'red' : 'white'"
-              icon="i-ph-heart-duotone"
-              size="lg"
-              variant="solid"
-              data-track="like post"
-              @click.prevent="handleLike()"
-            />
+            <UTooltip :text="likeCookie ? '已点赞' : '点赞'" :disabled="!likeCookie" :delay-duration="0">
+              <UButton
+                :label="`${postDB?.likes} 点赞`"
+                :color="likeCookie ? 'success' : 'neutral'"
+                icon="i-ph-heart-duotone"
+                size="lg"
+                variant="outline"
+                @click.prevent="handleLike()"
+              />
+            </UTooltip>
             <UButton
               v-if="copied"
-              color="green"
+              color="success"
               icon="i-ph-copy-simple-duotone"
               label="复制成功"
               size="lg"
@@ -142,16 +144,16 @@ const { progress } = useReadingProgress()
             />
             <UButton
               v-else
-              color="white"
+              color="neutral"
               icon="i-ph-copy-simple-duotone"
               label="复制链接"
               size="lg"
-              variant="solid"
+              variant="outline"
               @click.prevent="copy()"
             />
           </div>
         </div>
-        <UDivider
+        <USeparator
           class="my-16"
           icon="i-ph:messenger-logo-duotone"
         />

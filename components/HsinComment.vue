@@ -24,6 +24,8 @@ const path = computed(() => useRoute().path)
 </template>
 
 <style>
+@reference "tailwindcss";
+
 .wl-comment .wl-panel {
   @apply m-0 mt-4 dark:bg-zinc-600/5 dark:border-zinc-800;
 }

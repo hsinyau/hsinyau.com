@@ -25,7 +25,7 @@ useHead({
         <UButton
           to="/"
           label="返回首页"
-          color="gray"
+          color="neutral"
           variant="solid"
         />
       </div>

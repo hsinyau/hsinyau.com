@@ -63,7 +63,7 @@ const sortedFeed = [
         </div>
         <div class="min-w-0 max-w-full mt-2 pl-4 md:mt-0 md:-translate-y-4 md:pl-14">
           <div class="relative w-full min-w-0">
-            <div class="moments-content relative inline-block rounded-xl p-3 text-zinc-800 dark:text-zinc-200 rounded-tl-sm bg-zinc-600/5 dark:bg-zinc-500/20 max-w-full overflow-auto">
+            <div class="moments-content relative inline-block rounded-xl p-3 text-zinc-800 dark:text-zinc-200 rounded-tl-sm bg-neutral-600/5 dark:bg-neutral-500/20 max-w-full overflow-auto">
               <span v-html="item.html" />
               <span v-if="item.media" class="moments-images">
                 <NuxtImg
@@ -86,9 +86,11 @@ const sortedFeed = [
 </template>
 
 <style>
+@reference "tailwindcss";
+
 /* 一宫格 */
 .moments-images:has(img:nth-child(1)) {
-  @apply mt-2
+  @apply mt-4
 }
 
 /* 二宫格 */

@@ -53,7 +53,7 @@ function scrollToHeading(id: string) {
     <div class="text-sm font-medium mb-2">
       目录
     </div>
-    <ul class="space-y-2 border-b border-zinc-200 dark:border-zinc-800 pb-4 max-h-[60vh] overflow-y-auto">
+    <ul class="space-y-2 max-h-[60vh] overflow-y-auto">
       <template v-for="item in toc" :key="item.id">
         <li>
           <a

@@ -28,15 +28,16 @@ useOpenpanel().track('')
 </script>
 
 <template>
-  <Html lang="zh-CN">
-    <Body>
-      <NuxtLoadingIndicator color="#808080" />
-      <UContainer class="z-50 relative max-w-6xl flex flex-col min-h-[calc(100vh-24px)]">
-        <HsinHeader />
-        <NuxtPage class="mt-12 grow" />
-        <HsinFooter />
-      </UContainer>
-      <BackTop />
-    </Body>
-  </Html>
+  <UApp>
+    <Html lang="zh-CN">
+      <Body>
+        <NuxtLoadingIndicator color="#808080" />
+        <UContainer class="z-50 relative max-w-6xl flex flex-col min-h-[calc(100vh-24px)]">
+          <HsinHeader />
+          <NuxtPage class="mt-12 grow" />
+          <HsinFooter />
+        </UContainer>
+      </Body>
+    </Html>
+  </UApp>
 </template>

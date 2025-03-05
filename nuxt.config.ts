@@ -16,19 +16,9 @@ export default defineNuxtConfig({
   ],
   // Nuxt UI Module Config
   ui: {
-    safelistColors: [
-      'gray',
-      'zinc',
-      'red',
-      'orange',
-      'rose',
-      'green',
-      'emerald',
-      'sky',
-      'blue',
-      'purple',
-      'neutral',
-    ],
+    theme: {
+      colors: ['primary', 'secondary', 'tertiary', 'info', 'success', 'warning', 'error'],
+    },
   },
   // Nuxt Color Mode Config
   colorMode: {

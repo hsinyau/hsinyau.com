@@ -9,7 +9,7 @@ defineProps<{
     <li
       v-for="(post, id) in posts"
       :key="id"
-      class=" h-full border p-4 shadow-sm border-zinc-200 rounded-md hover:border-zinc-500 dark:border-zinc-800 dark:hover:border-zinc-500  duration-300"
+      class=" h-full border p-4 border-neutral-200 rounded-md hover:border-neutral-400 dark:border-neutral-800 dark:hover:border-neutral-600 duration-300"
     >
       <NuxtLink :to="post.path">
         <article class="space-y-2">

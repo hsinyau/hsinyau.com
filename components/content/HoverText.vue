@@ -28,6 +28,7 @@ defineProps({
     <UTooltip
       :popper="{ placement: position }"
       :text="hover"
+      :delay-duration="0"
     >
       <NuxtLink v-if="href" :href="href" :target="target" class="no-underline">
         <strong class="leading-3 cursor-point">{{ text }}</strong>

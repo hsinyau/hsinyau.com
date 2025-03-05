@@ -1,3 +1,7 @@
+@import 'tailwindcss';
+@import "@nuxt/ui";
+@plugin "@tailwindcss/typography";
+
 body {
   font-family: 'Noto Sans SC', system-ui, -apple-system, 'PingFang SC', "Microsoft YaHei", 'Segoe UI','Roboto','Helvetica','noto sans sc','hiragino sans gb',"sans-serif",'Apple Color Emoji','Segoe UI Emoji','Not Color Emoji';
   @apply h-full w-full text-neutral-700 dark:text-neutral-300;
@@ -50,12 +54,12 @@ body {
   border-radius: 3px;
 }
 
-.prose a:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) {
+.prose a:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .not-prose a) {
   text-decoration: none;
   border-bottom: 1px solid rgba(125,125,125,.3);
   transition: all 500 ease-in-out;
 }
 
-.prose a:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a):hover {
+.prose a:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .not-prose a):hover {
   border-bottom: 1px solid #555;
 }

@@ -28,37 +28,37 @@ export default defineAppConfig({
       icon: 'ph:github-logo-duotone',
       label: 'GitHub',
       link: 'https://github.com/hsinyau',
-      color: 'black',
+      color: 'neutral',
     },
     {
       icon: 'ph:instagram-logo-duotone',
       label: 'Instagram',
       link: 'https://www.instagram.com/hsinyau_zz',
-      color: 'rose',
+      color: 'error',
     },
     {
       icon: 'ph:telegram-logo-duotone',
       label: 'Telegram',
       link: 'https://t.me/hsinyau_channel',
-      color: 'sky',
+      color: 'secondary',
     },
     {
       icon: 'custom:neteasecloud',
       label: '网易云',
       link: 'https://music.163.com/#/user/home?id=1352085491',
-      color: 'red',
+      color: 'error',
     },
     {
       icon: 'custom:bilibili',
       label: '哔哩哔哩',
       link: 'https://space.bilibili.com/221029937',
-      color: 'pink',
+      color: 'info',
     },
     {
       icon: 'ph:envelope-duotone',
       label: 'Email',
       link: 'mailto:hi@hsinyau.com',
-      color: 'orange',
+      color: 'warning',
     },
   ],
   menu: [{
@@ -97,23 +97,31 @@ export default defineAppConfig({
     },
   ],
   ui: {
-    tabs: {
-      list: {
-        background: 'bg-zinc-600/5 dark:bg-zinc-500/20',
-        marker: {
-          background: 'bg-white dark:bg-neutral-900',
-        },
-      },
-    },
-    button: {
-      color: {
-        white: {
-          solid: 'dark:bg-zinc-500/20',
-        },
-      },
-    },
-    tooltip: {
-      background: 'bg-zinc-100 dark:bg-zinc-800',
+    colors: {
+      primary: 'neutral',
+      white: 'white',
+      black: 'black',
+      neutral: 'neutral',
+      red: 'red',
+      green: 'green',
+      blue: 'blue',
+      yellow: 'yellow',
+      purple: 'purple',
+      pink: 'pink',
+      indigo: 'indigo',
+      cyan: 'cyan',
+      teal: 'teal',
+      gray: 'gray',
+      orange: 'orange',
+      amber: 'amber',
+      lime: 'lime',
+      emerald: 'emerald',
+      rose: 'rose',
+      sky: 'sky',
+      violet: 'violet',
+      fuchsia: 'fuchsia',
+      lightBlue: 'lightBlue',
+
     },
   },
 })

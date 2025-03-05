@@ -1,9 +1,9 @@
 <template>
   <footer class="mt-8">
     <div class="flex justify-center mb-8">
-      <UDivider
+      <USeparator
         class="md:w-2/3"
-        size="2xs"
+        size="xs"
         type="solid"
       />
     </div>
