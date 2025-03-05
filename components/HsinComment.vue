@@ -27,28 +27,36 @@ const path = computed(() => useRoute().path)
 @reference "tailwindcss";
 
 .wl-comment .wl-panel {
-  @apply m-0 mt-4 dark:bg-zinc-600/5 dark:border-zinc-800;
+  @apply m-0 mt-4;
 }
 
-.wl-comment .wl-panel .wl-header {
-  @apply dark:border-b-zinc-800;
+.dark .wl-comment .wl-panel {
+  @apply bg-neutral-600/5 border-neutral-800;
 }
 
-.wl-comment .wl-panel .wl-header .wl-header-item * {
-  @apply dark:text-zinc-300;
+.dark .wl-comment .wl-panel .wl-header {
+  @apply border-b-neutral-800;
+}
+
+.dark .wl-comment .wl-panel .wl-header .wl-header-item * {
+  @apply text-zinc-300;
 }
 
 .wl-comment .wl-panel .wl-editor {
-  @apply text-zinc-800 dark:text-zinc-300;
+  @apply text-zinc-800;
 }
 
-.wl-comment .wl-panel .wl-editor:focus,
-.wl-input:focus {
-  @apply dark:bg-zinc-800/60;
+.dark .wl-comment .wl-panel .wl-editor {
+  @apply text-zinc-300;
 }
 
-.wl-footer button.wl-btn {
-  @apply dark:border-zinc-800 dark:text-zinc-300;
+.dark .wl-comment .wl-panel .wl-editor:focus,
+.dark .wl-input:focus {
+  @apply bg-zinc-800/60;
+}
+
+.dark .wl-footer button.wl-btn {
+  @apply border-zinc-800 text-zinc-300;
 }
 
 .wl-footer .wl-actions a {
@@ -59,14 +67,14 @@ const path = computed(() => useRoute().path)
   @apply text-zinc-500;
 }
 
-.wl-card .wl-meta .wl-browser,
-.wl-card .wl-meta .wl-addr,
-.wl-card .wl-meta .wl-os {
-  @apply dark:bg-zinc-800;
+.dark .wl-card .wl-meta .wl-browser,
+.dark .wl-card .wl-meta .wl-addr,
+.dark .wl-card .wl-meta .wl-os {
+  @apply bg-zinc-800;
 }
 
-.wl-card .wl-content p {
-  @apply dark:text-zinc-100
+.dark .wl-card .wl-content p {
+  @apply text-zinc-100;
 }
 
 .wl-power {
