@@ -38,6 +38,19 @@ export default defineNuxtConfig({
     analytics: true,
   },
   runtimeConfig: {
-    vscoSecret: '',
+    vsco: {
+      secret: '',
+    },
+    github: {
+      secret: '',
+    },
+    networks: {
+      bluesky: {
+        identifier: 'hsinyau.bsky.social',
+      },
+      mastodon: {
+        identifier: 'hsinyau@m.cmx.im',
+      },
+    },
   },
 })
