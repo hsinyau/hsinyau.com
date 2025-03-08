@@ -6,7 +6,7 @@ const { site } = useAppConfig()
 </script>
 
 <template>
-  <div class="space-y-6 mt-10 select-none slide-enter-content not-prose">
+  <div class="space-y-6 select-none slide-enter-content not-prose">
     <div class="flex flex-col justify-between sm:flex-row">
       <div class="flex flex-col gap-4 will-change-[transform,opacity] md:max-w-xl">
         <h1 class="bg-gradient-to-b from-black via-black/90 to-black/70 to-90% bg-clip-text font-title text-xl font-bold leading-9 text-transparent dark:from-white dark:via-white/90 dark:to-white/70 sm:text-3xl sm:leading-[3.5rem]">

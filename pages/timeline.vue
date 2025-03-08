@@ -1,6 +1,16 @@
 <script setup lang="ts">
+const { site } = useAppConfig()
 const title = '动态'
 const description = '对我的近况感兴趣？快来看看最近做了什么、去了哪里、看到了什么...'
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: `${title} | ${site.name}`,
+  ogDescription: description,
+  twitterTitle: `${title} | ${site.name}`,
+  twitterDescription: description,
+})
 
 const { data: timeline } = await useAsyncData('timeline', async () => {
   const [mastodon, bluesky, qzone] = await Promise.all([

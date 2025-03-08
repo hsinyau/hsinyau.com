@@ -1,4 +1,17 @@
 <script setup lang="ts">
+const { site } = useAppConfig()
+const title = '关于我'
+const description = '嗨，欢迎酷酷的你来到这个小小的网站，很高兴能在这里与你相遇。'
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: `${title} | ${site.name}`,
+  ogDescription: description,
+  twitterTitle: `${title} | ${site.name}`,
+  twitterDescription: description,
+})
+
 const { data: about } = await useAsyncData('about', async () => {
   return queryCollection('about').first()
 })

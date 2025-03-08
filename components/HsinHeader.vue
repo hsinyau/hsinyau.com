@@ -63,7 +63,7 @@ defineShortcuts({
       class="font-logo text-xl sm:text-3xl text-nowrap gap-2 font-bold duration-300 text-zinc-600 hover:text-black dark:text-zinc-400 dark:hover:text-white"
       to="/"
     >
-      {{ site.name }}
+      {{ site.author }}
     </NuxtLink>
     <nav class="flex gap-2 items-center justify-end flex-wrap">
       <UTooltip

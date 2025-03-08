@@ -10,7 +10,11 @@ export default defineAppConfig({
     },
   },
   site: {
-    name: 'Hsinyau',
+    name: '疏影横斜',
+    description: '欲笺心事，独语斜阑。',
+    author: 'Hsinyau',
+    domain: 'https://hsinyau.com',
+    avatar: 'https://cdn.jsdelivr.net/gh/hsinyau/static@master/avatar.jpg',
     menu: [
       {
         label: '文稿',

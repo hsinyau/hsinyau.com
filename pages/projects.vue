@@ -1,6 +1,16 @@
 <script setup lang="ts">
+const { site } = useAppConfig()
 const title = '我的项目'
 const description = '工作、个人、开源。自己的或参与开发的项目。'
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: `${title} | ${site.name}`,
+  ogDescription: description,
+  twitterTitle: `${title} | ${site.name}`,
+  twitterDescription: description,
+})
 
 const { data: projects } = await useAsyncData('projects', async () => {
   return queryCollection('projects').all()
