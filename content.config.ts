@@ -12,5 +12,16 @@ export default defineContentConfig({
         summary: z.string(),
       }),
     }),
+    projects: defineCollection({
+      type: 'data',
+      source: 'projects/*.json',
+      schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        color: z.string(),
+        link: z.string(),
+        icon: z.string(),
+      }),
+    }),
   },
 })

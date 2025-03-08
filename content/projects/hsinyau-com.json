@@ -1,0 +1,7 @@
+{
+  "title": "hsinyau.com",
+  "description": "一个极简主义的个人网站，采用了 Nuxt.js 框架和 Tailwindcss 原子化 CSS 库。",
+  "color": "pink",
+  "link": "https://hsinyau.com",
+  "icon": "i-ph:castle-turret-duotone"
+}
