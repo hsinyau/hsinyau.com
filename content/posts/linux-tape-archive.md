@@ -15,7 +15,7 @@ Tar 是 tape archive（磁带归档）的缩写，最初是用于将文件存储
 
 tar 命令的基本语法如下：
 
-```shell
+```bash
 tar 选项 归档文件名 文件或目录列表
 ```
 
@@ -29,7 +29,7 @@ tar 选项 归档文件名 文件或目录列表
 
 例如，要创建一个包含当前目录下所有文件和子目录的归档文件 myarchive.tar，可以使用以下命令：
 
-```shell
+```bash
 tar -cvf myarchive.tar.
 ```
 
@@ -40,19 +40,19 @@ tar -cvf myarchive.tar.
 
 例如，要创建一个使用 gzip 压缩的归档文件 myarchive.tar.gz，可以使用以下命令：
 
-```shell
+```bash
 tar -czvf myarchive.tar.gz.
 ```
 
 解压缩相应的文件也很简单。对于 .tar.gz 文件，可以使用以下命令解压缩：
 
-```shell
+```bash
 tar -xzvf myarchive.tar.gz
 ```
 
 对于 .tar.bz2 文件，可以使用：
 
-```shell
+```bash
 tar -xjvf myarchive.tar.bz2
 ```
 
@@ -60,13 +60,13 @@ tar -xjvf myarchive.tar.bz2
 
 我们可以在 tar 命令中明确指定要包含或排除的文件和目录。例如，只打包当前目录下的 docs 目录，可以使用：
 
-```shell
+```bash
 tar -cvf myarchive.tar docs
 ```
 
 要排除某个文件或目录，可以使用 --exclude 选项。比如，要打包除了 temp 目录以外的所有内容，可以使用：
 
-```shell
+```bash
 tar -cvf myarchive.tar --exclude=temp.
 ```
 
@@ -74,7 +74,7 @@ tar -cvf myarchive.tar --exclude=temp.
 
 当要打包的文件非常大时，我们可以使用分卷功能将其分成多个较小的部分。例如，要将归档文件分成每个大小为 100MB 的卷，可以使用以下命令：
 
-```shell
+```bash
 tar -cvMf myarchive.tar 100M.
 ```
 

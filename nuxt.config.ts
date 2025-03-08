@@ -42,6 +42,19 @@ export default defineNuxtConfig({
     },
     build: {
       markdown: {
+        toc: {
+          depth: 3,
+        },
+        highlight: {
+          theme: 'github-dark',
+          langs: [
+            'c',
+            'cpp',
+            'java',
+            'shellscript',
+            'sql',
+          ],
+        },
         remarkPlugins: {
           'remark-reading-time': {
             wordsPerMinute: 400,

@@ -68,7 +68,7 @@ CORS（Cross-Origin Resource Sharing，跨源资源共享）则是为了解决�
 
 下面是一个服务端和客户端完整的信息交互。首次交互是预检请求 / 响应：
 
-```shell
+```bash
 OPTIONS /doc HTTP/1.1
 Host: bar.other
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
@@ -96,7 +96,7 @@ Connection: Keep-Alive
 
 发送预检请求时一般会带有以下头部信息
 
-```shell
+```bash
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 ```
@@ -106,7 +106,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 第二个为预检请求的响应，表明服务器将接受后续的实际请求方法（POST）和请求头（X-PINGOTHER）。
 
-```shell
+```bash
 Access-Control-Allow-Origin: https://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type

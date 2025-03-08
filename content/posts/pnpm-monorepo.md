@@ -35,7 +35,7 @@ Monorepo，即单一代码库，是指将多个相关的项目或模块的代码
 
 首先需要确保自己已经安装好 pnpm, 在终端执行以下命令安装 pnpm
 
-```shell
+```bash
 npm install -g pnpm
 ```
 
@@ -68,7 +68,7 @@ packages:
 
 运行如下命令：
 
-```shell
+```bash
 pnpm add rollup typescript -Dw
 ```
 
@@ -78,13 +78,13 @@ pnpm add rollup typescript -Dw
 
 假如我要在 utils 包下安装 dayjs, 我们可以执行以下命令
 
-```shell
+```bash
 pnpm add dayjs -r --filter @monoremp/utils
 ```
 
 假设现在写好了 utils 模块，`@monorepo/web` 准备使用 utils 模块，可以按照如下操作
 
-```shell
+```bash
 pnpm -F @monorepo/web add @monorepo/utils@*
 ```
 
@@ -112,7 +112,7 @@ pnpm -F @monorepo/web add @monorepo/utils@*
 
 最终代码仓库的项目结构大致如下
 
-```shell
+```bash
 monorepo
 ├── package.json
 ├── packages
