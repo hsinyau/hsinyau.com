@@ -82,6 +82,11 @@ export default defineNuxtConfig({
     github: {
       secret: '',
     },
+    public: {
+      openpanel: {
+        clientid: '',
+      },
+    },
     networks: {
       bluesky: {
         identifier: 'hsinyau.bsky.social',

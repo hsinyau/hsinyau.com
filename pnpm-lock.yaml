@@ -23,6 +23,9 @@ importers:
       '@nuxthub/core':
         specifier: 0.8.18
         version: 0.8.18(db0@0.3.1(better-sqlite3@11.8.1))(ioredis@5.6.0)(magicast@0.3.5)(vite@6.2.1(@types/node@22.13.9)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.0))
+      '@openpanel/web':
+        specifier: ^1.0.1
+        version: 1.0.1
       '@vueuse/nuxt':
         specifier: 12.8.2
         version: 12.8.2(magicast@0.3.5)(nuxt@3.15.4(@parcel/watcher@2.5.1)(@types/node@22.13.9)(better-sqlite3@11.8.1)(db0@0.3.1(better-sqlite3@11.8.1))(eslint@9.21.0(jiti@2.4.2))(ioredis@5.6.0)(lightningcss@1.29.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.34.9)(terser@5.39.0)(typescript@5.8.2)(vite@6.2.1(@types/node@22.13.9)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.39.0)(yaml@2.7.0))(yaml@2.7.0))(typescript@5.8.2)
@@ -1209,6 +1212,12 @@ packages:
 
   '@nuxtjs/mdc@0.15.0':
     resolution: {integrity: sha512-xdYEu+FmUZpKQzDS35peX9hF36oxvD4zx9lTJq6RPh/vgJuLSohUIUVLtNxM7m8cY/pTh41qaO3pOvKz0Xq3sg==}
+
+  '@openpanel/sdk@1.0.0':
+    resolution: {integrity: sha512-FNmmfjdXoC/VHEjA+WkrQ4lyM5lxEmV7xDd57uj4E+lIS0sU3DLG2mV/dpS8AscnZbUvuMn3kPhiLCqYzuv/gg==}
+
+  '@openpanel/web@1.0.1':
+    resolution: {integrity: sha512-cVZ7Kr9SicczJ/RDIfEtZs8+1iGDzwkabVA/j3NqSl8VSucsC8m1+LVbjmCDzCJNnK4yVn6tEcc9PJRi2rtllw==}
 
   '@parcel/watcher-android-arm64@2.5.1':
     resolution: {integrity: sha512-KF8+j9nNbUN8vzOFDpRMsaKBHZ/mcjEjMToVMJOhTozkDonQFFrRcfdLWn6yWKCmJKmdVxSgHiYvTCef4/qcBA==}
@@ -7321,6 +7330,12 @@ snapshots:
     transitivePeerDependencies:
       - magicast
       - supports-color
+
+  '@openpanel/sdk@1.0.0': {}
+
+  '@openpanel/web@1.0.1':
+    dependencies:
+      '@openpanel/sdk': 1.0.0
 
   '@parcel/watcher-android-arm64@2.5.1':
     optional: true
