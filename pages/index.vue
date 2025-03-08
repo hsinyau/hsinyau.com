@@ -1,5 +1,3 @@
 <template>
-  <div>
-    <UButton>Click me</UButton>
-  </div>
+  <LatestPosts />
 </template>
