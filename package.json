@@ -23,12 +23,14 @@
     "masto": "^6.10.3",
     "nuxt": "^3.15.4",
     "remark-reading-time": "^2.0.1",
+    "swiper": "^11.2.5",
     "ufo": "^1.5.4",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.6.0",
+    "@iconify-json/ph": "^1.2.2",
     "@tailwindcss/typography": "^0.5.16",
     "eslint": "^9.21.0",
     "wrangler": "^3.114.0"

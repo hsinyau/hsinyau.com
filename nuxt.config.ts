@@ -22,6 +22,14 @@ export default defineNuxtConfig({
       quality: 80,
     },
   },
+  icon: {
+    customCollections: [
+      {
+        prefix: 'custom',
+        dir: './assets/custom',
+      },
+    ],
+  },
   content: {
     database: {
       type: 'd1',
