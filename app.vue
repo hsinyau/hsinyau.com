@@ -30,6 +30,7 @@ useHead({
         <NuxtPage />
       </main>
       <HsinFooter />
+      <BackTop />
     </UContainer>
   </UApp>
 </template>
