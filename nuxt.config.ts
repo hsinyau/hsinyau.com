@@ -10,6 +10,11 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
   ],
   css: ['~/assets/css/main.css'],
+  ui: {
+    theme: {
+      colors: ['primary', 'secondary', 'tertiary', 'info', 'success', 'warning', 'error'],
+    },
+  },
   image: {
     domains: [
       'fbf0ebb.webp.li',

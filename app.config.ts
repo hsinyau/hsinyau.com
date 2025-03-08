@@ -1,4 +1,14 @@
 export default defineAppConfig({
+  ui: {
+    colors: {
+      primary: 'green',
+      neutral: 'neutral',
+      error: 'red',
+      success: 'green',
+      warning: 'yellow',
+      info: 'blue',
+    },
+  },
   site: {
     name: 'Hsinyau',
     menu: [
