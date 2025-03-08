@@ -1,3 +1,4 @@
 <template>
   <LatestPosts />
+  <HsinPhotos />
 </template>

@@ -37,4 +37,7 @@ export default defineNuxtConfig({
     kv: true,
     analytics: true,
   },
+  runtimeConfig: {
+    vscoSecret: '',
+  },
 })
