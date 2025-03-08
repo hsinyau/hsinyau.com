@@ -33,5 +33,9 @@ export default defineContentConfig({
         link: z.string(),
       }),
     }),
+    about: defineCollection({
+      type: 'page',
+      source: 'about/*.md',
+    }),
   },
 })
