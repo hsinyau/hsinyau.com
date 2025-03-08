@@ -19,7 +19,7 @@ defineProps<{
           <div class="text-sm text-zinc-500 duration-300 flex items-center gap-1">
             <UIcon name="ph:calendar-duotone" size="16" />
             <p>
-              {{ post.created }}
+              {{ useTimeAgo(post.created, options) }}
             </p>·
             <UIcon name="ph:timer-duotone" size="16" />
             <p>{{ Math.round(post.meta.readingTime.words / 400) }}分钟阅读</p>·

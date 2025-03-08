@@ -45,7 +45,7 @@ const sortedFeed = [
             <div class="flex flex-col md:items-center items-start self-start md:flex-row md:gap-2">
               <span class="self-start text-lg font-medium md:self-auto">Hsinyau</span>
               <div class="text-xs opacity-80 md:-translate-y-1 md:self-end">
-                <span>{{ item.createdAt }}</span>
+                <span>{{ useTimeAgo(item.createdAt, options) }}</span>
                 <span>
                   · 来源 {{ item.network }}
                 </span>
