@@ -37,4 +37,4 @@ jobs:
         uses: nuxt-hub/action@v1
         id: deploy
         with:
-          project-key: hsinyau-com-3zd0
+          project-key: hsinyau-com-gep8
