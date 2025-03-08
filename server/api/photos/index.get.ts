@@ -1,11 +1,11 @@
 export default defineCachedEventHandler(async (event) => {
-  const { vscoSecret } = useRuntimeConfig(event)
+  const { vsco } = useRuntimeConfig(event)
 
   const data = await $fetch(`https://vsco.co/api/3.0/medias/profile?site_id=304275568&limit=6`, {
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Authorization': `Bearer ${vscoSecret}`,
+      'Authorization': `Bearer ${vsco.secret}`,
     },
   })
 
