@@ -69,6 +69,12 @@ export default defineNuxtConfig({
     kv: true,
     analytics: true,
   },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/', '/about', '/friends', '/projects', '/posts'],
+    },
+  },
   runtimeConfig: {
     vsco: {
       secret: '',
