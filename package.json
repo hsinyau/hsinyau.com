@@ -23,6 +23,8 @@
     "masto": "^6.10.3",
     "nuxt": "^3.15.4",
     "remark-reading-time": "^2.0.1",
+    "rss": "^1.2.2",
+    "sitemap": "^8.0.0",
     "swiper": "^11.2.5",
     "ufo": "^1.5.4",
     "vue": "^3.5.13",
@@ -32,6 +34,8 @@
     "@antfu/eslint-config": "^4.6.0",
     "@iconify-json/ph": "^1.2.2",
     "@tailwindcss/typography": "^0.5.16",
+    "@types/rss": "^0.0.32",
+    "@waline/client": "^3.5.5",
     "eslint": "^9.21.0",
     "wrangler": "^3.114.0"
   },

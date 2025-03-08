@@ -88,5 +88,19 @@ export default defineAppConfig({
         link: 'mailto:hi@hsinyau.com',
       },
     ],
+    comment: {
+      serverURL: 'https://comment.758201.xyz',
+      emoji: [
+        'https://cute.s3.bitiful.net/emojis/alus',
+        'https://cute.s3.bitiful.net/emojis/qq',
+        'https://cute.s3.bitiful.net/emojis/tieba',
+        'https://cute.s3.bitiful.net/emojis/weibo',
+        'https://cute.s3.bitiful.net/emojis/bilibili',
+      ],
+      locale: {
+        sofa: '此时无声胜有声',
+        placeholder: '填写邮箱可在被回复时收到邮件提醒~',
+      },
+    },
   },
 })

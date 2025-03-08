@@ -98,20 +98,25 @@ const { progress } = useReadingProgress()
           <p class="text-center">
             <strong>感谢您阅读这篇文章！如果您喜欢它，请考虑与您的朋友分享。</strong>
           </p>
+          <HsinComment />
         </div>
-        <USeparator
-          class="my-16"
-          icon="i-ph:messenger-logo-duotone"
-        />
       </div>
     </div>
   </main>
 </template>
 
 <style>
-.prose h2 a,
-.prose h3 a,
-.prose h4 a {
+@reference "tailwindcss";
+
+.prose a {
   @apply no-underline;
+}
+
+.prose :not(h1, h2, h3, h4, h5, h6) a {
+  border-bottom: 1px solid rgba(125,125,125,.3);
+}
+
+.prose :not(h1, h2, h3, h4, h5, h6) a:hover {
+  border-bottom: 1px solid #bbb;
 }
 </style>
