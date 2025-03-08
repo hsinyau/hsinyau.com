@@ -32,6 +32,10 @@ jobs:
 
       - name: Build application
         run: pnpm build
+        env: 
+          NUXT_VSCO_SECRET: ${{ vars.NUXT_VSCO_SECRET }}
+          NUXT_GITHUB_SECRET: ${{ secrets.NUXT_GITHUB_SECRET }}
+          NUXT_PUBLIC_OPENPANEL_CLIENTID: ${{ secrets.NUXT_PUBLIC_OPENPANEL_CLIENTID }}
 
       - name: Deploy to NuxtHub
         uses: nuxt-hub/action@v1
