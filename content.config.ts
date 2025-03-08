@@ -23,5 +23,15 @@ export default defineContentConfig({
         icon: z.string(),
       }),
     }),
+    friends: defineCollection({
+      type: 'data',
+      source: 'friends/*.json',
+      schema: z.object({
+        name: z.string(),
+        desc: z.string(),
+        avatar: z.string(),
+        link: z.string(),
+      }),
+    }),
   },
 })
