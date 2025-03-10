@@ -73,12 +73,12 @@ export default defineAppConfig({
         link: 'https://t.me/hsinyau_channel',
       },
       {
-        icon: 'custom:neteasecloud',
+        icon: 'tabler:brand-netease-music',
         label: '网易云',
         link: 'https://music.163.com/#/user/home?id=1352085491',
       },
       {
-        icon: 'custom:bilibili',
+        icon: 'tabler:brand-bilibili',
         label: '哔哩哔哩',
         link: 'https://space.bilibili.com/221029937',
       },
