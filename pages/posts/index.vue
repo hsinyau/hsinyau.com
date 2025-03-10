@@ -23,8 +23,8 @@ const { data: posts } = await useAsyncData('allPosts', async () => {
 </script>
 
 <template>
-  <main class="space-y-12">
+  <div class="space-y-12">
     <HsinTitle :title :description />
     <PostList v-if="posts" :posts="posts" />
-  </main>
+  </div>
 </template>

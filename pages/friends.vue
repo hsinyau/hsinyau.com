@@ -18,7 +18,7 @@ const { data: friends } = await useAsyncData('friends', async () => {
 </script>
 
 <template>
-  <main class="mt-12 space-y-12">
+  <div class="space-y-12">
     <HsinTitle :title :description />
     <ul class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 place-content-between">
       <li v-for="item in friends" :key="item.link">
@@ -47,5 +47,5 @@ const { data: friends } = await useAsyncData('friends', async () => {
         </NuxtLink>
       </li>
     </ul>
-  </main>
+  </div>
 </template>

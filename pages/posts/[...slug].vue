@@ -21,7 +21,7 @@ const { progress } = useReadingProgress()
 </script>
 
 <template>
-  <main v-if="post" class="flex gap-8">
+  <div v-if="post" class="flex gap-8">
     <div class="flex-1">
       <div class="mt-2">
         <div class="flex items-end gap-4 flex-wrap">
@@ -102,7 +102,7 @@ const { progress } = useReadingProgress()
         </div>
       </div>
     </div>
-  </main>
+  </div>
 </template>
 
 <style>

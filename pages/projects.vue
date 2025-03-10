@@ -18,7 +18,7 @@ const { data: projects } = await useAsyncData('projects', async () => {
 </script>
 
 <template>
-  <main class="mt-12 space-y-12">
+  <div class="space-y-12">
     <HsinTitle :title :description />
     <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <li v-for="project in projects" :key="project.link" class="border border-neutral-200 rounded-md hover:border-neutral-400 dark:border-neutral-800 dark:hover:border-neutral-600 duration-300">
@@ -48,5 +48,5 @@ const { data: projects } = await useAsyncData('projects', async () => {
         </NuxtLink>
       </li>
     </ul>
-  </main>
+  </div>
 </template>

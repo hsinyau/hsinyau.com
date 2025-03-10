@@ -18,7 +18,7 @@ const { data: about } = await useAsyncData('about', async () => {
 </script>
 
 <template>
-  <main class="!max-w-none prose dark:prose-invert">
+  <div class="!max-w-none prose dark:prose-invert">
     <div class="relative flex justify-center filter dark:brightness-50 pb-8">
       <div class="flex items-center justify-center">
         <NuxtImg
@@ -33,7 +33,7 @@ const { data: about } = await useAsyncData('about', async () => {
       </div>
     </div>
     <ContentRenderer v-if="about" :value="about" class="!max-w-none prose dark:prose-invert" />
-  </main>
+  </div>
 </template>
 
 <style>

@@ -32,7 +32,7 @@ const sortedFeed = [
 </script>
 
 <template>
-  <main class="space-y-12 mt-12">
+  <div class="space-y-12">
     <HsinTitle
       :title
       :description
@@ -87,7 +87,7 @@ const sortedFeed = [
         暂时没有动态内容
       </li>
     </ul>
-  </main>
+  </div>
 </template>
 
 <style>
