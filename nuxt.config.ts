@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
   modules: [
     '@nuxt/ui',
     '@nuxt/content',
@@ -70,9 +73,10 @@ export default defineNuxtConfig({
     analytics: true,
   },
   nitro: {
+    static: true,
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/about', '/friends', '/projects', '/posts', 'rss.xml', 'sitemap.xml'],
+      routes: ['/', '/about', '/friends', '/projects', '/posts', '/rss.xml', '/sitemap.xml'],
     },
   },
   runtimeConfig: {

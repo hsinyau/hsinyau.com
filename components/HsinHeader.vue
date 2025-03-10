@@ -42,7 +42,7 @@ async function toggleTheme(event: MouseEvent) {
           : clipPath,
       },
       {
-        duration: 400,
+        duration: 600,
         easing: 'ease-out',
         pseudoElement: isDark.value
           ? '::view-transition-old(root)'

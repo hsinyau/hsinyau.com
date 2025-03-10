@@ -7,7 +7,9 @@ useSeoMeta({
 </script>
 
 <template>
-  <HsinHero />
-  <LatestPosts />
-  <HsinPhotos />
+  <div class="home">
+    <HsinHero />
+    <LatestPosts />
+    <HsinPhotos />
+  </div>
 </template>

@@ -21,7 +21,9 @@ useHead({
   ],
 })
 
-useOpenpanel()
+if (process.env.NODE_ENV !== 'development') {
+  useOpenpanel()
+}
 </script>
 
 <template>
@@ -69,5 +71,20 @@ useOpenpanel()
 ::-webkit-scrollbar-thumb:active {
   background: rgba(128, 128, 128, 0.9);
   border-radius: 3px;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.2s;
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-5px);
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(5px);
 }
 </style>
