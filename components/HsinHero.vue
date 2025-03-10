@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { Autoplay } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/vue'
-
 const { site } = useAppConfig()
 </script>
 
@@ -12,25 +9,17 @@ const { site } = useAppConfig()
         <h1 class="bg-gradient-to-b from-black via-black/90 to-black/70 to-90% bg-clip-text font-title text-xl font-bold leading-9 text-transparent dark:from-white dark:via-white/90 dark:to-white/70 sm:text-3xl sm:leading-[3.5rem]">
           嗨，很高兴能在这里与你相遇。<br>我是 𝐻𝑠𝑖𝑛𝑦𝑎𝑢, 一个
           <div class="inline-grid h-9 overflow-hidden sm:h-[3.5rem]">
-            <Swiper
-              :modules="[Autoplay]"
-              direction="vertical"
-              :autoplay="{
-                delay: 2500,
-                disableOnInteraction: false,
-              }"
+            <UCarousel
+              v-slot="{ item }"
+              :items="site.hero"
+              :ui="{ container: 'h-18' }"
+              :autoplay="{ delay: 2500 }"
               :loop="true"
-              class="h-9 sm:h-[3.5rem] ease-in-out"
+              class="h-9 sm:h-[3.5rem] transition-all duration-300 ease-in-out"
+              orientation="vertical"
             >
-              <SwiperSlide
-                v-for="item in site.hero"
-                :key="item.text"
-                class="flex items-center"
-                :class="item.className"
-              >
-                {{ item.text }}
-              </SwiperSlide>
-            </Swiper>
+              <span :class="item.className">{{ item.text }}</span>
+            </UCarousel>
           </div>
           。
           <br>
