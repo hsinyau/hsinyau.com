@@ -73,7 +73,6 @@ export default defineNuxtConfig({
     analytics: true,
   },
   nitro: {
-    static: true,
     prerender: {
       crawlLinks: true,
       routes: ['/', '/about', '/friends', '/projects', '/posts', '/rss.xml', '/sitemap.xml'],
