@@ -92,7 +92,7 @@ export default defineNuxtConfig({
     },
     networks: {
       bluesky: {
-        identifier: 'hsinyau.bsky.social',
+        identifier: 'hsinyau.com',
       },
       mastodon: {
         identifier: 'hsinyau@m.cmx.im',
