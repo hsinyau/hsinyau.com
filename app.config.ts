@@ -58,34 +58,40 @@ export default defineAppConfig({
     ],
     socials: [
       {
+        id: 'github',
         icon: 'ph:github-logo-duotone',
         label: 'GitHub',
-        link: 'https://github.com/hsinyau',
+        to: 'https://github.com/hsinyau',
       },
       {
+        id: 'instagram',
         icon: 'ph:instagram-logo-duotone',
         label: 'Instagram',
-        link: 'https://www.instagram.com/hsinyau_zz',
+        to: 'https://www.instagram.com/hsinyau_zz',
       },
       {
+        id: 'telegram',
         icon: 'ph:telegram-logo-duotone',
         label: 'Telegram',
-        link: 'https://t.me/hsinyau_channel',
+        to: 'https://t.me/hsinyau_channel',
       },
       {
+        id: 'netease',
         icon: 'tabler:brand-netease-music',
         label: '网易云',
-        link: 'https://music.163.com/#/user/home?id=1352085491',
+        to: 'https://music.163.com/#/user/home?id=1352085491',
       },
       {
+        id: 'bilibili',
         icon: 'tabler:brand-bilibili',
         label: '哔哩哔哩',
-        link: 'https://space.bilibili.com/221029937',
+        to: 'https://space.bilibili.com/221029937',
       },
       {
+        id: 'email',
         icon: 'ph:envelope-duotone',
         label: 'Email',
-        link: 'mailto:hi@hsinyau.com',
+        to: 'mailto:hi@hsinyau.com',
       },
     ],
     comment: {

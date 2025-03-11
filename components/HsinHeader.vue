@@ -81,6 +81,8 @@ defineShortcuts({
           variant="outline"
         />
       </UTooltip>
+      <USeparator orientation="vertical" class="h-4" />
+      <CommandPalette />
       <ClientOnly>
         <UTooltip
           text="主题"
