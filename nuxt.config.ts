@@ -76,6 +76,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/about', '/friends', '/projects', '/posts', '/rss.xml', '/sitemap.xml'],
+      ignore: ['/timeline'],
     },
   },
   runtimeConfig: {
