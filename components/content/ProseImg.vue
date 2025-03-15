@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import mediumZoom from 'medium-zoom'
+
 const props = defineProps({
   src: {
     type: String,
@@ -17,6 +19,21 @@ const props = defineProps({
     default: undefined,
   },
 })
+
+onMounted(() => {
+  const zoom = mediumZoom('.article-image', {
+    margin: 36,
+    background: '#3f3f46',
+  })
+
+  // 监听点击事件,点击背景时关闭
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement
+    if (target.classList.contains('medium-zoom-overlay')) {
+      zoom.close()
+    }
+  })
+})
 </script>
 
 <template>
@@ -27,7 +44,7 @@ const props = defineProps({
     :width="props.width"
     :height="props.height"
     placeholder
-    class="rounded-lg w-full h-full overflow-hidden duration-300 dark:brightness-75 cursor-pointer"
+    class="article-image rounded-lg w-full h-full overflow-hidden duration-300 dark:brightness-75 cursor-pointer"
     loading="lazy"
   />
 </template>

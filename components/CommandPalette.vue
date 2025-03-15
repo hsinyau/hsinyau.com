@@ -16,7 +16,7 @@ const groups = computed(() => [
   {
     id: 'posts',
     label: searchTerm.value ? `搜索博文 - ${searchTerm.value}` : '最新博文',
-    items: posts.value?.map(post => ({
+    items: posts.value?.map((post: { path: string, title: string }) => ({
       id: post.path,
       label: post.title,
       to: post.path,
