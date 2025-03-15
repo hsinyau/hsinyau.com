@@ -8,7 +8,7 @@ const { data: photos } = await useAsyncData<any>('photos', () => $fetch('/api/ph
       <span class="font-bold text-gray-600 dark:text-gray-300 text-lg"><span class="animate-pulse">✨</span>最近捕获</span>
       <NuxtLink
         class="flex items-center gap-2 group text-sm hover:text-black dark:hover:text-white duration-300"
-        href="https://photo.hsinyau.com"
+        href="https://photos.hsinyau.com"
         target="_blank"
       >
         查看更多

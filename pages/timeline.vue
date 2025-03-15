@@ -38,7 +38,7 @@ const sortedFeed = [
       :description
       :external-link="{
         title: '画廊',
-        url: 'https://photo.hsinyau.com',
+        url: 'https://photos.hsinyau.com',
       }"
     />
     <ul v-if="timeline">
